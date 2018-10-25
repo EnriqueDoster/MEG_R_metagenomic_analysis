@@ -1,28 +1,42 @@
 ## Start with this staging file to set up your analysis. 
+# Source the utility functions file, which should be in the scripts folder with this file
+source('scripts/meg_utility_functions.R')
+source('scripts/load_libraries.R')
 
 # Set working directory to the MEG_R_metagenomic_analysis folder and add your data to that folder
 setwd("")
 
 # Set the output directory for graphs:
-graph_output_dir = 'MEG_analysis/graphs'
+graph_output_dir = 'graphs'
 # Set the output directory for statistics:
-stats_output_dir = 'MEG_analysis/stats'
+stats_output_dir = 'stats'
 # In which column of the metadata file are the sample IDs stored?
 sample_column_id = 'ID'
 
 
 # AMR analysis 
 # Where is the metadata file stored on your machine?
-amr_metadata_filepath = 'MEG_analysis/proj6_mapping_file.csv'
+amr_metadata_filepath = '../retail_metadata.csv'
 # Name of the megares annotation file used for this project
-megares_annotation_filename = 'MEG_analysis/megares_annotations_v1.01.csv'
+megares_annotation_filename = 'data/amr/megares_annotations_v1.01.csv'
 
 # Load the data, MEGARes annotations, and metadata
-amr <- newMRexperiment(read.table('amr_plus_plus/AMR_analytic_matrix.csv', header=T, row.names=1, sep=','))
-annotations <- data.table(read.csv(megares_annotation_filename, header=T))
-setkey(annotations, header)  # Data tables are SQL objects with optional primary keys
+amr <- newMRexperiment(read.table('../AMR_analytic_matrix.csv', header=T, row.names=1, sep=','))
+amr <- newMRexperiment(round(MRcounts(amr),0))
 amr_temp_metadata <- read.csv(amr_metadata_filepath, header=T)
 amr_temp_metadata[, sample_column_id] <- make.names(amr_temp_metadata[, sample_column_id])
+
+# Annotation for regular AMR++ analysis
+#annotations <- data.table(read.csv(megares_annotation_filename, header=T))
+#setkey(annotations, header)  # Data tables are SQL objects with optional primary keys
+
+## Annotations for HMMs
+annotations <- data.table(read.csv(megares_annotation_filename, header=T))
+annotations[,header := NULL]
+setkey(annotations, group)  # Data tables are SQL objects with optional primary keys
+setkey(annotations, group)
+annotations <- unique(annotations, by = key(annotations))
+
 
 
 ## First, the 16S files. 
@@ -154,9 +168,7 @@ microbiome_statistical_analyses = list(
 
 ## Run the analysis
 
-# Source the utility functions file, which should be in the scripts folder with this file
-source('scripts/meg_utility_functions.R')
-source('scripts/load_libraries.R')
+
 ## Run the script to convert qiime2 results into "microbiome" objects to be used with amr_plus_plus
 source('scripts/qiime2_2_phyloseq.R')
 ## Run the script that handles resistome data and microbiome data. 
