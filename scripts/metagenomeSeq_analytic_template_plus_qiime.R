@@ -120,16 +120,17 @@ for( dtype in c('Microbiome') ) {
 }
 
 
-ifelse(!dir.exists(file.path('MEG_analysis/amr_matrices')), dir.create(file.path('MEG_analysis/amr_matrices'), mode='777'), FALSE)
-ifelse(!dir.exists(file.path('MEG_analysis/microbiome_matrices')), dir.create(file.path('MEG_analysis/microbiome_matrices'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('amr_matrices')), dir.create(file.path('amr_matrices'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('microbiome_matrices')), dir.create(file.path('microbiome_matrices'), mode='777'), FALSE)
 
-ifelse(!dir.exists(file.path('MEG_analysis/amr_matrices/sparse_normalized')), dir.create(file.path('MEG_analysis/amr_matrices/sparse_normalized'), mode='777'), FALSE)
-ifelse(!dir.exists(file.path('MEG_analysis/amr_matrices/normalized')), dir.create(file.path('MEG_analysis/amr_matrices/normalized'), mode='777'), FALSE)
-ifelse(!dir.exists(file.path('MEG_analysis/amr_matrices/raw')), dir.create(file.path('MEG_analysis/amr_matrices/raw'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('amr_matrices/sparse_normalized')), dir.create(file.path('amr_matrices/sparse_normalized'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('amr_matrices/normalized')), dir.create(file.path('amr_matrices/normalized'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('amr_matrices/raw')), dir.create(file.path('amr_matrices/raw'), mode='777'), FALSE)
 
-ifelse(!dir.exists(file.path('MEG_analysis/microbiome_matrices/sparse_normalized')), dir.create(file.path('MEG_analysis/microbiome_matrices/sparse_normalized'), mode='777'), FALSE)
-ifelse(!dir.exists(file.path('MEG_analysis/microbiome_matrices/normalized')), dir.create(file.path('MEG_analysis/microbiome_matrices/normalized'), mode='777'), FALSE)
-ifelse(!dir.exists(file.path('MEG_analysis/microbiome_matrices/raw')), dir.create(file.path('MEG_analysis/microbiome_matrices/raw'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('microbiome_matrices/sparse_normalized')), dir.create(file.path('microbiome_matrices/sparse_normalized'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('microbiome_matrices/normalized')), dir.create(file.path('microbiome_matrices/normalized'), mode='777'), FALSE)
+ifelse(!dir.exists(file.path('microbiome_matrices/raw')), dir.create(file.path('microbiome_matrices/raw'), mode='777'), FALSE)
+
 
 
 
