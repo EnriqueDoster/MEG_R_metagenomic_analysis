@@ -704,6 +704,70 @@ meg_fitZig <- function(data_list,
 }
 
 
+hullPlot <- function(df, grouping, legend = TRUE){
+  # requires that your columns are called NMDS1, NMDS2, NMDS3
+  
+  # requires that the "grouping" column is printed as per the name of the column
+  # you want separate hulls for
+  
+  
+  allSites <- sort(as.vector(unique(df[[grouping]])))
+  matList <- list()
+  hullList <- list()
+  cols <- as.character(brewer_pal(type = "qual", palette = 1, direction = 1)(length(allSites)))
+  
+  
+  # this loop creates the points for each site
+  # it also calculates a separate hull for each site
+  # "site" or whatever grouping variable you are using
+  for(thisSite in 1:length(allSites)){
+    
+    tmp <- df[df[grouping] == allSites[thisSite], ]
+    
+    plot3d(tmp$NMDS1, tmp$NMDS2, tmp$NMDS3, col = cols[thisSite], box = FALSE,
+           type = "s", radius = 0.01, add = ifelse(thisSite > 1, TRUE, FALSE),
+           xlab = "", ylab = "", zlab = "")
+    
+    
+    matList[[thisSite]] <- matrix(
+      c(tmp[[grep("NMDS1", names(tmp))]],
+        tmp[[grep("NMDS2", names(tmp))]],
+        tmp[[grep("NMDS3", names(tmp))]]), ncol = 3)
+    
+    hullList[[thisSite]] <- t(convhulln(matList[[thisSite]]))
+    
+  }
+  
+  
+  # this will run if you have legend = TRUE (the default)
+  if(legend){
+    # this slows down the plotting which is necessary otherwise
+    # the printing can lag and the legend goes to a funny size
+    Sys.sleep(0.5)
+    
+    # you can change your legend as per 'legend' commands
+    legend3d("bottom", legend = allSites,
+             # uses the same cols as for plotting
+             col = cols,
+             # symbol size
+             pch = 16,
+             inset=c(0.02),
+             horiz = TRUE)
+    
+  }
+  
+  
+  # this loop plots the hulls
+  for(hull in seq_along(matList)){
+    rgl.triangles(matList[[hull]][hullList[[hull]],1],matList[[hull]][hullList[[hull]],2],matList[[hull]][hullList[[hull]],3],
+                  col=cols[hull],
+                  
+                  # change the alpha to change how see through they are
+                  alpha=.6)
+    
+  }
+  
+}
 
 
 
