@@ -532,7 +532,10 @@ meg_barplot <- function(melted_data,
                                           ordered=T)
     
     setkey(bar_subset, Normalized_Count)
-    bar_subset[, sample_number:=(length(unique(bar_subset[[sample_var]]))), by=c(group_var, 'Name')]
+    #bar_subset[, sample_number:=(length(unique(bar_subset[[sample_var]]))), by=c(group_var, 'Name')] # commented this one out sample number was the total number of samples
+    bar_subset[, sample_number:=(.N), by=c(group_var, 'Name')]
+
+    
     bar_subset <- unique(bar_subset[, sum(Normalized_Count) / sample_number,
                                                   by=c(group_var, 'Name')])
     
