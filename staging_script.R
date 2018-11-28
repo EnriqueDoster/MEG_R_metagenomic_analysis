@@ -49,7 +49,7 @@ annotations <- unique(annotations, by = key(annotations))
 #biom convert -i feature-table.biom -o otu_table_json.biom --table-type="OTU table" --to-json
 
 # Now, specify file location
-microbiome_temp_metadata <- "16S/project_mapping_file.tsv"
+microbiome_temp_metadata_file <- "16S/project_mapping_file.tsv"
 
 biom_file <- "16S/exported-biom-table/otu_table_json.biom"
 tre_file <- "16S/exported-tree/tree.nwk"
@@ -165,7 +165,6 @@ microbiome_statistical_analyses = list(
     random_effect = NA
   )
 )
-
 ## Run the analysis
 
 
@@ -173,13 +172,14 @@ microbiome_statistical_analyses = list(
 source('scripts/qiime2_2_phyloseq.R')
 ## Run the script that handles resistome data and microbiome data. 
 source('scripts/metagenomeSeq_analytic_template_plus_qiime.R')
+#source('scripts/HMM_metagenomeSeq_AMR.R')
+
 # After running this script, these are the useful objects that contain all the data aggregated to different levels
 # The metagenomeSeq objects are contained in these lists "AMR_analytic_data" and "microbiome_analytic_data"
 # Melted counts are contained in these data.table objects "amr_melted_analytic" "microbiome_melted_analytic"
 
 ## Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
 source('scripts/print_figures.R')
-
 
 
 
