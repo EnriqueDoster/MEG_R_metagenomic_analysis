@@ -28,7 +28,9 @@ taxa <- as.matrix(taxa.df)
 TAXA <- tax_table(taxa)
 
 # Now, it's sample metadata
-sampleDF = read.delim(microbiome_temp_metadata, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+sampleDF = read.delim(microbiome_temp_metadata_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+microbiome_temp_metadata = read.delim(microbiome_temp_metadata_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+
 all(rownames(sampleDF) %in% sample_names(OTU_table)) # Check that the rownames match the sample names
 METADATA = sample_data(sampleDF)# Convert to "sample_data" class in phyloseq
 
