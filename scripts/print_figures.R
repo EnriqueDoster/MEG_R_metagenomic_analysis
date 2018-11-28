@@ -202,67 +202,67 @@ for( a in 1:length(microbiome_statistical_analyses) ) {
 ########################
 ## Output of matrices ##
 ########################
-write.csv(make_sparse(amr_class, 'class', c('class')), 'MEG_analysis/amr_matrices/sparse_normalized/AMR_Class_Sparse_Normalized.csv',
+write.csv(make_sparse(amr_class, 'class', c('class')), 'amr_matrices/sparse_normalized/AMR_Class_Sparse_Normalized.csv',
           row.names=T)
-write.table(amr_class, 'MEG_analysis/amr_matrices/normalized/AMR_Class_Normalized.csv', sep=',', row.names = F, col.names = T)
-write.table(amr_class_raw, 'MEG_analysis/amr_matrices/raw/AMR_Class_Raw.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_class, 'amr_matrices/normalized/AMR_Class_Normalized.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_class_raw, 'amr_matrices/raw/AMR_Class_Raw.csv', sep=',', row.names = F, col.names = T)
 
 
-write.csv(make_sparse(amr_mech, 'mechanism', c('mechanism')), 'MEG_analysis/amr_matrices/sparse_normalized/AMR_Mechanism_Sparse_Normalized.csv',
+write.csv(make_sparse(amr_mech, 'mechanism', c('mechanism')), 'amr_matrices/sparse_normalized/AMR_Mechanism_Sparse_Normalized.csv',
           row.names=T)
-write.table(amr_mech, 'MEG_analysis/amr_matrices/normalized/AMR_Mechanism_Normalized.csv', sep=',', row.names = F, col.names = T)
-write.table(amr_mech_raw, 'MEG_analysis/amr_matrices/raw/AMR_Mechanism_Raw.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_mech, 'amr_matrices/normalized/AMR_Mechanism_Normalized.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_mech_raw, 'amr_matrices/raw/AMR_Mechanism_Raw.csv', sep=',', row.names = F, col.names = T)
 
-write.csv(make_sparse(amr_group, 'group', c('group')), 'MEG_analysis/amr_matrices/sparse_normalized/AMR_Group_Sparse_Normalized.csv',
+write.csv(make_sparse(amr_group, 'group', c('group')), 'amr_matrices/sparse_normalized/AMR_Group_Sparse_Normalized.csv',
           row.names=T)
-write.table(amr_group, 'MEG_analysis/amr_matrices/normalized/AMR_Group_Normalized.csv', sep=',', row.names = F, col.names = T)
-write.table(amr_mech_raw, 'MEG_analysis/amr_matrices/raw/AMR_Group_Raw.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_group, 'amr_matrices/normalized/AMR_Group_Normalized.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_mech_raw, 'amr_matrices/raw/AMR_Group_Raw.csv', sep=',', row.names = F, col.names = T)
 
 write.csv(make_sparse(amr_norm, 'header', c('header', 'class', 'mechanism', 'group')),
-          'MEG_analysis/amr_matrices/sparse_normalized/AMR_Gene_Sparse_Normalized.csv',
+          'amr_matrices/sparse_normalized/AMR_Gene_Sparse_Normalized.csv',
           row.names=T)
-write.table(amr_norm, 'MEG_analysis/amr_matrices/normalized/AMR_Gene_Normalized.csv', sep=',', row.names = F, col.names = T)
-write.table(amr_raw, 'MEG_analysis/amr_matrices/raw/AMR_Gene_Raw.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_norm, 'amr_matrices/normalized/AMR_Gene_Normalized.csv', sep=',', row.names = F, col.names = T)
+write.table(amr_raw, 'amr_matrices/raw/AMR_Gene_Raw.csv', sep=',', row.names = F, col.names = T)
 
 
 write.csv(make_sparse(microbiome_domain, 'Domain', c('Domain')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Domain_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Domain_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_domain, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Domain_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_domain_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Domain_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_domain, 'microbiome_matrices/normalized/microbiome_Domain_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_domain_raw, 'microbiome_matrices/raw/microbiome_Domain_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_phylum, 'Phylum', c('Phylum')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Phylum_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Phylum_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_phylum, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Phylum_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_phylum_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Phylum_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_phylum, 'microbiome_matrices/normalized/microbiome_Phylum_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_phylum_raw, 'microbiome_matrices/raw/microbiome_Phylum_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_class, 'Class', c('Class')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Class_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Class_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_class, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Class_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_class_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Class_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_class, 'microbiome_matrices/normalized/microbiome_Class_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_class_raw, 'microbiome_matrices/raw/microbiome_Class_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_order, 'Order', c('Order')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Order_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Order_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_order, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Order_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_order_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Order_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_order, 'microbiome_matrices/normalized/microbiome_Order_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_order_raw, 'microbiome_matrices/raw/microbiome_Order_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_family, 'Family', c('Family')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Family_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Family_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_family, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Family_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_family_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Family_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_family, 'microbiome_matrices/normalized/microbiome_Family_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_family_raw, 'microbiome_matrices/raw/microbiome_Family_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_genus, 'Genus', c('Genus')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Genus_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Genus_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_genus, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Genus_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_genus_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Genus_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_genus, 'microbiome_matrices/normalized/microbiome_Genus_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_genus_raw, 'microbiome_matrices/raw/microbiome_Genus_Raw.csv', sep=',', row.names=F, col.names=T)
 
 write.csv(make_sparse(microbiome_species, 'Species', c('Species')),
-          'MEG_analysis/microbiome_matrices/sparse_normalized/microbiome_Species_Sparse_Normalized.csv',
+          'microbiome_matrices/sparse_normalized/microbiome_Species_Sparse_Normalized.csv',
           row.names=T)
-write.table(microbiome_species, 'MEG_analysis/microbiome_matrices/normalized/microbiome_Species_Normalized.csv', sep=',', row.names=F, col.names=T)
-write.table(microbiome_species_raw, 'MEG_analysis/microbiome_matrices/raw/microbiome_Species_Raw.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_species, 'microbiome_matrices/normalized/microbiome_Species_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_species_raw, 'microbiome_matrices/raw/microbiome_Species_Raw.csv', sep=',', row.names=F, col.names=T)
