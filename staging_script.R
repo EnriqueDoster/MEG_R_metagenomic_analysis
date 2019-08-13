@@ -13,31 +13,31 @@ stats_output_dir = 'stats'
 # In which column of the metadata file are the sample IDs stored?
 sample_column_id = 'ID'
 
+####################
+## File locations ##
+####################
+## The files you want to use for input to this (for the MEG group analyses)
+## is the AMR_analytic_matrix.csv. So you should have pulled these files from the output of the nextflow pipeline
+## and you are now performing this analysis on your local machine. 
 
-# AMR analysis 
+## For the AMR analysis, you will also need to download the megares_annotations.csv
+## file from the MEGARes website; the annotation file must be from the same version
+## of the database as the file you used in the AmrPlusPlus pipeline, i.e. the headers
+## must match between the annotation file and the database file.
+
 # Where is the metadata file stored on your machine?
-amr_metadata_filepath = '../retail_metadata.csv'
+amr_metadata_filepath = '../SamplingInventory_18samples.csv'
+amr_count_matrix_filepath = '../KSU_AMR_analytic_matrix.csv'
 # Name of the megares annotation file used for this project
-megares_annotation_filename = 'data/amr/megares_annotations_v1.01.csv'
+megares_annotation_filename = 'data/amr/megares_annotations_v1.02.csv'
 
-# Load the data, MEGARes annotations, and metadata
-amr <- newMRexperiment(read.table('../AMR_analytic_matrix.csv', header=T, row.names=1, sep=','))
-amr <- newMRexperiment(round(MRcounts(amr),0))
-amr_temp_metadata <- read.csv(amr_metadata_filepath, header=T)
-amr_temp_metadata[, sample_column_id] <- make.names(amr_temp_metadata[, sample_column_id])
+# Where is the metadata file for the microbiome samples stored on your machine?
+microbiome_temp_metadata_file = "../SamplingInventory_18samples.csv"
+kraken_temp_file = '../KSU_kraken_analytic_matrix.csv'
 
-# Annotation for regular AMR++ analysis
-#annotations <- data.table(read.csv(megares_annotation_filename, header=T))
-#setkey(annotations, header)  # Data tables are SQL objects with optional primary keys
-
-## Annotations for HMMs
-annotations <- data.table(read.csv(megares_annotation_filename, header=T))
-annotations[,header := NULL]
-setkey(annotations, group)  # Data tables are SQL objects with optional primary keys
-setkey(annotations, group)
-annotations <- unique(annotations, by = key(annotations))
-
-
+#################################
+## Microbiome - 16S or kraken? ##
+#################################
 
 ## First, the 16S files. 
 # These are the files you'll need to export from qiime2
@@ -48,23 +48,15 @@ annotations <- unique(annotations, by = key(annotations))
 #then you need to convert the biom file to "json" using qiime1
 #biom convert -i feature-table.biom -o otu_table_json.biom --table-type="OTU table" --to-json
 
-# Now, specify file location
-microbiome_temp_metadata_file <- "16S/project_mapping_file.tsv"
+##
+## If you are using qiime2 results, uncomment the four lines below and specify the location to each file
+##
+#biom_file <- "16S/exported-biom-table/otu_table_json.biom"
+#tre_file <- "16S/exported-tree/tree.nwk"
+#tax_fasta <- "16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
+#taxa_file <- "16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
-biom_file <- "16S/exported-biom-table/otu_table_json.biom"
-tre_file <- "16S/exported-tree/tree.nwk"
-tax_fasta <- "16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
-taxa_file <- "16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
-
-## The files you want to use for input to this (for the MEG group analyses)
-## is the AMR_analytic_matrix.csv. So you should have pulled these files from the output of the nextflow pipeline
-## and you are now performing this analysis on your local machine. 
-
-## For the AMR analysis, you will also need to download the megares_annotations.csv
-## file from the MEGARes website; the annotation file must be from the same version
-## of the database as the file you used in the AmrPlusPlus pipeline, i.e. the headers
-## must match between the annotation file and the database file.
 
 
 ###################
@@ -82,16 +74,30 @@ AMR_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Gender',
     subsets = list(),
-    exploratory_var = 'Variable1'
+    exploratory_var = 'Gender'
   ),
   # Analysis 2
   # Description: 
   list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    exploratory_var = 'Variable2'
+    name = 'Age_cat',
+    subsets = list(),
+    exploratory_var = 'Age_cat'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Housing_facility',
+    subsets = list(),
+    exploratory_var = 'Housing_facility'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'ID',
+    subsets = list(),
+    exploratory_var = 'ID'
   )
 )
 
@@ -99,16 +105,30 @@ microbiome_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Gender',
     subsets = list(),
-    exploratory_var = 'Variable1'
+    exploratory_var = 'Gender'
   ),
   # Analysis 2
   # Description: 
   list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    exploratory_var = 'Variable2'
+    name = 'Age_cat',
+    subsets = list(),
+    exploratory_var = 'Age_cat'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Housing_facility',
+    subsets = list(),
+    exploratory_var = 'Housing_facility'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'ID',
+    subsets = list(),
+    exploratory_var = 'ID'
   )
 )
 
@@ -123,22 +143,10 @@ AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Gender',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
-    random_effect = NA
-  ),
-  
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    model_matrix = '~ 0 + Gender + Age_days',
+    contrasts = list('GenderMale - GenderFemale'),
     random_effect = NA
   )
 )
@@ -147,21 +155,10 @@ microbiome_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Gender',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
-    random_effect = NA
-  ),
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    model_matrix = '~ 0 + Gender + Age_days',
+    contrasts = list('GenderMale - GenderFemale'),
     random_effect = NA
   )
 )
@@ -169,9 +166,9 @@ microbiome_statistical_analyses = list(
 
 
 ## Run the script to convert qiime2 results into "microbiome" objects to be used with amr_plus_plus
-source('scripts/qiime2_2_phyloseq.R')
+#source('scripts/qiime2_2_phyloseq.R')
 ## Run the script that handles resistome data and microbiome data. 
-source('scripts/metagenomeSeq_analytic_template_plus_qiime.R')
+source('scripts/metagenomeSeq_megares_kraken.R')
 #source('scripts/HMM_metagenomeSeq_AMR.R')
 
 # After running this script, these are the useful objects that contain all the data aggregated to different levels
@@ -181,6 +178,9 @@ source('scripts/metagenomeSeq_analytic_template_plus_qiime.R')
 ## Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
 source('scripts/print_figures.R')
 
+
+all_metadata <- cbind(microbiome_metadata,metadata)
+View(metadata)
 
 
 
