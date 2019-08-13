@@ -236,6 +236,13 @@ amr_melted_raw_analytic <- rbind(melt_dt(MRcounts(amr_class_raw_analytic), 'Clas
 # this set of commands splits the rownames into their taxonomic levels and
 # fills empty values with NA.  We then join that taxonomy data table with
 # the actual data and aggregate using lapply as before.
+temp_microbiome <- read.table(kraken_temp_file, header=T, row.names=1, sep=',')
+microbiome <- newMRexperiment(temp_microbiome[rowSums(temp_microbiome) > 0, ])
+# Load microbiome metadata
+microbiome_temp_metadata = read.delim(microbiome_temp_metadata_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+
+
+
 microbiome_taxonomy <- data.table(id=rownames(microbiome))
 setDT(microbiome_taxonomy)[, c('Domain',
                                'Kingdom',

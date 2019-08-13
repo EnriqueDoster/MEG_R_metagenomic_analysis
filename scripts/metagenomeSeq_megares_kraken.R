@@ -15,60 +15,59 @@ set.seed(154)  # Seed the RNG, necessary for reproducibility
 
 # We usually filter out genes with wild-type potential.  If you want to include these
 # in your analysis, comment this vector out
-snp_regex = ''
-  # c('ACRR',
-  #             'CATB',
-  #             'CLS',
-  #             'DFRC',
-  #             'DHFR',
-  #             'DHFRIII',
-  #             'DHFRIX',
-  #             'EMBA',
-  #             'embB',
-  #             'EMBB',
-  #             'EMBC',
-  #             'EMBR',
-  #             'ETHA',
-  #             'FOLP',
-  #             'GIDB',
-  #             'GYRA',
-  #             'gyrB',
-  #             'GYRB',
-  #             'INHA',
-  #             'INIA',
-  #             'INIC',
-  #             'KASA',
-  #             'LIAFSR',
-  #             'LMRA',
-  #             'MARR',
-  #             'MEXR',
-  #             'MEXZ',
-  #             'mprF',
-  #             'MPRF',
-  #             'NDH',
-  #             'omp36',
-  #             'OMP36',
-  #             'OMPF',
-  #             'OPRD',
-  #             'PARC',
-  #             'parE',
-  #             'PARE',
-  #             'PGSA',
-  #             'phoP',
-  #             'PHOP',
-  #             'PNCA',
-  #             'POR',
-  #             'PORB',
-  #             'RAMR',
-  #             'rpoB',
-  #             'RPOB',
-  #             'RPOC',
-  #             'RPSL',
-  #             'SOXS',
-  #             'tetR',
-  #             'TETR',
-  #             'TLYA',
-  #             'TUFAB')
+snp_regex = c('ACRR',
+              'CATB',
+              'CLS',
+              'DFRC',
+              'DHFR',
+              'DHFRIII',
+              'DHFRIX',
+              'EMBA',
+              'embB',
+              'EMBB',
+              'EMBC',
+              'EMBR',
+              'ETHA',
+              'FOLP',
+              'GIDB',
+              'GYRA',
+              'gyrB',
+              'GYRB',
+              'INHA',
+              'INIA',
+              'INIC',
+              'KASA',
+              'LIAFSR',
+              'LMRA',
+              'MARR',
+              'MEXR',
+              'MEXZ',
+              'mprF',
+              'MPRF',
+              'NDH',
+              'omp36',
+              'OMP36',
+              'OMPF',
+              'OPRD',
+              'PARC',
+              'parE',
+              'PARE',
+              'PGSA',
+              'phoP',
+              'PHOP',
+              'PNCA',
+              'POR',
+              'PORB',
+              'RAMR',
+              'rpoB',
+              'RPOB',
+              'RPOC',
+              'RPSL',
+              'SOXS',
+              'tetR',
+              'TETR',
+              'TLYA',
+              'TUFAB')
 
 
 ##########################
@@ -121,7 +120,6 @@ for( dtype in c('Microbiome') ) {
 }
 
 
-
 ifelse(!dir.exists(file.path('amr_matrices')), dir.create(file.path('amr_matrices'), mode='777'), FALSE)
 ifelse(!dir.exists(file.path('microbiome_matrices')), dir.create(file.path('microbiome_matrices'), mode='777'), FALSE)
 
@@ -133,6 +131,8 @@ ifelse(!dir.exists(file.path('microbiome_matrices/sparse_normalized')), dir.crea
 ifelse(!dir.exists(file.path('microbiome_matrices/normalized')), dir.create(file.path('microbiome_matrices/normalized'), mode='777'), FALSE)
 ifelse(!dir.exists(file.path('microbiome_matrices/raw')), dir.create(file.path('microbiome_matrices/raw'), mode='777'), FALSE)
 
+
+
 ####################
 ##       AMR      ##
 ####################
@@ -141,12 +141,10 @@ amr <- newMRexperiment(read.table(amr_count_matrix_filepath, header=T, row.names
 amr <- newMRexperiment(round(MRcounts(amr),0))
 amr_temp_metadata <- read.csv(amr_metadata_filepath, header=T)
 amr_temp_metadata[, sample_column_id] <- make.names(amr_temp_metadata[, sample_column_id])
-## Annotations for HMMs
+# Annotation for regular AMR++ analysis
 annotations <- data.table(read.csv(megares_annotation_filename, header=T))
-annotations[,header := NULL]
-setkey(annotations, group)  # Data tables are SQL objects with optional primary keys
-setkey(annotations, group)
-annotations <- unique(annotations, by = key(annotations))
+setkey(annotations, header)  # Data tables are SQL objects with optional primary keys
+
 
 
 ##### optional edits ###
@@ -167,12 +165,12 @@ amr_raw <- data.table(MRcounts(amr, norm=F))
 
 # Aggregate the normalized counts for AMR using the annotations data table, SQL
 # outer join, and aggregation with vectorized lapply
-amr_norm[, group :=( rownames(amr) ), ]
-setkey(amr_norm, group)
+amr_norm[, header :=( rownames(amr) ), ]
+setkey(amr_norm, header)
 amr_norm <- annotations[amr_norm]  # left outer join
 
-amr_raw[, group :=( rownames(amr) ), ]
-setkey(amr_raw, group)
+amr_raw[, header :=( rownames(amr) ), ]
+setkey(amr_raw, header)
 amr_raw <- annotations[amr_raw]  # left outer join
 
 # subset groups that correspond to potentially wild-type genes
@@ -183,50 +181,51 @@ amr_raw <- amr_raw[!(group %in% snp_regex), ]
 amr_norm<- amr_norm[!(group %in% snp_regex), ]
 
 # Group the AMR data by level for analysis
-amr_class <- amr_norm[, lapply(.SD, sum), by='class', .SDcols=!c('mechanism', 'group')]
+amr_class <- amr_norm[, lapply(.SD, sum), by='class', .SDcols=!c('header', 'mechanism', 'group')]
 amr_class_analytic <- newMRexperiment(counts=amr_class[, .SD, .SDcols=!'class'])
 rownames(amr_class_analytic) <- amr_class$class
 
-amr_class_raw <- amr_raw[, lapply(.SD, sum), by='class', .SDcols=!c('mechanism', 'group')]
+amr_class_raw <- amr_raw[, lapply(.SD, sum), by='class', .SDcols=!c('header', 'mechanism', 'group')]
 amr_class_raw_analytic <- newMRexperiment(counts=amr_class_raw[, .SD, .SDcols=!'class'])
 rownames(amr_class_raw_analytic) <- amr_class_raw$class
 
-amr_mech <- amr_norm[, lapply(.SD, sum), by='mechanism', .SDcols=!c('class', 'group')]
+amr_mech <- amr_norm[, lapply(.SD, sum), by='mechanism', .SDcols=!c('header', 'class', 'group')]
 amr_mech_analytic <- newMRexperiment(counts=amr_mech[, .SD, .SDcols=!'mechanism'])
 rownames(amr_mech_analytic) <- amr_mech$mechanism
 
-amr_mech_raw <- amr_raw[, lapply(.SD, sum), by='mechanism', .SDcols=!c('class', 'group')]
+amr_mech_raw <- amr_raw[, lapply(.SD, sum), by='mechanism', .SDcols=!c('header', 'class', 'group')]
 amr_mech_raw_analytic <- newMRexperiment(counts=amr_mech_raw[, .SD, .SDcols=!'mechanism'])
 rownames(amr_mech_raw_analytic) <- amr_mech_raw$mechanism
 
-amr_group <- amr_norm[, lapply(.SD, sum), by='group', .SDcols=!c('mechanism', 'class')]
+amr_group <- amr_norm[, lapply(.SD, sum), by='group', .SDcols=!c('header', 'mechanism', 'class')]
 amr_group_analytic <- newMRexperiment(counts=amr_group[, .SD, .SDcols=!'group'])
 rownames(amr_group_analytic) <- amr_group$group
 
-amr_group_raw <- amr_raw[, lapply(.SD, sum), by='group', .SDcols=!c('mechanism', 'class')]
+amr_group_raw <- amr_raw[, lapply(.SD, sum), by='group', .SDcols=!c('header', 'mechanism', 'class')]
 amr_group_raw_analytic <- newMRexperiment(counts=amr_group_raw[, .SD, .SDcols=!'group'])
 rownames(amr_group_raw_analytic) <- amr_group_raw$group
 
-amr_hmm_analytic <- newMRexperiment(
+amr_gene_analytic <- newMRexperiment(
     counts=amr_norm[!(group %in% snp_regex),
-                    .SD, .SDcols=!c('class', 'mechanism','group')])
-amr_hmm_raw_analytic <- newMRexperiment(
+                    .SD, .SDcols=!c('header', 'class', 'mechanism', 'group')])
+amr_gene_raw_analytic <- newMRexperiment(
     counts=amr_raw[!(group %in% snp_regex),
-                   .SD, .SDcols=!c('class', 'mechanism', 'group')])
+                   .SD, .SDcols=!c('header', 'class', 'mechanism', 'group')])
 
-rownames(amr_hmm_analytic) <- amr_norm$group
-rownames(amr_hmm_raw_analytic) <- amr_raw$group
+rownames(amr_gene_analytic) <- amr_norm$header
+rownames(amr_gene_raw_analytic) <- amr_raw$header
 
 
 # Make long data frame for plotting with ggplot2
 amr_melted_analytic <- rbind(melt_dt(MRcounts(amr_class_analytic), 'Class'),
                              melt_dt(MRcounts(amr_mech_analytic), 'Mechanism'),
                              melt_dt(MRcounts(amr_group_analytic), 'Group'),
-                             melt_dt(MRcounts(amr_hmm_analytic), 'HMM'))
+                             melt_dt(MRcounts(amr_gene_analytic), 'Gene'))
 amr_melted_raw_analytic <- rbind(melt_dt(MRcounts(amr_class_raw_analytic), 'Class'),
                                  melt_dt(MRcounts(amr_mech_raw_analytic), 'Mechanism'),
                                  melt_dt(MRcounts(amr_group_raw_analytic), 'Group'),
-                                 melt_dt(MRcounts(amr_hmm_raw_analytic), 'HMM'))
+                                 melt_dt(MRcounts(amr_gene_raw_analytic), 'Gene'))
+
 
 
 ####################
@@ -236,6 +235,11 @@ amr_melted_raw_analytic <- rbind(melt_dt(MRcounts(amr_class_raw_analytic), 'Clas
 # this set of commands splits the rownames into their taxonomic levels and
 # fills empty values with NA.  We then join that taxonomy data table with
 # the actual data and aggregate using lapply as before.
+temp_microbiome <- read.table(kraken_temp_file, header=T, row.names=1, sep=',')
+microbiome <- newMRexperiment(temp_microbiome[rowSums(temp_microbiome) > 0, ])
+# Load microbiome metadata
+microbiome_temp_metadata = read.delim(microbiome_temp_metadata_file, sep = ",", stringsAsFactors=FALSE, row.names=NULL)
+
 microbiome_taxonomy <- data.table(id=rownames(microbiome))
 setDT(microbiome_taxonomy)[, c('Domain',
                                'Kingdom',
@@ -267,59 +271,59 @@ setkey(microbiome_raw, id)
 microbiome_raw <- microbiome_taxonomy[microbiome_raw]  # left outer join
 
 # Group the microbiome data by level for analysis, removing NA entries
-microbiome_domain <- microbiome_norm[!is.na(Domain) & Domain != 'NA', lapply(.SD, sum), by='Domain', .SDcols=!1:8]
+microbiome_domain <- microbiome_norm[!is.na(Domain) & Domain != 'NA', lapply(.SD, sum), by='Domain', .SDcols=!1:9]
 microbiome_domain_analytic <- newMRexperiment(counts=microbiome_domain[, .SD, .SDcols=!'Domain'])
 rownames(microbiome_domain_analytic) <- microbiome_domain$Domain
 
-microbiome_domain_raw <- microbiome_raw[!is.na(Domain) & Domain != 'NA', lapply(.SD, sum), by='Domain', .SDcols=!1:8]
+microbiome_domain_raw <- microbiome_raw[!is.na(Domain) & Domain != 'NA', lapply(.SD, sum), by='Domain', .SDcols=!1:9]
 microbiome_domain_raw_analytic <- newMRexperiment(counts=microbiome_domain_raw[, .SD, .SDcols=!'Domain'])
 rownames(microbiome_domain_raw_analytic) <- microbiome_domain_raw$Domain
 
-microbiome_phylum <- microbiome_norm[!is.na(Phylum) & Phylum != 'NA', lapply(.SD, sum), by='Phylum', .SDcols=!1:8]
+microbiome_phylum <- microbiome_norm[!is.na(Phylum) & Phylum != 'NA', lapply(.SD, sum), by='Phylum', .SDcols=!1:9]
 microbiome_phylum_analytic <- newMRexperiment(counts=microbiome_phylum[, .SD, .SDcols=!'Phylum'])
 rownames(microbiome_phylum_analytic) <- microbiome_phylum$Phylum
 
-microbiome_phylum_raw <- microbiome_raw[!is.na(Phylum) & Phylum != 'NA', lapply(.SD, sum), by='Phylum', .SDcols=!1:8]
+microbiome_phylum_raw <- microbiome_raw[!is.na(Phylum) & Phylum != 'NA', lapply(.SD, sum), by='Phylum', .SDcols=!1:9]
 microbiome_phylum_raw_analytic <- newMRexperiment(counts=microbiome_phylum_raw[, .SD, .SDcols=!'Phylum'])
 rownames(microbiome_phylum_raw_analytic) <- microbiome_phylum_raw$Phylum
 
-microbiome_class <- microbiome_norm[!is.na(Class) & Class != 'NA' & Class != '', lapply(.SD, sum), by='Class', .SDcols=!1:8]
+microbiome_class <- microbiome_norm[!is.na(Class) & Class != 'NA' & Class != '', lapply(.SD, sum), by='Class', .SDcols=!1:9]
 microbiome_class_analytic <- newMRexperiment(counts=microbiome_class[, .SD, .SDcols=!'Class'])
 rownames(microbiome_class_analytic) <- microbiome_class$Class
 
-microbiome_class_raw <- microbiome_raw[!is.na(Class) & Class != 'NA' & Class != '', lapply(.SD, sum), by='Class', .SDcols=!1:8]
+microbiome_class_raw <- microbiome_raw[!is.na(Class) & Class != 'NA' & Class != '', lapply(.SD, sum), by='Class', .SDcols=!1:9]
 microbiome_class_raw_analytic <- newMRexperiment(counts=microbiome_class_raw[, .SD, .SDcols=!'Class'])
 rownames(microbiome_class_raw_analytic) <- microbiome_class_raw$Class
 
-microbiome_order <- microbiome_norm[!is.na(Order) & Order != 'NA' & Order != '', lapply(.SD, sum), by='Order', .SDcols=!1:8]
+microbiome_order <- microbiome_norm[!is.na(Order) & Order != 'NA' & Order != '', lapply(.SD, sum), by='Order', .SDcols=!1:9]
 microbiome_order_analytic <- newMRexperiment(counts=microbiome_order[, .SD, .SDcols=!'Order'])
 rownames(microbiome_order_analytic) <- microbiome_order$Order
 
-microbiome_order_raw <- microbiome_raw[!is.na(Order) & Order != 'NA' & Order != '', lapply(.SD, sum), by='Order', .SDcols=!1:8]
+microbiome_order_raw <- microbiome_raw[!is.na(Order) & Order != 'NA' & Order != '', lapply(.SD, sum), by='Order', .SDcols=!1:9]
 microbiome_order_raw_analytic <- newMRexperiment(counts=microbiome_order_raw[, .SD, .SDcols=!'Order'])
 rownames(microbiome_order_raw_analytic) <- microbiome_order_raw$Order
 
-microbiome_family <- microbiome_norm[!is.na(Family) & Family != 'NA' & Family != '', lapply(.SD, sum), by='Family', .SDcols=!1:8]
+microbiome_family <- microbiome_norm[!is.na(Family) & Family != 'NA' & Family != '', lapply(.SD, sum), by='Family', .SDcols=!1:9]
 microbiome_family_analytic <- newMRexperiment(counts=microbiome_family[, .SD, .SDcols=!'Family'])
 rownames(microbiome_family_analytic) <- microbiome_family$Family
 
-microbiome_family_raw <- microbiome_raw[!is.na(Family) & Family != 'NA' & Family != '', lapply(.SD, sum), by='Family', .SDcols=!1:8]
+microbiome_family_raw <- microbiome_raw[!is.na(Family) & Family != 'NA' & Family != '', lapply(.SD, sum), by='Family', .SDcols=!1:9]
 microbiome_family_raw_analytic <- newMRexperiment(counts=microbiome_family_raw[, .SD, .SDcols=!'Family'])
 rownames(microbiome_family_raw_analytic) <- microbiome_family_raw$Family
 
-microbiome_genus <- microbiome_norm[!is.na(Genus) & Genus != 'NA' & Genus != '', lapply(.SD, sum), by='Genus', .SDcols=!1:8]
+microbiome_genus <- microbiome_norm[!is.na(Genus) & Genus != 'NA' & Genus != '', lapply(.SD, sum), by='Genus', .SDcols=!1:9]
 microbiome_genus_analytic <- newMRexperiment(counts=microbiome_genus[, .SD, .SDcols=!'Genus'])
 rownames(microbiome_genus_analytic) <- microbiome_genus$Genus
 
-microbiome_genus_raw <- microbiome_raw[!is.na(Genus) & Genus != 'NA' & Genus != '', lapply(.SD, sum), by='Genus', .SDcols=!1:8]
+microbiome_genus_raw <- microbiome_raw[!is.na(Genus) & Genus != 'NA' & Genus != '', lapply(.SD, sum), by='Genus', .SDcols=!1:9]
 microbiome_genus_raw_analytic <- newMRexperiment(counts=microbiome_genus_raw[, .SD, .SDcols=!'Genus'])
 rownames(microbiome_genus_raw_analytic) <- microbiome_genus_raw$Genus
 
-microbiome_species <- microbiome_norm[!is.na(Species) & Species != 'NA' & Species != '', lapply(.SD, sum), by='Species', .SDcols=!1:8]
+microbiome_species <- microbiome_norm[!is.na(Species) & Species != 'NA' & Species != '', lapply(.SD, sum), by='Species', .SDcols=!1:9]
 microbiome_species_analytic <- newMRexperiment(counts=microbiome_species[, .SD, .SDcols=!'Species'])
 rownames(microbiome_species_analytic) <- microbiome_species$Species
 
-microbiome_species_raw <- microbiome_raw[!is.na(Species) & Species != 'NA' & Species != '', lapply(.SD, sum), by='Species', .SDcols=!1:8]
+microbiome_species_raw <- microbiome_raw[!is.na(Species) & Species != 'NA' & Species != '', lapply(.SD, sum), by='Species', .SDcols=!1:9]
 microbiome_species_raw_analytic <- newMRexperiment(counts=microbiome_species_raw[, .SD, .SDcols=!'Species'])
 rownames(microbiome_species_raw_analytic) <- microbiome_species_raw$Species
 
@@ -351,13 +355,13 @@ setkeyv(microbiome_metadata, sample_column_id)
 AMR_analytic_data <- c(amr_class_analytic,
                        amr_mech_analytic,
                        amr_group_analytic,
-                       amr_hmm_analytic)
-AMR_analytic_names <- c('Class', 'Mechanism', 'Group', 'HMM')
+                       amr_gene_analytic)
+AMR_analytic_names <- c('Class', 'Mechanism', 'Group', 'Gene')
 AMR_raw_analytic_data <- c(amr_class_raw_analytic,
                            amr_mech_raw_analytic,
                            amr_group_raw_analytic,
-                           amr_hmm_raw_analytic)
-AMR_raw_analytic_names <- c('Class', 'Mechanism', 'Group', 'HMM')
+                           amr_gene_raw_analytic)
+AMR_raw_analytic_names <- c('Class', 'Mechanism', 'Group', 'Gene')
 microbiome_analytic_data <- c(microbiome_domain_analytic,
                           microbiome_phylum_analytic,
                           microbiome_class_analytic,
