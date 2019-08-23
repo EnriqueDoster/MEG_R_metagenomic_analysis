@@ -151,7 +151,7 @@ meg_ordination <- function(data_list,
         if( method == 'NMDS' ) {
             # Set parallel to whatever your computer can support in terms of CPU count
             #ord.res <- metaMDS(t_data, autotransform=F, parallel=7, trymax=1000)  #### adding way more try max, from 49 to 1000
-            ord.res <- metaMDS(t_data, autotransform=F, trymax=2000, stratmax = 0.999999)  #### adding way more try max, from 49 to 1000, removed parallel=7, 
+            ord.res <- metaMDS(t_data, autotransform=F, trymax=100, stratmax = 0.999999)  #### adding way more try max, from 49 to 1000, removed parallel=7, 
             ord_points <- data.table(ord.res$points)
             names(ord_points) <- c('Ord1', 'Ord2')
             ord_points[, ID :=( rownames(ord.res$points) )]
