@@ -7,7 +7,7 @@
 OTU_table <- import_biom(biom_file,tre_file,tax_fasta) # this has count table and phylogenetic tree
 
 ## Taxonomic information. The taxonomy.tsv file must be edited. Erase the "confidence" column". data.table to split up the taxonomic classification by ";" and rename each column by it's taxonomic level
-taxa <- read.delim(taxa_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+taxa <- read.csv(taxa_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
 row.names(taxa) <- paste(row.names(taxa),taxa[,1], sep= '; ')
 taxa.dt <- as.data.table(taxa)
 fixed_taxonomy <- data.table(id=rownames(taxa))
@@ -28,7 +28,8 @@ taxa <- as.matrix(taxa.df)
 TAXA <- tax_table(taxa)
 
 # Now, it's sample metadata
-sampleDF = read.delim(microbiome_temp_metadata_file, sep = "\t", stringsAsFactors=FALSE, row.names=1)
+sampleDF = read.delim(microbiome_temp_metadata_file, sep = ",", stringsAsFactors=FALSE, row.names=1)
+microbiome_temp_metadata = read.delim(microbiome_temp_metadata_file, sep = ",", stringsAsFactors=FALSE, row.names=NULL)
 
 all(rownames(sampleDF) %in% sample_names(OTU_table)) # Check that the rownames match the sample names
 METADATA = sample_data(sampleDF)# Convert to "sample_data" class in phyloseq
