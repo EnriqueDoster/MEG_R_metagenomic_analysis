@@ -254,8 +254,7 @@ meg_ordination <- function(data_list,
     return(all_ord)
 }
 
-
-heatmap_col <- c("#f77a74", "#efdfa7", "#f7f6ed", "#9ce2de", "#849bed")
+heatmap_col <- c("#849bed", "#9ce2de","#f7f6ed","#efdfa7","#f77a74")
 meg_heatmap <- function(melted_data,
                         metadata,
                         sample_var,
