@@ -1,0 +1,166 @@
+## Print out some exploratory figures
+
+microbiome_analytic_data <- meg_filter_data(microbiome_analytic_data, filter_min_threshold = 0.15)
+
+#############################################
+## Exploratory Analyses: Alpha Rarefaction ##
+#############################################
+
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  # Microbiome
+  meg_alpha_rarefaction(data_list=microbiome_raw_analytic_data,
+                        data_names=microbiome_raw_analytic_names,
+                        metadata=microbiome_metadata,
+                        sample_var=sample_column_id,
+                        group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                        analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                        outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                                     sep='/', collapse=''),
+                        data_type='Microbiome')
+}
+
+
+######################################
+## Exploratory Analyses: Ordination ##
+######################################
+
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  # Microbiome NMDS
+  meg_ordination(data_list = microbiome_analytic_data,
+                 data_names = microbiome_analytic_names,
+                 metadata = microbiome_metadata,
+                 sample_var = sample_column_id,
+                 hull_var = microbiome_exploratory_analyses[[v]]$exploratory_var,
+                 analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                 outdir = paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                                sep='/', collapse=''),
+                 data_type = 'Microbiome',
+                 method = 'NMDS')
+
+  # Microbiome PCA
+  meg_ordination(data_list = microbiome_analytic_data,
+                 data_names = microbiome_analytic_names,
+                 metadata = microbiome_metadata,
+                 sample_var = sample_column_id,
+                 hull_var = microbiome_exploratory_analyses[[v]]$exploratory_var,
+                 analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                 outdir = paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                                sep='/', collapse=''),
+                 data_type = 'Microbiome',
+                 method = 'PCA')
+}
+
+
+####################################
+## Exploratory Analyses: Heatmaps ##
+####################################
+
+
+# Microbiome
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  for( l in 1:length(microbiome_analytic_names) ) {
+    meg_heatmap(melted_data=microbiome_melted_analytic,
+                metadata=microbiome_metadata,
+                sample_var=sample_column_id,
+                group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                level_var=microbiome_analytic_names[l],
+                analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                outdir=paste(graph_output_dir, 'Microbiome',microbiome_exploratory_analyses[[v]]$name,
+                             sep='/', collapse=''),
+                data_type='Microbiome')
+  }
+}
+
+
+####################################
+## Exploratory Analyses: Barplots ##
+####################################
+
+
+# Microbiome
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  for( l in 1:length(microbiome_analytic_names) ) {
+    suppressWarnings(
+      meg_barplot(melted_data=microbiome_melted_analytic,
+                  metadata=microbiome_metadata,
+                  sample_var=sample_column_id,
+                  group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                  level_var=microbiome_analytic_names[l],
+                  analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                  outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                               sep='/', collapse=''),
+                  data_type='Microbiome')
+    )
+  }
+}
+
+
+##########################
+## Statistical Analyses ##
+##########################
+
+for( a in 1:length(microbiome_statistical_analyses) ) {
+  meg_fitZig(data_list=microbiome_analytic_data,
+             data_names=microbiome_analytic_names,
+             metadata=microbiome_metadata,
+             zero_mod=model.matrix(~1 + log(libSize(microbiome))),
+             data_mod=microbiome_statistical_analyses[[a]]$model_matrix,
+             filter_min_threshold=0.15,
+             contrast_list=microbiome_statistical_analyses[[a]]$contrasts,
+             random_effect_var=microbiome_statistical_analyses[[a]]$random_effect,
+             outdir=paste(stats_output_dir, 'Microbiome', microbiome_statistical_analyses[[a]]$name,
+                          sep='/', collapse=''),
+             analysis_name=microbiome_statistical_analyses[[a]]$name,
+             analysis_subset=microbiome_statistical_analyses[[a]]$subsets,
+             data_type='Microbiome',
+             pval=0.99,
+             top_hits=1000)
+}
+
+
+########################
+## Output of matrices ##
+########################
+
+
+write.csv(make_sparse(microbiome_domain, 'Domain', c('Domain')),
+          'microbiome_matrices/sparse_normalized/microbiome_Domain_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_domain, 'microbiome_matrices/normalized/microbiome_Domain_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_domain_raw, 'microbiome_matrices/raw/microbiome_Domain_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_phylum, 'Phylum', c('Phylum')),
+          'microbiome_matrices/sparse_normalized/microbiome_Phylum_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_phylum, 'microbiome_matrices/normalized/microbiome_Phylum_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_phylum_raw, 'microbiome_matrices/raw/microbiome_Phylum_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_class, 'Class', c('Class')),
+          'microbiome_matrices/sparse_normalized/microbiome_Class_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_class, 'microbiome_matrices/normalized/microbiome_Class_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_class_raw, 'microbiome_matrices/raw/microbiome_Class_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_order, 'Order', c('Order')),
+          'microbiome_matrices/sparse_normalized/microbiome_Order_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_order, 'microbiome_matrices/normalized/microbiome_Order_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_order_raw, 'microbiome_matrices/raw/microbiome_Order_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_family, 'Family', c('Family')),
+          'microbiome_matrices/sparse_normalized/microbiome_Family_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_family, 'microbiome_matrices/normalized/microbiome_Family_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_family_raw, 'microbiome_matrices/raw/microbiome_Family_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_genus, 'Genus', c('Genus')),
+          'microbiome_matrices/sparse_normalized/microbiome_Genus_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_genus, 'microbiome_matrices/normalized/microbiome_Genus_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_genus_raw, 'microbiome_matrices/raw/microbiome_Genus_Raw.csv', sep=',', row.names=F, col.names=T)
+
+write.csv(make_sparse(microbiome_species, 'Species', c('Species')),
+          'microbiome_matrices/sparse_normalized/microbiome_Species_Sparse_Normalized.csv',
+          row.names=T)
+write.table(microbiome_species, 'microbiome_matrices/normalized/microbiome_Species_Normalized.csv', sep=',', row.names=F, col.names=T)
+write.table(microbiome_species_raw, 'microbiome_matrices/raw/microbiome_Species_Raw.csv', sep=',', row.names=F, col.names=T)
