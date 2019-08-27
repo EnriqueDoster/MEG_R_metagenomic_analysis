@@ -22,6 +22,17 @@ melt_dt <- function(D, level_id) {
 # Calculate the points for convex hulls around data for ordination plots
 meg_find_hulls <- function(x) x[chull(x$Ord1, x$Ord2),]
 
+# Filter data by quantile
+meg_filter_data <- function(data_list,
+                            filter_min_threshold) {
+  local_obj <- data_list
+  for( l in 1:length(local_obj) ) {
+    filter_threshold <- quantile(rowSums(MRcounts(local_obj[[l]])), 0.15)
+    if( filter_threshold > filter_min_threshold ) filter_threshold <- filter_min_threshold
+    local_obj[[l]] <- local_obj[[l]][which(rowSums(MRcounts(local_obj[[l]])) >= filter_threshold ), ]
+    cumNorm(local_obj[[l]])
+  }
+
 # Function that returns species count, rarefied species count, and alpha diversity measures
 # for each sample in the m x n matrix, m = features, n = samples
 alpha_rarefaction <- function(X, minlevel, method='invsimpson') {
