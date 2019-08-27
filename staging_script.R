@@ -33,7 +33,6 @@ megares_annotation_filename = 'data/amr/megares_annotations_v1.02.csv'
 
 # Where is the metadata file for the microbiome samples stored on your machine?
 microbiome_temp_metadata_file = "../qiime2_metadata.csv"
-#kraken_temp_file = '../AMR_analytic_matrix.csv'
 
 #################################
 ## Microbiome - 16S or kraken? ##
@@ -57,8 +56,6 @@ tax_fasta <- "../16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2
 taxa_file <- "../16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
 
-
-
 ###################
 ## User Controls ##
 ###################
@@ -74,16 +71,17 @@ AMR_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Farm_type',
-    subsets = list(),
-    exploratory_var = 'farm_type'
+      name = 'Variable1',
+      subsets = list(),
+      exploratory_var = 'Variable1'
   ),
+
   # Analysis 2
   # Description: 
   list(
-    name = 'Sample',
-    subsets = list(),
-    exploratory_var = 'sample'
+      name = 'Variable2_Variable1_Subset',
+      subsets = list('Variable1 == Value1'),
+      exploratory_var = 'Variable2'
   )
 )
 
@@ -91,23 +89,17 @@ microbiome_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Farm_type',
-    subsets = list(),
-    exploratory_var = 'farm_type'
+      name = 'Variable1',
+      subsets = list(),
+      exploratory_var = 'Variable1'
   ),
+
   # Analysis 2
   # Description: 
   list(
-    name = 'Sample',
-    subsets = list(),
-    exploratory_var = 'sample'
-  ),
-  # Analysis 3
-  # Description: 
-  list(
-    name = 'Milk',
-    subsets = list(),
-    exploratory_var = 'milk'
+      name = 'Variable2_Variable1_Subset',
+      subsets = list('Variable1 == Value1'),
+      exploratory_var = 'Variable2'
   )
 )
 
@@ -122,10 +114,22 @@ AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'farm_type',
+    name = 'Variable1',
     subsets = list(),
-    model_matrix = '~ 0 + farm_type',
-    contrasts = list('farm_typeFree_stall-farm_typeTie_stall'),
+    model_matrix = '~ 0 + Variable1 + Variable2',
+    contrasts = list('Variable1Value1 - Variable1Value2'),
+    random_effect = NA
+  ),
+  
+  # Analysis 2
+  # Description: 
+  list(
+    name = 'Variable2_Variable1_Subset',
+    subsets = list('Variable1 == Value1'),
+    model_matrix = '~ 0 + Variable2',
+    contrasts = list('Variable2Value1 - Variable2Value2',
+                     'Variable2Value1 - Variable2Value3',
+                     'Variable2Value2 - Variable2Value3'),
     random_effect = NA
   )
 )
@@ -134,28 +138,31 @@ microbiome_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'farm_type',
+    name = 'Variable1',
     subsets = list(),
-    model_matrix = '~ 0 + farm_type',
-    contrasts = list('farm_typeFree_stall-farm_typeTie_stall'),
+    model_matrix = '~ 0 + Variable1 + Variable2',
+    contrasts = list('Variable1Value1 - Variable1Value2'),
     random_effect = NA
   ),
+  
   # Analysis 2
   # Description: 
   list(
-    name = 'milk',
-    subsets = list(),
-    model_matrix = '~ 0 + milk',
-    contrasts = list('milkpellet-milkcream'),
+    name = 'Variable2_Variable1_Subset',
+    subsets = list('Variable1 == Value1'),
+    model_matrix = '~ 0 + Variable2',
+    contrasts = list('Variable2Value1 - Variable2Value2',
+                     'Variable2Value1 - Variable2Value3',
+                     'Variable2Value2 - Variable2Value3'),
     random_effect = NA
   )
 )
+
+
+
 ## Run the analysis
-
-
-## Run the script to convert qiime2 results into "microbiome" objects to be used with amr_plus_plus
 #
-## Run the script that handles resistome data and microbiome data. 
+## Pick the correct script that handles resistome data and/or microbiome data. 
 source('scripts/metagenomeSeq_megares_kraken.R')
 #source('scripts/HMM_metagenomeSeq_AMR.R')
 
