@@ -32,7 +32,8 @@ meg_filter_data <- function(data_list,
     local_obj[[l]] <- local_obj[[l]][which(rowSums(MRcounts(local_obj[[l]])) >= filter_threshold ), ]
     cumNorm(local_obj[[l]])
   }
-
+}
+  
 # Function that returns species count, rarefied species count, and alpha diversity measures
 # for each sample in the m x n matrix, m = features, n = samples
 alpha_rarefaction <- function(X, minlevel, method='invsimpson') {
@@ -776,9 +777,5 @@ hullPlot <- function(df, grouping, legend = TRUE){
                   alpha=.6)
     
   }
-  
 }
-
-
-
 
