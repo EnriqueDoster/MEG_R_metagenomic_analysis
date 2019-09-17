@@ -38,6 +38,14 @@ microbiome_temp_metadata_file = "../qiime2_metadata.csv"
 ## Microbiome - 16S or kraken? ##
 #################################
 
+
+# Where is the metadata file for the microbiome samples stored on your machine?
+microbiome_temp_metadata_file = "../FT_metadata.csv"
+
+# If you used the AMR++ pipeline and have the kraken2 count matrix, point to the kraken file or see below for using qiime2 results.
+kraken_temp_file = "../kraken_analytic_matrix.csv"
+
+
 ## First, the 16S files. 
 # These are the files you'll need to export from qiime2
 #qiime tools export project-taxonomy.qza --output-dir exported-biom-table-taxa
@@ -50,10 +58,11 @@ microbiome_temp_metadata_file = "../qiime2_metadata.csv"
 ##
 ## If you are using qiime2 results, uncomment the four lines below and specify the location to each file
 ##
-biom_file <- "../16S/exported-biom-table/otu_table_json.biom"
-tre_file <- "../16S/exported-tree/tree.nwk"
-tax_fasta <- "../16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
-taxa_file <- "../16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
+#biom_file <- "../16S/exported-biom-table/otu_table_json.biom"
+#tre_file <- "../16S/exported-tree/tree.nwk"
+#tax_fasta <- "../16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
+#taxa_file <- "../16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
+
 
 
 ###################
@@ -67,6 +76,7 @@ taxa_file <- "../16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2
 # The following is a list of analyses based on variables in 
 # your metadata.csv file that you want
 # to use for EXPLORATORY analysis (NMDS, PCA, alpha rarefaction, barplots)
+# NOTE: Exploratory variables cannot be numeric. 
 AMR_exploratory_analyses = list(
   # Analysis 1
   # Description: 
@@ -174,5 +184,4 @@ source('scripts/metagenomeSeq_megares_kraken.R')
 source('scripts/print_figures.R')
 
 
-all_metadata <- cbind(microbiome_metadata,metadata)
-View(metadata)
+
