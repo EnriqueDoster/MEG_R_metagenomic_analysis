@@ -31,13 +31,12 @@ amr_count_matrix_filepath = '../AMR_analytic_matrix.csv'
 # Name of the megares annotation file used for this project
 megares_annotation_filename = 'data/amr/megares_annotations_v1.02.csv'
 
-# Where is the metadata file for the microbiome samples stored on your machine?
-microbiome_temp_metadata_file = "../qiime2_metadata.csv"
-
 #################################
 ## Microbiome - 16S or kraken? ##
 #################################
 
+# Where is the metadata file for the microbiome samples stored on your machine?
+microbiome_temp_metadata_file = "../qiime2_metadata.csv"
 
 # Where is the metadata file for the microbiome samples stored on your machine?
 microbiome_temp_metadata_file = "../FT_metadata.csv"
