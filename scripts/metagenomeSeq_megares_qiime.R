@@ -149,8 +149,8 @@ setkey(annotations, header)  # Data tables are SQL objects with optional primary
 
 ##### optional edits ###
 ## add step to remove samples with 1 or 0 features
-amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
-amr = amr[, -amr_sparseFeatures]
+#amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
+#amr = amr[, -amr_sparseFeatures]
 # microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
 # microbiome = microbiome[, -microbiome_sparseFeatures]
 
