@@ -1,7 +1,7 @@
 ---
-title: "metagenomeSeq"
-author: "jpaulson"
-date: "October 22, 2014"
+title: "metagenomeSeq_explorer"
+author: "EnriqueDoster, based on code from jpaulson"
+date: "October 17, 2019"
 output: html_document
 runtime: shiny
 ---
@@ -9,14 +9,13 @@ runtime: shiny
 This R Markdown document is made interactive using Shiny and allows you to explore MRexperiment objects.
 Replace 
 ```
-data = mouseData
+data = amr
 ```
 with your MRexperiment object's name.
 
 ```{r, echo=FALSE,warning=FALSE}
-suppressMessages(require(metagenomeSeq))
-data(mouseData)
-data = mouseData
+suppressMessages(source("staging_script.R"))
+data = AMR_analytic_data[[1]]
 ```
 
 # Metadata
@@ -29,18 +28,18 @@ renderDataTable({
           Rownames = rownames(fd)
           fd = cbind(Index,Rownames,fd)
           return(fd)
-        },options = list(iDisplayLength = 10))
+        },options = list(pageLength = 5))
 ```
 
 ## Phenotype information
 ```{r,echo=FALSE}
 renderDataTable({
-          return(pData(data))
-        },options = list(iDisplayLength = 10))
+  return(pData(data))
+  },options = list(pageLength = 10))
+
 ```
 
 # Plots
-
 ## Input for all plots
 ```{r,echo=FALSE}
 inputPanel(
@@ -53,17 +52,18 @@ inputPanel(
 ```{r,echo=FALSE}
 inputPanel(
   numericInput("featureIndex","Display feature (index):",1,min=1)
-  )
+)
 renderPlot({
   mat = MRcounts(data,norm=input$norm,log=input$norm)
   pd = factor(pData(data)[,input$pd])
   #if(ncol(pd)==0) pd = as.matrix(rep(1,nrow(pd)))
   ylabel = ifelse(input$norm,yes=expression(bold("Log"[2]*" Abundance")),no="No. raw reads")
   plotFeature(mat,otuIndex = input$featureIndex,ylab=ylabel,main=rownames(mat)[input$featureIndex],
-  classIndex = list(All_samples=1:ncol(mat)),col=pd,font.lab=2,font.axis=1,sort=FALSE,xaxt="n")
+              classIndex = list(All_samples=1:ncol(mat)),col=pd,font.lab=2,font.axis=1,sort=FALSE,xaxt="n")
   legend("topleft",legend=unique(pd),fill=unique(pd),box.col="NA")
 })
 ```
+
 
 ### Heatmap
 ```{r,echo=FALSE}
@@ -80,7 +80,7 @@ renderPlot({
   my_mat <- mat[otuIndices,]
   heatmapColColors=brewer.pal(12,"Set3")[as.integer(factor(trials))];
   heatmapCols = colorRampPalette(brewer.pal(9, "RdBu"))(50)
-  gplots::heatmap.2(my_mat,trace="none",cexRow=.8,cexCol=.8,col = heatmapCols,ColSideColors = heatmapColColors)
+  gplots::heatmap.2(my_mat,trace="none",cexRow=.8,cexCol=.8,col = rev(heatmapCols),ColSideColors = heatmapColColors)
   legend("left",fill=unique(heatmapColColors),legend=unique(trials))
 },height=800)
 ```
@@ -89,26 +89,26 @@ renderPlot({
 ### PCA/PCoA
 ```{r,echo=FALSE}
 inputPanel(
-      radioButtons("pcaOrMds","PCA or MDS:",c("PCA"="TRUE","MDS"="FALSE"),selected="TRUE"),
-      radioButtons("useDist","Make use of count distances:",c("False"="FALSE","True"="TRUE"),selected="FALSE"),
-      conditionalPanel(condition = "input.useDist == 'TRUE'",
-        selectInput("distance", "Distance:", 
-          choices=c("euclidean","manhattan","canberra","bray",
-            "kulczynski","jaccard","gower","altGower","morisita",
-            "horn","raup","binomial","chao","cao"),selected="euclidean")
-      ),
-      numericInput('dimensionx', 'X-axis dimension:', 1,
-         min = 1, max = 4),
-      numericInput('dimensiony', 'Y-axis dimension:', 2,
-         min = 1, max = 4)
+  radioButtons("pcaOrMds","PCA or MDS:",c("PCA"="TRUE","MDS"="FALSE"),selected="TRUE"),
+  radioButtons("useDist","Make use of count distances:",c("False"="FALSE","True"="TRUE"),selected="FALSE"),
+  conditionalPanel(condition = "input.useDist == 'TRUE'",
+                   selectInput("distance", "Distance:", 
+                               choices=c("euclidean","manhattan","canberra","bray",
+                                         "kulczynski","jaccard","gower","altGower","morisita",
+                                         "horn","raup","binomial","chao","cao"),selected="euclidean")
+  ),
+  numericInput('dimensionx', 'X-axis dimension:', 1,
+               min = 1, max = 4),
+  numericInput('dimensiony', 'Y-axis dimension:', 2,
+               min = 1, max = 4)
 )
 renderPlot({
   mat = MRcounts(data,norm=input$norm,log=input$norm)
   useDist = input$useDist
   pd  = factor(pData(data)[,input$pd])
   plotOrd(mat,n=100,pch=21,bg=pd,usePCA=input$pcaOrMds,
-  comp=c(input$dimensionx,input$dimensiony),
-  useDist=useDist,distfun=vegan::vegdist,dist.method=input$distance)
+          comp=c(input$dimensionx,input$dimensiony),
+          useDist=useDist,distfun=vegan::vegdist,dist.method=input$distance)
   legend("topleft",levels(pd),fill=factor(levels(pd)),box.col="NA")
 })
 ```

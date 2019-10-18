@@ -4,7 +4,7 @@ source('scripts/meg_utility_functions.R')
 source('scripts/load_libraries.R')
 
 # Set working directory to the MEG_R_metagenomic_analysis folder and add your data to that folder
-setwd("")
+#setwd("")
 
 # Set the output directory for graphs:
 graph_output_dir = 'graphs'
@@ -26,23 +26,20 @@ sample_column_id = 'ID'
 ## must match between the annotation file and the database file.
 
 # Where is the metadata file stored on your machine?
-amr_metadata_filepath = '../metadata.csv'
-amr_count_matrix_filepath = '../AMR_analytic_matrix.csv'
+amr_metadata_filepath = '~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/Proj_3_metadata_full.csv'
+amr_count_matrix_filepath = '~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/proj3_strict_SNP_confirmed_AMR_analytic_matrix.csv'
 # Name of the megares annotation file used for this project
-megares_annotation_filename = 'data/amr/megares_annotations_v1.02.csv'
+megares_annotation_filename = 'data/amr/megares_RGI_annotations_v1.02.csv'
 
 #################################
 ## Microbiome - 16S or kraken? ##
 #################################
 
 # Where is the metadata file for the microbiome samples stored on your machine?
-microbiome_temp_metadata_file = "../qiime2_metadata.csv"
-
-# Where is the metadata file for the microbiome samples stored on your machine?
-microbiome_temp_metadata_file = "../FT_metadata.csv"
+microbiome_temp_metadata_file = "~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/Proj_3_microbiome_metadata_full.csv"
 
 # If you used the AMR++ pipeline and have the kraken2 count matrix, point to the kraken file or see below for using qiime2 results.
-kraken_temp_file = "../kraken_analytic_matrix.csv"
+#kraken_temp_file = "../kraken_analytic_matrix.csv"
 
 
 ## First, the 16S files. 
@@ -57,10 +54,10 @@ kraken_temp_file = "../kraken_analytic_matrix.csv"
 ##
 ## If you are using qiime2 results, uncomment the four lines below and specify the location to each file
 ##
-#biom_file <- "../16S/exported-biom-table/otu_table_json.biom"
-#tre_file <- "../16S/exported-tree/tree.nwk"
-#tax_fasta <- "../16S/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
-#taxa_file <- "../16S/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
+biom_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table/otu_table_json.biom"
+tre_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-tree/tree.nwk"
+tax_fasta <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
+taxa_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
 
 
@@ -80,17 +77,72 @@ AMR_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-      name = 'Variable1',
-      subsets = list(),
-      exploratory_var = 'Variable1'
+    name = 'Arrival_samples',
+    subsets = list('Group == IndividualArrival'),
+    exploratory_var = 'ID'
   ),
-
   # Analysis 2
   # Description: 
   list(
-      name = 'Variable2_Variable1_Subset',
-      subsets = list('Variable1 == Value1'),
-      exploratory_var = 'Variable2'
+    name = 'Pair_ID',
+    subsets = list(),
+    exploratory_var = 'Pair_ID'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Time_Group',
+    subsets = list(),
+    exploratory_var = 'Group'
+  ),
+  # Analysis 4
+  # Description: 
+  list(
+    name = 'Tx_time_cat_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'Tx_time_cat'
+  ),
+  # Analysis 5
+  # Description: 
+  list(
+    name = 'DOF',
+    subsets = list(),
+    exploratory_var = 'DOF'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'tx_doses_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'tx_doses'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'tx_class_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'tx_class'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'exit_by_DDD_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'DDD_cat'
+  ),
+  # Analysis 10
+  # Description: 
+  list(
+    name = 'PenID',
+    subsets = list(),
+    exploratory_var = 'PEN.ID'
+  ),
+  # Analysis 10
+  # Description: 
+  list(
+    name = 'exit_DDD_cat',
+    subsets = list('Time == Rehandling'),
+    exploratory_var = 'DDD_cat'
   )
 )
 
@@ -98,17 +150,72 @@ microbiome_exploratory_analyses = list(
   # Analysis 1
   # Description: 
   list(
-      name = 'Variable1',
-      subsets = list(),
-      exploratory_var = 'Variable1'
+    name = 'Arrival_samples',
+    subsets = list('Group == IndividualArrival'),
+    exploratory_var = 'ID'
   ),
-
   # Analysis 2
   # Description: 
   list(
-      name = 'Variable2_Variable1_Subset',
-      subsets = list('Variable1 == Value1'),
-      exploratory_var = 'Variable2'
+    name = 'Pair_ID',
+    subsets = list(),
+    exploratory_var = 'Pair_ID'
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Time_Group',
+    subsets = list(),
+    exploratory_var = 'Group'
+  ),
+  # Analysis 4
+  # Description: 
+  list(
+    name = 'Tx_time_cat_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'Tx_time_cat'
+  ),
+  # Analysis 5
+  # Description: 
+  list(
+    name = 'DOF',
+    subsets = list(),
+    exploratory_var = 'DOF'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'tx_doses',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'tx_doses'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'exit_by_DDD_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'DDD_cat'
+  ),
+  # Analysis 7
+  # Description: 
+  list(
+    name = 'tx_class_Rehandling',
+    subsets = list('Group == IndividualRehandling'),
+    exploratory_var = 'tx_class'
+  ),
+  # Analysis 10
+  # Description: 
+  list(
+    name = 'PenID',
+    subsets = list(),
+    exploratory_var = 'PEN.ID'
+  ),
+  # Analysis 10
+  # Description: 
+  list(
+    name = 'exit_DDD_cat',
+    subsets = list('Time == Rehandling'),
+    exploratory_var = 'DDD_cat'
   )
 )
 
@@ -123,22 +230,10 @@ AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Time_Rehandling',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
-    random_effect = NA
-  ),
-  
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    model_matrix = '~ 0 + Time',
+    contrasts = list('TimeRehandling-TimeArrival'),
     random_effect = NA
   )
 )
@@ -147,40 +242,27 @@ microbiome_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Time_Rehandling',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
-    random_effect = NA
-  ),
-  
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    model_matrix = '~ 0 + Time',
+    contrasts = list('TimeRehandling-TimeArrival'),
     random_effect = NA
   )
 )
 
 
-
 ## Run the analysis
 #
 ## Pick the correct script that handles resistome data and/or microbiome data. 
-source('scripts/metagenomeSeq_megares_kraken.R')
-#source('scripts/HMM_metagenomeSeq_AMR.R')
+#source('scripts/metagenomeSeq_megares_kraken.R')
+source('scripts/metagenomeSeq_megares_qiime.R')
 
 # After running this script, these are the useful objects that contain all the data aggregated to different levels
 # The metagenomeSeq objects are contained in these lists "AMR_analytic_data" and "microbiome_analytic_data"
 # Melted counts are contained in these data.table objects "amr_melted_analytic" "microbiome_melted_analytic"
 
 ## Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
-source('scripts/print_figures.R')
+#source('scripts/print_figures.R')
 
 
 
