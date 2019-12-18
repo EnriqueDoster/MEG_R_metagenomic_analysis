@@ -74,149 +74,39 @@ taxa_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table-ta
 # to use for EXPLORATORY analysis (NMDS, PCA, alpha rarefaction, barplots)
 # NOTE: Exploratory variables cannot be numeric. 
 AMR_exploratory_analyses = list(
-  # Analysis 1
-  # Description: 
-  list(
-    name = 'Arrival_samples',
-    subsets = list('Group == IndividualArrival'),
-    exploratory_var = 'ID'
-  ),
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Pair_ID',
-    subsets = list(),
-    exploratory_var = 'Pair_ID'
-  ),
-  # Analysis 3
-  # Description: 
-  list(
-    name = 'Time_Group',
-    subsets = list(),
-    exploratory_var = 'Group'
-  ),
-  # Analysis 4
-  # Description: 
-  list(
-    name = 'Tx_time_cat_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'Tx_time_cat'
-  ),
-  # Analysis 5
-  # Description: 
-  list(
-    name = 'DOF',
-    subsets = list(),
-    exploratory_var = 'DOF'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'tx_doses_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'tx_doses'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'tx_class_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'tx_class'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'exit_by_DDD_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'DDD_cat'
-  ),
-  # Analysis 10
-  # Description: 
-  list(
-    name = 'PenID',
-    subsets = list(),
-    exploratory_var = 'PEN.ID'
-  ),
-  # Analysis 10
-  # Description: 
-  list(
-    name = 'exit_DDD_cat',
-    subsets = list('Time == Rehandling'),
-    exploratory_var = 'DDD_cat'
-  )
+    # Analysis 1
+    # Description: 
+    list(
+        name = 'Variable1',
+        subsets = list(),
+        exploratory_var = 'Variable1'
+    ),
+    
+    # Analysis 2
+    # Description: 
+    list(
+        name = 'Variable2_Variable1_Subset',
+        subsets = list('Variable1 == Value1'),
+        exploratory_var = 'Variable2'
+    )
 )
 
 microbiome_exploratory_analyses = list(
-  # Analysis 1
-  # Description: 
-  list(
-    name = 'Arrival_samples',
-    subsets = list('Group == IndividualArrival'),
-    exploratory_var = 'ID'
-  ),
-  # Analysis 2
-  # Description: 
-  list(
-    name = 'Pair_ID',
-    subsets = list(),
-    exploratory_var = 'Pair_ID'
-  ),
-  # Analysis 3
-  # Description: 
-  list(
-    name = 'Time_Group',
-    subsets = list(),
-    exploratory_var = 'Group'
-  ),
-  # Analysis 4
-  # Description: 
-  list(
-    name = 'Tx_time_cat_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'Tx_time_cat'
-  ),
-  # Analysis 5
-  # Description: 
-  list(
-    name = 'DOF',
-    subsets = list(),
-    exploratory_var = 'DOF'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'tx_doses',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'tx_doses'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'exit_by_DDD_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'DDD_cat'
-  ),
-  # Analysis 7
-  # Description: 
-  list(
-    name = 'tx_class_Rehandling',
-    subsets = list('Group == IndividualRehandling'),
-    exploratory_var = 'tx_class'
-  ),
-  # Analysis 10
-  # Description: 
-  list(
-    name = 'PenID',
-    subsets = list(),
-    exploratory_var = 'PEN.ID'
-  ),
-  # Analysis 10
-  # Description: 
-  list(
-    name = 'exit_DDD_cat',
-    subsets = list('Time == Rehandling'),
-    exploratory_var = 'DDD_cat'
-  )
+    # Analysis 1
+    # Description: 
+    list(
+        name = 'Variable1',
+        subsets = list(),
+        exploratory_var = 'Variable1'
+    ),
+    
+    # Analysis 2
+    # Description: 
+    list(
+        name = 'Variable2_Variable1_Subset',
+        subsets = list('Variable1 == Value1'),
+        exploratory_var = 'Variable2'
+    )
 )
 
 # Each analyses you wish to perform should have its own list in the following
@@ -230,22 +120,47 @@ AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Time_Rehandling',
+    name = 'Variable1',
     subsets = list(),
-    model_matrix = '~ 0 + Time',
-    contrasts = list('TimeRehandling-TimeArrival'),
+    model_matrix = '~ 0 + Variable1 + Variable2',
+    contrasts = list('Variable1Value1 - Variable1Value2'),
+    random_effect = NA
+  ),
+  
+  # Analysis 2
+  # Description: 
+  list(
+    name = 'Variable2_Variable1_Subset',
+    subsets = list('Variable1 == Value1'),
+    model_matrix = '~ 0 + Variable2',
+    contrasts = list('Variable2Value1 - Variable2Value2',
+                     'Variable2Value1 - Variable2Value3',
+                     'Variable2Value2 - Variable2Value3'),
     random_effect = NA
   )
 )
 
 microbiome_statistical_analyses = list(
   # Analysis 1
+  # Analysis 1
   # Description: 
   list(
-    name = 'Time_Rehandling',
+    name = 'Variable1',
     subsets = list(),
-    model_matrix = '~ 0 + Time',
-    contrasts = list('TimeRehandling-TimeArrival'),
+    model_matrix = '~ 0 + Variable1 + Variable2',
+    contrasts = list('Variable1Value1 - Variable1Value2'),
+    random_effect = NA
+  ),
+  
+  # Analysis 2
+  # Description: 
+  list(
+    name = 'Variable2_Variable1_Subset',
+    subsets = list('Variable1 == Value1'),
+    model_matrix = '~ 0 + Variable2',
+    contrasts = list('Variable2Value1 - Variable2Value2',
+                     'Variable2Value1 - Variable2Value3',
+                     'Variable2Value2 - Variable2Value3'),
     random_effect = NA
   )
 )
