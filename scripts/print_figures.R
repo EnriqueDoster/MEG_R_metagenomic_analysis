@@ -1,5 +1,35 @@
 ## Print out some exploratory figures 
 
+######################################################
+## Exploratory Analyses: Alpha Diversity CSS values ##
+######################################################
+for( v in 1:length(AMR_exploratory_analyses) ) {
+  # AMR
+  meg_alpha_diversity(data_list=AMR_analytic_data,
+                        data_names=AMR_analytic_names,
+                        metadata=metadata,
+                        sample_var=sample_column_id,
+                        group_var=AMR_exploratory_analyses[[v]]$exploratory_var,
+                        analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
+                        outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
+                                     sep='/', collapse=''),
+                        data_type='AMR',
+                        factor_order= AMR_exploratory_analyses[[v]]$order)
+}
+  
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  # Microbiome
+  meg_alpha_diversity(data_list=microbiome_analytic_data,
+                        data_names=microbiome_analytic_names,
+                        metadata=microbiome_metadata,
+                        sample_var=sample_column_id,
+                        group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                        analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                        outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                                     sep='/', collapse=''),
+                        data_type='Microbiome',
+                        factor_order= AMR_exploratory_analyses[[v]]$order)
+}
 
 #############################################
 ## Exploratory Analyses: Alpha Rarefaction ##
@@ -14,7 +44,8 @@ for( v in 1:length(AMR_exploratory_analyses) ) {
                         analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
                         outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
                                      sep='/', collapse=''),
-                        data_type='AMR')
+                        data_type='AMR',
+                        factor_order= AMR_exploratory_analyses[[v]]$order)
 }
   
 for( v in 1:length(microbiome_exploratory_analyses) ) {
@@ -27,7 +58,8 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                         analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
                         outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                      sep='/', collapse=''),
-                        data_type='Microbiome')
+                        data_type='Microbiome',
+                        factor_order= AMR_exploratory_analyses[[v]]$order)
 }
 
 
@@ -45,7 +77,8 @@ for( v in 1:length(AMR_exploratory_analyses) ) {
                  outdir = paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
                                 sep='/', collapse=''),
                  data_type = 'AMR',
-                 method = 'NMDS')
+                 method = 'NMDS',
+                 factor_order= AMR_exploratory_analyses[[v]]$order)
   
   # AMR PCA
   meg_ordination(data_list = AMR_analytic_data,
@@ -57,7 +90,8 @@ for( v in 1:length(AMR_exploratory_analyses) ) {
                  outdir = paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
                                 sep='/', collapse=''),
                  data_type = 'AMR',
-                 method = 'PCA')
+                 method = 'PCA',
+                 factor_order= AMR_exploratory_analyses[[v]]$order)
 }
 for( v in 1:length(microbiome_exploratory_analyses) ) {
   # Microbiome NMDS
@@ -70,7 +104,8 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                  outdir = paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                 sep='/', collapse=''),
                  data_type = 'Microbiome',
-                 method = 'NMDS')
+                 method = 'NMDS',
+                 factor_order= AMR_exploratory_analyses[[v]]$order)
   
   # Microbiome PCA
   meg_ordination(data_list = microbiome_analytic_data,
@@ -82,7 +117,8 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                  outdir = paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                 sep='/', collapse=''),
                  data_type = 'Microbiome',
-                 method = 'PCA')
+                 method = 'PCA',
+                 factor_order= AMR_exploratory_analyses[[v]]$order)
 }
 
 
@@ -101,7 +137,8 @@ for( v in 1:length(AMR_exploratory_analyses) ) {
                 analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
                 outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
                              sep='/', collapse=''),
-                data_type='AMR')
+                data_type='AMR',
+                factor_order= AMR_exploratory_analyses[[v]]$order)
   }
 }
 
@@ -116,7 +153,50 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                 analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
                 outdir=paste(graph_output_dir, 'Microbiome',microbiome_exploratory_analyses[[v]]$name,
                              sep='/', collapse=''),
-                data_type='Microbiome')
+                data_type='Microbiome',
+                factor_order= AMR_exploratory_analyses[[v]]$order)
+  }
+}
+
+
+#######################################################
+## Exploratory Analyses: Relative abundance Barplots ##
+#######################################################
+
+
+# AMR
+for( v in 1:length(AMR_exploratory_analyses) ) {
+  for( l in 1:length(AMR_analytic_names) ) {
+    suppressWarnings(
+      meg_relative_barplot(melted_data=amr_melted_analytic,
+                  metadata=metadata,
+                  sample_var=sample_column_id,
+                  group_var=AMR_exploratory_analyses[[v]]$exploratory_var,
+                  level_var=AMR_analytic_names[l],
+                  analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
+                  outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
+                               sep='/', collapse=''),
+                  data_type='AMR',
+                  factor_order= AMR_exploratory_analyses[[v]]$order)
+    )
+  }
+}
+
+# Microbiome
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  for( l in 1:length(microbiome_analytic_names) ) {
+    suppressWarnings(
+      meg_relative_barplot(melted_data=microbiome_melted_analytic,
+                  metadata=microbiome_metadata,
+                  sample_var=sample_column_id,
+                  group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                  level_var=microbiome_analytic_names[l],
+                  analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                  outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                               sep='/', collapse=''),
+                  data_type='Microbiome',
+                  factor_order= AMR_exploratory_analyses[[v]]$order)
+    )
   }
 }
 
@@ -137,7 +217,8 @@ for( v in 1:length(AMR_exploratory_analyses) ) {
                   analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
                   outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
                                sep='/', collapse=''),
-                  data_type='AMR')
+                  data_type='AMR',
+                  factor_order= AMR_exploratory_analyses[[v]]$order)
     )
   }
 }
@@ -154,7 +235,8 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                   analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
                   outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                sep='/', collapse=''),
-                  data_type='Microbiome')
+                  data_type='Microbiome',
+                  factor_order= AMR_exploratory_analyses[[v]]$order)
     )
   }
 }
