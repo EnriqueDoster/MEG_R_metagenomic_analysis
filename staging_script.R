@@ -79,7 +79,8 @@ AMR_exploratory_analyses = list(
     list(
         name = 'Variable1',
         subsets = list(),
-        exploratory_var = 'Variable1'
+        exploratory_var = 'Variable1',
+        order = ''
     ),
     
     # Analysis 2
@@ -87,7 +88,8 @@ AMR_exploratory_analyses = list(
     list(
         name = 'Variable2_Variable1_Subset',
         subsets = list('Variable1 == Value1'),
-        exploratory_var = 'Variable2'
+        exploratory_var = 'Variable2',
+        order = ''
     )
 )
 
@@ -97,7 +99,8 @@ microbiome_exploratory_analyses = list(
     list(
         name = 'Variable1',
         subsets = list(),
-        exploratory_var = 'Variable1'
+        exploratory_var = 'Variable1',
+        order = ''
     ),
     
     # Analysis 2
@@ -105,7 +108,8 @@ microbiome_exploratory_analyses = list(
     list(
         name = 'Variable2_Variable1_Subset',
         subsets = list('Variable1 == Value1'),
-        exploratory_var = 'Variable2'
+        exploratory_var = 'Variable2',
+        order = ''
     )
 )
 
