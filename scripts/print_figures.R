@@ -28,7 +28,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                         outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                      sep='/', collapse=''),
                         data_type='Microbiome',
-                        factor_order= AMR_exploratory_analyses[[v]]$order)
+                        factor_order= microbiome_exploratory_analyses[[v]]$order)
 }
 
 #############################################
@@ -59,7 +59,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                         outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                      sep='/', collapse=''),
                         data_type='Microbiome',
-                        factor_order= AMR_exploratory_analyses[[v]]$order)
+                        factor_order= microbiome_exploratory_analyses[[v]]$order)
 }
 
 
@@ -105,7 +105,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                                 sep='/', collapse=''),
                  data_type = 'Microbiome',
                  method = 'NMDS',
-                 factor_order= AMR_exploratory_analyses[[v]]$order)
+                 factor_order= microbiome_exploratory_analyses[[v]]$order)
   
   # Microbiome PCA
   meg_ordination(data_list = microbiome_analytic_data,
@@ -118,7 +118,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                                 sep='/', collapse=''),
                  data_type = 'Microbiome',
                  method = 'PCA',
-                 factor_order= AMR_exploratory_analyses[[v]]$order)
+                 factor_order= microbiome_exploratory_analyses[[v]]$order)
 }
 
 
@@ -154,7 +154,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                 outdir=paste(graph_output_dir, 'Microbiome',microbiome_exploratory_analyses[[v]]$name,
                              sep='/', collapse=''),
                 data_type='Microbiome',
-                factor_order= AMR_exploratory_analyses[[v]]$order)
+                factor_order= microbiome_exploratory_analyses[[v]]$order)
   }
 }
 
@@ -195,7 +195,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                   outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                sep='/', collapse=''),
                   data_type='Microbiome',
-                  factor_order= AMR_exploratory_analyses[[v]]$order)
+                  factor_order= microbiome_exploratory_analyses[[v]]$order)
     )
   }
 }
@@ -236,7 +236,7 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
                   outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
                                sep='/', collapse=''),
                   data_type='Microbiome',
-                  factor_order= AMR_exploratory_analyses[[v]]$order)
+                  factor_order= microbiome_exploratory_analyses[[v]]$order)
     )
   }
 }
