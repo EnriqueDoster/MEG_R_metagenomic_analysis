@@ -160,6 +160,46 @@ for( v in 1:length(microbiome_exploratory_analyses) ) {
 
 
 #######################################################
+## Exploratory Analyses: Median abundance Barplots ##
+#######################################################
+
+for( v in 1:length(AMR_exploratory_analyses) ) {
+  for( l in 1:length(AMR_analytic_names) ) {
+    suppressWarnings(
+      meg_median_barplot(melted_data=amr_melted_analytic,
+                         metadata=metadata,
+                         sample_var=sample_column_id,
+                         group_var=AMR_exploratory_analyses[[v]]$exploratory_var,
+                         level_var=AMR_analytic_names[l],
+                         analysis_subset=AMR_exploratory_analyses[[v]]$subsets,
+                         outdir=paste(graph_output_dir, 'AMR', AMR_exploratory_analyses[[v]]$name,
+                                      sep='/', collapse=''),
+                         data_type='AMR',
+                         factor_order= AMR_exploratory_analyses[[v]]$order)
+    )
+  }
+}
+
+# Microbiome
+for( v in 1:length(microbiome_exploratory_analyses) ) {
+  for( l in 1:length(microbiome_analytic_names) ) {
+    suppressWarnings(
+      meg_median_barplot(melted_data=microbiome_melted_analytic,
+                         metadata=microbiome_metadata,
+                         sample_var=sample_column_id,
+                         group_var=microbiome_exploratory_analyses[[v]]$exploratory_var,
+                         level_var=microbiome_analytic_names[l],
+                         analysis_subset=microbiome_exploratory_analyses[[v]]$subsets,
+                         outdir=paste(graph_output_dir, 'Microbiome', microbiome_exploratory_analyses[[v]]$name,
+                                      sep='/', collapse=''),
+                         data_type='Microbiome',
+                         factor_order= microbiome_exploratory_analyses[[v]]$order)
+    )
+  }
+}
+
+
+#######################################################
 ## Exploratory Analyses: Relative abundance Barplots ##
 #######################################################
 
