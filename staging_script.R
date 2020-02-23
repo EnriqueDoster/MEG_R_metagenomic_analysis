@@ -26,17 +26,17 @@ sample_column_id = 'ID'
 ## must match between the annotation file and the database file.
 
 # Where is the metadata file stored on your machine?
-amr_metadata_filepath = '~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/Proj_3_metadata_full.csv'
-amr_count_matrix_filepath = '~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/proj3_strict_SNP_confirmed_AMR_analytic_matrix.csv'
+amr_metadata_filepath = '../FC_meat_AMR_metadata.csv'
+amr_count_matrix_filepath = '../strict_SNP_confirmed_AMR_analytic_matrix.csv'
 # Name of the megares annotation file used for this project
-megares_annotation_filename = 'data/amr/megares_RGI_annotations_v1.02.csv'
+megares_annotation_filename = 'data/amr/megares_annotations_v1.03.csv'
 
 #################################
 ## Microbiome - 16S or kraken? ##
 #################################
 
 # Where is the metadata file for the microbiome samples stored on your machine?
-microbiome_temp_metadata_file = "~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual_2019/Proj_3_microbiome_metadata_full.csv"
+microbiome_temp_metadata_file = "../FC_meat_metadata.csv"
 
 # If you used the AMR++ pipeline and have the kraken2 count matrix, point to the kraken file or see below for using qiime2 results.
 #kraken_temp_file = "../kraken_analytic_matrix.csv"
@@ -54,10 +54,10 @@ microbiome_temp_metadata_file = "~/Dropbox/WRITING/Projs_3_4_CB/Proj3_individual
 ##
 ## If you are using qiime2 results, uncomment the four lines below and specify the location to each file
 ##
-biom_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table/otu_table_json.biom"
-tre_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-tree/tree.nwk"
-tax_fasta <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
-taxa_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
+biom_file <- "../exported-biom-table/otu_table_json.biom"
+tre_file <- "../exported-tree/tree.nwk"
+tax_fasta <- "../exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
+taxa_file <- "../exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
 
 
@@ -73,44 +73,109 @@ taxa_file <- "~/Dropbox/WRITING/Projs_3_4_CB/16S_analysis/exported-biom-table-ta
 # your metadata.csv file that you want
 # to use for EXPLORATORY analysis (NMDS, PCA, alpha rarefaction, barplots)
 # NOTE: Exploratory variables cannot be numeric. 
+
 AMR_exploratory_analyses = list(
-    # Analysis 1
-    # Description: 
-    list(
-        name = 'Variable1',
-        subsets = list(),
-        exploratory_var = 'Variable1',
-        order = ''
-    ),
-    
-    # Analysis 2
-    # Description: 
-    list(
-        name = 'Variable2_Variable1_Subset',
-        subsets = list('Variable1 == Value1'),
-        exploratory_var = 'Variable2',
-        order = ''
-    )
+  # Analysis Store
+  # Description: 
+  list(
+    name = 'Store',
+    subsets = list(),
+    exploratory_var = 'Blinded_Store',
+    order = ''
+  ),  
+  # Analysis Dilution
+  # Description: 
+  list(
+    name = 'Dilution',
+    subsets = list(),
+    exploratory_var = 'Dilution',
+    order = ''
+  ),  
+  # Analysis ID
+  # Description: 
+  list(
+    name = 'ID',
+    subsets = list(),
+    exploratory_var = 'ID',
+    order = ''
+  ),  
+  # Analysis 1
+  # Description: 
+  list(
+    name = 'City',
+    subsets = list(),
+    exploratory_var = 'City',
+    order = ''
+  ),
+  # Analysis 2
+  # Description:
+  list(
+    name = 'Treatment',
+    subsets = list(),
+    exploratory_var = 'Treatment',
+    order = ''
+  ),
+  # Analysis 3
+  # Description:
+  list(
+    name = 'Packaging',
+    subsets = list(),
+    exploratory_var = 'Packaging',
+    order = ''
+  ),
+  # Analysis 3
+  # Description:
+  list(
+    name = 'sample',
+    subsets = list(),
+    exploratory_var = 'sample',
+    order = ''
+  )
 )
 
+
+
 microbiome_exploratory_analyses = list(
-    # Analysis 1
-    # Description: 
-    list(
-        name = 'Variable1',
-        subsets = list(),
-        exploratory_var = 'Variable1',
-        order = ''
-    ),
-    
-    # Analysis 2
-    # Description: 
-    list(
-        name = 'Variable2_Variable1_Subset',
-        subsets = list('Variable1 == Value1'),
-        exploratory_var = 'Variable2',
-        order = ''
-    )
+  # Analysis Store
+  # Description: 
+  list(
+    name = 'Store',
+    subsets = list(),
+    exploratory_var = 'Blinded_Store',
+    order = ''
+  ), 
+  # Analysis ID
+  # Description: 
+  list(
+    name = 'ID',
+    subsets = list(),
+    exploratory_var = 'ID',
+    order = ''
+  ),  
+  # Analysis 1
+  # Description: 
+  list(
+    name = 'City',
+    subsets = list(),
+    exploratory_var = 'City',
+    order = ''
+  ),
+  # Analysis 2
+  # Description:
+  list(
+    name = 'Treatment',
+    subsets = list(),
+    exploratory_var = 'Treatment',
+    order = ''
+  ),
+  # Analysis 3
+  # Description:
+  list(
+    name = 'Packaging',
+    subsets = list(),
+    exploratory_var = 'Packaging',
+    order = ''
+  )
 )
 
 # Each analyses you wish to perform should have its own list in the following
@@ -124,47 +189,76 @@ AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Treatment',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
+    model_matrix = '~ 0 + Treatment ',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
     random_effect = NA
   ),
-  
   # Analysis 2
   # Description: 
   list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    name = 'Treatment_w_store',
+    subsets = list(),
+    model_matrix = '~ 0 + Treatment + Blinded_Store',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
+    random_effect = NA
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Treatment_w_Dilution',
+    subsets = list(),
+    model_matrix = '~ 0 + Treatment + Dilution',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
+    random_effect = NA
+  ),
+  # Analysis 4
+  # Description: 
+  list(
+    name = 'Treatment_w_store_packaging',
+    subsets = list(),
+    model_matrix = '~ 0 + Treatment + Packaging + Blinded_Store',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
+    random_effect = NA
+  ),
+  # Analysis 5
+  # Description: 
+  list(
+    name = 'Dilution',
+    subsets = list(),
+    model_matrix = '~ 0 + Dilution',
+    contrasts = list('DilutionNone - DilutionHalf'),
     random_effect = NA
   )
 )
 
 microbiome_statistical_analyses = list(
   # Analysis 1
-  # Analysis 1
   # Description: 
   list(
-    name = 'Variable1',
+    name = 'Treatment',
     subsets = list(),
-    model_matrix = '~ 0 + Variable1 + Variable2',
-    contrasts = list('Variable1Value1 - Variable1Value2'),
+    model_matrix = '~ 0 + Treatment ',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
     random_effect = NA
   ),
-  
   # Analysis 2
   # Description: 
   list(
-    name = 'Variable2_Variable1_Subset',
-    subsets = list('Variable1 == Value1'),
-    model_matrix = '~ 0 + Variable2',
-    contrasts = list('Variable2Value1 - Variable2Value2',
-                     'Variable2Value1 - Variable2Value3',
-                     'Variable2Value2 - Variable2Value3'),
+    name = 'Treatment_w_store',
+    subsets = list(),
+    model_matrix = '~ 0 + Treatment + Blinded_Store',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
+    random_effect = NA
+  ),
+  # Analysis 3
+  # Description: 
+  list(
+    name = 'Treatment_w_store_packaging',
+    subsets = list(),
+    model_matrix = '~ 0 + Treatment + Blinded_Store + Packaging',
+    contrasts = list('TreatmentCONV - TreatmentRWA'),
     random_effect = NA
   )
 )

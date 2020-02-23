@@ -109,7 +109,7 @@ ggsave("FC_meat_AMR_raw_reads-by_Packaging.jpeg", width = 30, height = 20, units
 ggplot(metadata, aes(x=Dilution, y=Raw_paired_reads, color=Treatment)) +
   #geom_boxplot() + 
   geom_point(binaxis='y', stackdir='center',
-               position=position_dodge(1) , dotsize=1)
+             position=position_dodge(1) , dotsize=1)
 ggplot(metadata, aes(x=sample, y=Raw_paired_reads, color=Dilution)) +
   geom_point(stat = 'identity')
 

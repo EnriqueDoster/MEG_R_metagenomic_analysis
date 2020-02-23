@@ -1,0 +1,566 @@
+"header","class","mechanism","group","FC.199A1in2_concatenated","FC.113A1in2_concatenated","FC.186A1in2_concatenated","FC.143A_concatenated","FC.172A1in2_concatenated","FC.177A1in2_concatenated","FC.112A1in2_concatenated","FC.161A1in2_concatenated","FC.162A_concatenated","FC.122A1in2_concatenated","FC.195A1in2_concatenated","FC.195A_concatenated","FC.134A_concatenated","FC.181A1in2_concatenated","FC.123A_concatenated","FC.133A_concatenated","FC.134A1in2_concatenated","FC.172A_concatenated","FC.181A_concatenated","FC.186A_concatenated","FC.123A1in2_concatenated","FC.162A1in2_concatenated","FC.142A1in2_concatenated","FC.143A1in2_concatenated","FC.161A_concatenated","FC.113A_concatenated","FC.177A_concatenated","FC.122A_concatenated","FC.133A1in2_concatenated","FC.199A_concatenated","FC.142A_concatenated","FC.112A_concatenated"
+"1090|DQ303459.3|DQ303459|betalactams|Class_A_betalactamases|CTX","betalactams","Class A betalactamases","CTX",0,0,0,0,0,10,0,0,15,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,20,12,27,0,0
+"1268|AB976602.1|AB976602|betalactams|Class_A_betalactamases|CTX","betalactams","Class A betalactamases","CTX",94,14,49,9,133,0,0,0,64,14,72,35,14,0,0,10,0,20,0,70,0,30,0,0,0,38,0,24,24,178,0,0
+"1298|KM926622.1|KM926622|betalactams|Class_C_betalactamases|ACT","betalactams","Class C betalactamases","ACT",0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,2,0,3,0,0,0
+"1482|HF953351.1|HF953351|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETH","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,0,2071,0,18,0,0,1867,32,0,1048,498,0,0,0,0,0,0,0,2164,0,0,0,0,2151,0,0,0,0,0,0,0
+"1493|AY339625.2|AY339625|betalactams|Class_C_betalactamases|CMY","betalactams","Class C betalactamases","CMY",0,0,0,0,0,43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0
+"1650|U36911.1|SAU36911|betalactams|Class_A_betalactamases|TEM","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0
+"1737|AY033516.1|AY033516|betalactams|Class_A_betalactamases|CTX","betalactams","Class A betalactamases","CTX",37,0,14,0,71,0,0,0,20,0,58,20,0,0,0,0,0,0,0,37,0,0,0,0,0,16,0,0,0,85,0,0
+"1821|GQ149347.1|GQ149347|betalactams|Class_A_betalactamases|TEM","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,10,0,0
+"222|JQ394987.1|JQ394987|Multi-drug_resistance|Multi-drug_efflux_pumps|MDFA","Multi-drug resistance","Multi-drug efflux pumps","MDFA",0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0
+"511|unknown_id|unknown_name|betalactams|Class_C_betalactamases|ACC","betalactams","Class C betalactamases","ACC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,29,0,0
+"948|DQ464881.1|DQ464881|Aminoglycosides|Aminoglycoside_O-phosphotransferases|APH3-DPRIME","Aminoglycosides","Aminoglycoside O-phosphotransferases","APH3-DPRIME",0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"AGly|Aac6-IIc|AF162771|62-643|582|Aminoglycosides|Aminoglycoside_N-acetyltransferases|AAC6-PRIME","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"AGly|NC_004973.1.1149626|Aminoglycosides|Aminoglycoside_O-phosphotransferases|APH6","Aminoglycosides","Aminoglycoside O-phosphotransferases","APH6",0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"AGly|StrA|AB366441|22458-23261|804|Aminoglycosides|Aminoglycoside_O-phosphotransferases|APH3-DPRIME","Aminoglycosides","Aminoglycoside O-phosphotransferases","APH3-DPRIME",0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Bac|AP009048.1|gene3103|Bacitracin|Undecaprenyl_pyrophosphate_phosphatase|BACA","Bacitracin","Undecaprenyl pyrophosphate phosphatase","BACA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0
+"Bac|NC_002695.1.916234|Bacitracin|Undecaprenyl_pyrophosphate_phosphatase|BACA","Bacitracin","Undecaprenyl pyrophosphate phosphatase","BACA",0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0
+"Bla|AMPH_Ecoli|AP012030|395554-396711|1158|betalactams|Penicillin_binding_protein|AMPH","betalactams","Penicillin binding protein","AMPH",0,0,0,0,0,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0
+"Bla|A_1_DQ424965|betalactams|Class_A_betalactamases|BLAA","betalactams","Class A betalactamases","BLAA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0
+"Bla|A_2_AY954728|betalactams|Class_A_betalactamases|BLAA","betalactams","Class A betalactamases","BLAA",0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,0,0,0,0,0,0,0,0,0
+"Bla|AmpC2|Ecoli|CP002970|332756-333889|1134|betalactams|Class_C_betalactamases|BLAEC","betalactams","Class C betalactamases","BLAEC",0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0
+"Bla|PBP|Ecoli|CP002291|664439-666340|1902|betalactams|Penicillin_binding_protein|PBP2","betalactams","Penicillin binding protein","PBP2",0,0,0,0,0,130,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,183,0,0,0,0,0
+"CARD|phgb|AB091338|173-1355|ARO:3003551|emeA|Multi-drug_resistance|Multi-drug_efflux_pumps|EMEA","Multi-drug resistance","Multi-drug efflux pumps","EMEA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0
+"CARD|phgb|AM399080|1664-2150|ARO:3002835|lnuA|MLS|Lincosamide_nucleotidyltransferases|LNUA","MLS","Lincosamide nucleotidyltransferases","LNUA",0,436,556,0,0,0,0,0,0,0,8,0,0,0,0,7,0,0,0,686,0,0,0,0,0,691,0,0,33,0,0,0
+"CARD|phgb|AP009048|2810082-2811255|ARO:3000027|emrA|Multi-drug_resistance|Multi-drug_efflux_pumps|EMRA","Multi-drug resistance","Multi-drug efflux pumps","EMRA",0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,101,0,0,0,0,0
+"CARD|phgb|AP009048|3980025-3981183|ARO:3000795|mdtE|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTE","Multi-drug resistance","Multi-drug efflux pumps","MDTE",0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,115,0,0,0,0,0
+"CARD|phgb|AP009048|4153663-4154296|ARO:3000518|CRP|Multi-drug_resistance|MDR_regulator|CRP","Multi-drug resistance","MDR regulator","CRP",0,0,0,0,12,24,0,0,13,0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,37,0,0,23,0,0
+"CARD|phgb|AP009048|4306556-4307588|ARO:3003548|mdtN|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTN","Multi-drug resistance","Multi-drug efflux pumps","MDTN",0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0
+"CARD|phgb|CP000034|2662758-2663289|ARO:3000516|emrR|Multi-drug_resistance|MDR_regulator|EMRR","Multi-drug resistance","MDR regulator","EMRR",0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0
+"CARD|phgb|D78168|1591-3130|ARO:3000254|emrY|Multi-drug_resistance|Multi-drug_efflux_pumps|EMRY","Multi-drug resistance","Multi-drug efflux pumps","EMRY",0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0
+"CARD|phgb|D78168|536-1592|ARO:3000206|emrK|Multi-drug_resistance|Multi-drug_efflux_pumps|EMRK","Multi-drug resistance","Multi-drug efflux pumps","EMRK",0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0
+"CARD|phgb|EF504260|1994-3155|ARO:3001818|ACC-4|betalactams|Class_C_betalactamases|ACC","betalactams","Class C betalactamases","ACC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,16,0,0
+"CARD|phgb|FJ768952|0-1488|ARO:3000237|tolC|Multi-drug_resistance|Multi-drug_efflux_pumps|TOLC","Multi-drug resistance","Multi-drug efflux pumps","TOLC",0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,139,0,0,0,0,0
+"CARD|phgb|NC_002156|1429-2290|ARO:3000979|TEM-116|betalactams|Class_A_betalactamases|TEM","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+"CARD|phgb|NC_002695|1737553-1737967|ARO:3000676|H-NS|Multi-drug_resistance|MDR_regulator|HNS","Multi-drug resistance","MDR regulator","HNS",0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0
+"CARD|phgb|NC_002695|3211891-3212506|ARO:3000832|evgA|Multi-drug_resistance|MDR_regulator|EVGA","Multi-drug resistance","MDR regulator","EVGA",0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0
+"CARD|phgb|NC_002695|4904931-4905630|ARO:3000831|cpxR|Multi-drug_resistance|MDR_regulator|CPXA","Multi-drug resistance","MDR regulator","CPXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0
+"CARD|phgb|NC_007779|1115840-1117067|ARO:3001329|mdtG|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTG","Multi-drug resistance","Multi-drug efflux pumps","MDTG",0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,0
+"CARD|phgb|NC_007779|1621287-1621671|ARO:3000263|marA|Multi-drug_resistance|MDR_regulator|MARA","Multi-drug resistance","MDR regulator","MARA",0,0,0,0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0
+"CARD|phgb|NC_007779|1745170-1746544|ARO:3001327|mdtK|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTK","Multi-drug resistance","Multi-drug efflux pumps","MDTK",0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,0,0,0,0,0
+"CARD|phgb|NC_007779|2166412-2167135|ARO:3000828|baeR|Multi-drug_resistance|MDR_regulator|BAER","Multi-drug resistance","MDR regulator","BAER",0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,0,0,0,0
+"CARD|phgb|NC_007779|2586250-2589364|ARO:3000491|acrD|Aminoglycosides|Aminoglycoside_efflux_pumps|ACRD","Aminoglycosides","Aminoglycoside efflux pumps","ACRD",0,0,0,0,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,171,0,0,0,0,0
+"CARD|phgb|NC_007779|3974604-3975429|ARO:3000508|gadX|Multi-drug_resistance|MDR_regulator|GADX","Multi-drug resistance","MDR regulator","GADX",0,0,0,0,0,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0
+"CARD|phgb|U00096|1124117-1125326|ARO:3001216|mdtH|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTH","Multi-drug resistance","Multi-drug efflux pumps","MDTH",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0
+"CARD|phgb|U00096|1188315-1189776|ARO:3000835|phoQ|Multi-drug_resistance|MDR_regulator|PHOQ","Multi-drug resistance","MDR regulator","PHOQ",0,0,0,0,0,109,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,119,0,0,0,0,0
+"CARD|phgb|U00096|2154015-2155263|ARO:3000792|mdtA|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTA","Multi-drug resistance","Multi-drug efflux pumps","MDTA",0,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0
+"CARD|phgb|U00096|2155262-2158385|ARO:3000793|mdtB|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTB","Multi-drug resistance","Multi-drug efflux pumps","MDTB",0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,158,0,0,0,0,0
+"CARD|phgb|U00096|2158385-2161463|ARO:3000794|mdtC|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTC","Multi-drug resistance","Multi-drug efflux pumps","MDTC",0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118,0,0,0,0,0
+"CARD|phgb|U00096|2368038-2370021|ARO:3002985|arnA|Cationic_antimicrobial_peptides|Lipid_A_modification|ARNA","Cationic antimicrobial peptides","Lipid A modification","ARNA",0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,162,0,0,0,0,0
+"CARD|phgb|U00096|2484373-2487967|ARO:3000833|evgS|Multi-drug_resistance|MDR_regulator|EVGS","Multi-drug resistance","MDR regulator","EVGS",0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0
+"CARD|phgb|U00096|2812615-2814154|ARO:3000074|emrB|Multi-drug_resistance|Multi-drug_efflux_pumps|EMRB","Multi-drug resistance","Multi-drug efflux pumps","EMRB",0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0
+"CARD|phgb|U00096|3203309-3204131|ARO:3002986|bacA|Bacitracin|Undecaprenyl_pyrophosphate_phosphatase|BACA","Bacitracin","Undecaprenyl pyrophosphate phosphatase","BACA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0
+"CARD|phgb|U00096|3412802-3413465|ARO:3000656|acrS|Aminoglycosides|Aminoglycoside_efflux_regulator|ACRS","Aminoglycosides","Aminoglycoside efflux regulator","ACRS",0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0
+"CARD|phgb|U00096|3413863-3415021|ARO:3000499|acrE|Aminoglycosides|Aminoglycoside_efflux_pumps|ACRE","Aminoglycosides","Aminoglycoside efflux pumps","ACRE",0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0
+"CARD|phgb|U00096|3415032-3418137|ARO:3000502|acrF|Aminoglycosides|Aminoglycoside_efflux_pumps|ACRF","Aminoglycosides","Aminoglycoside efflux pumps","ACRF",0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,169,0,0,0,0,0
+"CARD|phgb|U00096|3660413-3663527|ARO:3000796|mdtF|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTC","Multi-drug resistance","Multi-drug efflux pumps","MDTC",0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,173,0,0,0,0,0
+"CARD|phgb|U00096|4567286-4568519|ARO:3001214|mdtM|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTC","Multi-drug resistance","Multi-drug efflux pumps","MDTC",0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0
+"CARD|phgb|U46859|22365-24057|ARO:3003049|rosB|Cationic_antimicrobial_peptides|Cationic_antimicrobial_peptide_efflux_pumps|rosB","Cationic antimicrobial peptides","Cationic antimicrobial peptide efflux pumps","rosB",0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,0,0,0,0,0,0,0
+"CARD|phgb|U46859|24294-25527|ARO:3003048|rosA|Cationic_antimicrobial_peptides|Cationic_antimicrobial_peptide_efflux_pumps|rosA","Cationic antimicrobial peptides","Cationic antimicrobial peptide efflux pumps","rosA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0
+"MLS|AM399080.1|gene2|MLS|Lincosamide_nucleotidyltransferases|LNUA","MLS","Lincosamide nucleotidyltransferases","LNUA",0,328,404,0,0,0,0,0,0,0,9,5,0,0,0,0,0,0,0,543,0,0,0,0,0,578,0,0,30,0,0,0
+"MLS|LnuA|M14039|413-898|486|MLS|Lincosamide_nucleotidyltransferases|LNUA","MLS","Lincosamide nucleotidyltransferases","LNUA",0,0,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,0,0,54,0,0,0,0,0,0
+"Mdr|AP009048.1|gene2135|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTD","Multi-drug resistance","Multi-drug efflux pumps","MDTD",0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0
+"Mdr|AP009048.1|gene3415|Multi-drug_resistance|MDR_regulator|CPXAR","Multi-drug resistance","MDR regulator","CPXAR",0,0,0,0,0,105,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,141,0,0,0,0,0
+"Mdr|AP009048.1|gene3616|Multi-drug_resistance|Multi-drug_efflux_pumps|MDTL","Multi-drug resistance","Multi-drug efflux pumps","MDTL",0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0
+"Mdr|CP000034.1|gene2198|Multi-drug_resistance|MDR_regulator|ASMA","Multi-drug resistance","MDR regulator","ASMA",0,0,0,0,0,91,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,132,0,0,0,0,0
+"Mdr|CP000034.1|gene3834|Multi-drug_resistance|MDR_regulator|CPXAR","Multi-drug resistance","MDR regulator","CPXAR",0,0,0,0,0,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0
+"Mdr|U46859.1|gene22|Fosmidomycin|Multi-drug_resistance|Multi-drug_efflux_pumps|ROSB","Multi-drug resistance","Multi-drug efflux pumps","ROSB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0
+"Mdr|U46859.1|gene23|Multi-drug_resistance|Multi-drug_efflux_pumps|ROSA","Multi-drug resistance","Multi-drug efflux pumps","ROSA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0
+"RGI|gb|AF170730|+|69-735|ARO:3003744","MLS","Streptogramin A O-acetyltransferase","VATF",0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,0
+"RGI|gb|AP009048.1|-|3980025-3981183|ARO:3000795","Multi-drug resistance","Multi-drug efflux pumps","MDTE",0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118,0,0,0,0,0
+"RGI|gb|AP009048.1|-|4153663-4154296|ARO:3000518","Multi-drug resistance","MDR regulator","CRP",0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0
+"RGI|gb|AP009048|+|2810082-2811255|ARO:3000027","Multi-drug resistance","Multi-drug efflux pumps","EMRA",0,0,0,0,0,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,96,0,0,0,0,0
+"RGI|gb|CP000800.1|-|1191727-1192954|ARO:3001329","Multi-drug resistance","Multi-drug efflux pumps","MDTG",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0
+"RGI|gb|CP015085.1|-|2551711-2552440|ARO:3003838","Multi-drug resistance","MDR regulator","GADW",0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0
+"RGI|gb|D78168|+|1591-3130|ARO:3000254","Multi-drug resistance","Multi-drug efflux pumps","EMRY",0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0
+"RGI|gb|D78168|+|536-1592|ARO:3000206","Multi-drug resistance","Multi-drug efflux pumps","EMRK",0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0
+"RGI|gb|DQ149925.1|+|188-521|ARO:3003836","Multi-drug resistance","Multi-drug efflux pumps","QACH",77,0,0,0,507,0,0,0,41,0,30,18,0,2,0,0,0,161,0,0,0,14,0,0,3,0,0,0,0,114,0,0
+"RGI|gb|NC_000913.3|+|2810769-2811300|ARO:3000516","Multi-drug resistance","MDR regulator","EMRR",0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0
+"RGI|gb|NC_000913.3|-|481253-484403|ARO:3000216","Multi-drug resistance","Multi-drug efflux pumps","ACRB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0
+"RGI|gb|NC_000913.3|-|484425-485619|ARO:3004043","Multi-drug resistance","MDR regulator","ACRA",0,0,0,0,0,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,0,0,0,0,0
+"RGI|gb|NC_002695.2|-|1737690-1738104|ARO:3000676","Multi-drug resistance","MDR regulator","HNS",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0
+"RGI|gb|NC_002695|+|3211891-3212506|ARO:3000832","Multi-drug resistance","MDR regulator","EVGA",0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0
+"RGI|gb|NC_007779|+|1621287-1621671|ARO:3000263","Multi-drug resistance","MDR regulator","MARA",0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,0,0
+"RGI|gb|NC_007779|+|2166412-2167135|ARO:3000828","Multi-drug resistance","MDR regulator","BAER",0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0
+"RGI|gb|NC_007779|+|2586250-2589364|ARO:3000491","Aminoglycosides","Aminoglycoside efflux pumps","ACRD",0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,176,0,0,0,0,0
+"RGI|gb|NC_007779|+|3974604-3975429|ARO:3000508","Multi-drug resistance","MDR regulator","GADX",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0
+"RGI|gb|U00096.3|-|4567286-4568519|ARO:3001214","Multi-drug resistance","Multi-drug efflux pumps","MDTM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,0,0,0,0,0
+"RGI|gb|U00096|+|2154015-2155263|ARO:3000792","Multi-drug resistance","Multi-drug efflux pumps","MDTA",0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0
+"RGI|gb|U00096|+|2155262-2158385|ARO:3000793","Multi-drug resistance","Multi-drug efflux pumps","MDTB",0,0,0,0,0,113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,137,0,0,0,0,0
+"RGI|gb|U00096|+|2158385-2161463|ARO:3000794","Multi-drug resistance","Multi-drug efflux pumps","MDTC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0
+"RGI|gb|U00096|+|2484373-2487967|ARO:3000833","Multi-drug resistance","MDR regulator","EVGS",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0
+"RGI|gb|U00096|+|2812615-2814154|ARO:3000074","Multi-drug resistance","Multi-drug efflux pumps","EMRB",0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0
+"RGI|gb|U00096|+|3413863-3415021|ARO:3000499","Aminoglycosides","Aminoglycoside efflux pumps","ACRE",0,0,0,0,0,61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,83,0,0,0,0,0
+"RGI|gb|U00096|+|3415032-3418137|ARO:3000502","Aminoglycosides","Aminoglycoside efflux pumps","ACRF",0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,184,0,0,0,0,0
+"RGI|gb|U00096|+|3660413-3663527|ARO:3000796","Multi-drug resistance","Multi-drug efflux pumps","MDTF",0,0,0,0,0,88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,163,0,0,0,0,0
+"RGI|gb|U00096|-|1124117-1125326|ARO:3001216","Multi-drug resistance","Multi-drug efflux pumps","MDTH",0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0
+"RGI|gb|U00096|-|3412802-3413465|ARO:3000656","Aminoglycosides","Aminoglycoside efflux regulator","ACRS",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|AAC(3)-IIa","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC4",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|AAC(3)-IIc","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC5",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|AAC(3)-Ib","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC3",2,0,1,0,4,1,0,0,2,0,1,1,0,0,1,0,0,0,2,3,8,1,0,1,2,1,1,1,0,6,0,0
+"SNPconfirmed|RGI|Strict|AAC(6)-31","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|AAC(6)-IIc","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",2,3,0,0,2,0,4,0,4,4,1,0,0,4,0,0,0,0,4,2,3,0,2,0,1,3,4,2,2,2,3,0
+"SNPconfirmed|RGI|Strict|AAC(6)-Ib7","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",15,1,4,0,13,0,0,0,9,1,19,3,2,2,0,0,1,0,1,7,3,8,0,1,8,1,1,3,4,34,0,1
+"SNPconfirmed|RGI|Strict|AAC(6)-Ic","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|AAC(6)-Ii","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACC-1","betalactams","Class C betalactamases","ACC",0,0,0,0,8,0,0,0,6,2,0,1,0,0,0,0,0,0,0,1,0,9,0,0,0,0,0,7,0,10,0,0
+"SNPconfirmed|RGI|Strict|ACC-2","betalactams","Class C betalactamases","ACC",3,0,0,0,2,0,0,0,7,2,0,0,1,0,0,0,2,0,0,0,0,6,0,0,0,0,0,6,0,7,0,0
+"SNPconfirmed|RGI|Strict|ACC-3","betalactams","Class C betalactamases","ACC",5,0,0,0,15,0,0,0,10,3,2,3,0,0,0,0,0,0,0,4,0,4,0,0,0,0,0,15,0,14,0,0
+"SNPconfirmed|RGI|Strict|ACC-4","betalactams","Class C betalactamases","ACC",4,0,0,0,18,0,0,0,13,2,0,0,2,0,0,0,0,0,0,1,0,12,1,0,0,0,0,11,0,20,0,0
+"SNPconfirmed|RGI|Strict|ACC-5","betalactams","Class C betalactamases","ACC",3,0,0,0,8,0,0,0,10,5,0,0,1,0,0,0,0,2,0,0,0,9,0,0,0,0,0,10,0,6,0,0
+"SNPconfirmed|RGI|Strict|ACT-16","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-17","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-18","betalactams","Class C betalactamases","ACT",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-19","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-20","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-21","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-27","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-30","betalactams","Class C betalactamases","ACT",0,0,0,0,0,1,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,0,1,0,2,0,1,0
+"SNPconfirmed|RGI|Strict|ACT-32","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-35","betalactams","Class C betalactamases","ACT",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-36","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ACT-4","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|ACT-5","betalactams","Class C betalactamases","ACT",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|ACT-6","betalactams","Class C betalactamases","ACT",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|ANT(2)-Ia","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT2-DPRIME",0,0,4,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ANT(3)-Ii-AAC(6)-IId fusion protein","Aminoglycosides","Aminoglycoside N-acetyltransferases","AAC6-PRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ANT(6)-Ia","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT6",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+"SNPconfirmed|RGI|Strict|APH(3)-IIIa","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|APH(3)-Ia","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,1,0,2,0,0,2,2,0,1,2,2,0,0,0,0,2,4,0,0,0,0,0,4,2,5,0,2,0
+"SNPconfirmed|RGI|Strict|APH(3)-Ib","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,2,0,4,8,1,37,2,4,2,6,2,6,3,0,0,0,0,4,3,20,0,0,0,4,12,4,8,12,0,2,2
+"SNPconfirmed|RGI|Strict|APH(6)-Id","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT6",0,1,4,6,0,0,21,4,0,1,2,0,0,6,4,2,0,0,3,8,7,0,0,2,0,8,4,6,7,6,4,8
+"SNPconfirmed|RGI|Strict|AcrE","Aminoglycosides","Aminoglycoside efflux pumps","ACRE",0,0,0,0,0,101,3,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,157,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|AcrF","Aminoglycosides","Aminoglycoside efflux pumps","ACRF",0,0,1,0,1,169,4,0,1,0,2,2,0,0,0,0,1,2,0,0,2,3,0,0,1,0,335,1,2,0,0,2
+"SNPconfirmed|RGI|Strict|AcrS","Aminoglycosides","Aminoglycoside efflux regulator","ACRS",0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CARB-10","betalactams","Class A betalactamases","CARB",0,0,0,0,0,0,11,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CARB-14","betalactams","Class A betalactamases","CARB",0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|CARB-16","betalactams","Class A betalactamases","CARB",0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|CARB-5","betalactams","Class A betalactamases","CARB",0,0,0,0,0,0,4,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,2,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|CARB-8","betalactams","Class A betalactamases","CARB",0,0,0,0,0,0,3,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|CFE-1","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-100","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-101","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-102","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-103","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-104","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-105","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-108","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-110","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-111","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-113","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-114","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-115","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-116","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-117","betalactams","Class C betalactamases","CMY",0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-118","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-119","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-12","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-13","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-14","betalactams","Class C betalactamases","CMY",0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-17","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-21","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-23","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-24","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-25","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-31","betalactams","Class C betalactamases","CMY",0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-32","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-34","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-35","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-36","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-4","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-40","betalactams","Class C betalactamases","CMY",0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-41","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-42","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-45","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-46","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-47","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-48","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-49","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-5","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-50","betalactams","Class C betalactamases","CMY",0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-51","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-56","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-60","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-62","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-65","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-66","betalactams","Class C betalactamases","CMY",0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-67","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-68","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-7","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-70","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-72","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-75","betalactams","Class C betalactamases","CMY",0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-76","betalactams","Class C betalactamases","CMY",0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-78","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-79","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-82","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-84","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-85","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-86","betalactams","Class C betalactamases","CMY",0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-87","betalactams","Class C betalactamases","CMY",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CMY-93","betalactams","Class C betalactamases","CMY",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|CRP","Multi-drug resistance","MDR regulator","CRP",12,0,110,2,13,41,0,83,17,7,18,26,2,0,0,0,0,10,0,68,0,9,1,0,81,0,66,3,1,36,1,0
+"SNPconfirmed|RGI|Strict|CTX-M-20","betalactams","Class A betalactamases","CTX",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|CTX-M-76","betalactams","Class A betalactamases","CTX",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|CTX-M-92","betalactams","Class A betalactamases","CTX",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|CepS","betalactams","Class C betalactamases","CEPS",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Enterobacter cloacae acrA","Multi-drug resistance","Multi-drug efflux pumps","ACRA",0,0,0,0,0,2,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|EreA","MLS","Macrolide esterases","EREA",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|EreA2","MLS","Macrolide esterases","EREA",0,0,0,0,0,0,0,0,5,1,0,0,1,1,0,0,0,0,0,0,6,0,0,0,7,0,1,1,0,2,0,0
+"SNPconfirmed|RGI|Strict|ErmB","MLS","Macrolide esterases","EREB",0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ErmX","MLS","23S rRNA methyltransferases","ERMX",0,0,0,0,0,0,4,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2
+"SNPconfirmed|RGI|Strict|Escherichia coli 16S rRNA (rrsB) mutation conferring resistance to spectinomycin","Aminoglycosides","Aminoglycoside-resistant 16S-23S rRNA O-methyltransferases","RRSB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli EF-Tu mutants conferring resistance to Pulvomycin","Elfamycins","EF-Tu inhibition","TUFAB",1,0,0,0,1,5,0,1,2,0,0,1,0,0,1,0,0,1,1,1,0,1,0,0,0,1,7,1,0,4,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli EF-Tu mutants conferring resistance to kirromycin","Elfamycins","EF-Tu inhibition","TUFAB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli GlpT with mutation conferring resistance to fosfomycin","Fosfomycin","fosfomycin target mutation","GLPT",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli acrA","Multi-drug resistance","MDR regulator","ACRA",0,0,0,0,0,37,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli acrR with mutation conferring multidrug antibiotic resistance","Multi-drug resistance","MDR regulator","ACRR",0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli ampC beta-lactamase","betalactams","Class C betalactamases","BLAEC",0,0,0,0,0,68,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,89,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli emrE","Multi-drug resistance","Multi-drug efflux pumps","EMRE",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli marR mutant conferring antibiotic resistance","Multi-drug resistance","MDR regulator","MARR",0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli mdfA","Multi-drug resistance","Multi-drug efflux pumps","MDFA",0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli nfsA mutations conferring resistance to nitrofurantoin","Nitrofuran","nfsA mutation","NFSA",0,0,0,0,0,12,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|Escherichia coli soxR with mutation conferring antibiotic resistance","Multi-drug resistance","MDR regulator","SOXS",0,0,0,0,0,45,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|Escherichia coli soxS with mutation conferring antibiotic resistance","Multi-drug resistance","MDR regulator","SOXS",0,0,0,0,0,21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|FOX-3","betalactams","Class C betalactamases","FOX",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|FosA2","Fosfomycin","Fosfomycin thiol transferases","FOSA",0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|H-NS","Multi-drug resistance","MDR regulator","HNS",1,0,0,0,0,26,0,0,0,0,1,3,1,0,0,0,0,0,0,0,0,0,0,0,3,0,43,0,0,4,0,2
+"SNPconfirmed|RGI|Strict|Klebsiella pneumoniae acrA","Multi-drug resistance","Multi-drug efflux pumps","ACRA",0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-11","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-13","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|MIR-14","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-15","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-2","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-5","betalactams","Class C betalactamases","MIR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MIR-8","betalactams","Class C betalactamases","MIR",0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MexB","Multi-drug resistance","Multi-drug efflux pumps","MEXB",1,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,1,0,0,0,0,4,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|MexC","Multi-drug resistance","Multi-drug efflux pumps","MEXC",0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|MexD","Multi-drug resistance","Multi-drug efflux pumps","MEXD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+"SNPconfirmed|RGI|Strict|MexF","Multi-drug resistance","Multi-drug efflux pumps","MEXF",2,0,0,0,3,0,0,1,3,1,1,8,0,0,0,0,0,1,0,0,0,2,0,0,1,0,0,0,0,8,3,0
+"SNPconfirmed|RGI|Strict|MexI","Multi-drug resistance","Multi-drug efflux pumps","MEXI",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|MexK","Multi-drug resistance","Multi-drug efflux pumps","MEXK",0,0,0,0,7,0,0,0,0,0,4,2,0,0,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,1,1,0
+"SNPconfirmed|RGI|Strict|MexT","Multi-drug resistance","MDR regulator","MEXT",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Morganella morganii gyrB conferring resistance to fluoroquinolone","Aminocoumarins","Aminocoumarin-resistant DNA topoisomerases","gyrB",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|MuxC","Multi-drug resistance","Multi-drug efflux pumps","MUXC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|Mycobacterium avium 23S rRNA with mutation conferring resistance to clarithromycin","MLS","23S rRNA target mutation","M23",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|OCH-3","betalactams","Class C betalactamases","OCH",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|OCH-5","betalactams","Class C betalactamases","OCH",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|OXA-117","betalactams","Class D betalactamases","OXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|OXA-12","betalactams","Class D betalactamases","OXA",0,0,0,0,3,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,4,0,1,0,0
+"SNPconfirmed|RGI|Strict|OXA-178","betalactams","Class D betalactamases","OXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|OXA-315","betalactams","Class D betalactamases","OXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|OXA-365","betalactams","Class D betalactamases","OXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|OXA-376","betalactams","Class D betalactamases","OXA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|OXY-3-1","betalactams","Class A betalactamases","OXY",5,0,0,0,2,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|PmrF","Cationic antimicrobial peptides","Lipid A modification","PMRF",0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Pseudomonas aeruginosa CpxR","Multi-drug resistance","MDR regulator","CPXAR",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|QnrB17","Fluoroquinolones","Quinolone resistance protein Qnr","QNRB",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|QnrB18","Fluoroquinolones","Quinolone resistance protein Qnr","QNRB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|QnrB59","Fluoroquinolones","Quinolone resistance protein Qnr","QNRB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|QnrB72","Fluoroquinolones","Quinolone resistance protein Qnr","QNRB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|ROB-1","betalactams","Class A betalactamases","ROB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Rm3","betalactams","Class B betalactamases","RM3",0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|SAT-2","Aminoglycosides","Aminoglycoside N-acetyltransferases","SAT",0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|SRT-1","betalactams","Class C betalactamases","SRT",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|SRT-2","betalactams","Class C betalactamases","SRT",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|Shigella flexneri chloramphenicol acetyltransferase","Phenicol","Chloramphenicol acetyltransferases","CAT",0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,1,4,0,0,0,0,1,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-1","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-10","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-101","betalactams","Class A betalactamases","TEM",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-102","betalactams","Class A betalactamases","TEM",2,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,2,2,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-104","betalactams","Class A betalactamases","TEM",0,0,2,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,2,1,1,1
+"SNPconfirmed|RGI|Strict|TEM-105","betalactams","Class A betalactamases","TEM",0,0,2,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,4,1,0,0,0,1,2,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-108","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-109","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,3,1,0,3,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-11","betalactams","Class A betalactamases","TEM",0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-110","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,4,0,1,0,0,0,1,2,1,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-111","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-112","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-113","betalactams","Class A betalactamases","TEM",0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,5,0,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-114","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-115","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-116","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,2,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-117","betalactams","Class A betalactamases","TEM",1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-118","betalactams","Class A betalactamases","TEM",0,1,1,0,0,0,0,0,0,1,0,0,0,0,3,1,0,0,0,0,2,0,0,0,0,0,2,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-12","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-120","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,3,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,8,2,0,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-121","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-122","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|TEM-123","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-124","betalactams","Class A betalactamases","TEM",2,0,0,0,0,0,0,0,0,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-125","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-126","betalactams","Class A betalactamases","TEM",0,2,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-127","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,4,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-128","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-129","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,6,5,0,6,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-130","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-132","betalactams","Class A betalactamases","TEM",0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,4,0,3,4,0,0
+"SNPconfirmed|RGI|Strict|TEM-133","betalactams","Class A betalactamases","TEM",0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-134","betalactams","Class A betalactamases","TEM",0,0,0,2,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,2,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-135","betalactams","Class A betalactamases","TEM",1,0,0,0,0,1,0,1,1,1,1,1,0,0,2,0,0,0,0,0,1,1,0,0,1,0,1,0,0,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-137","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,1,3,2,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-138","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,1,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-139","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,3,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-141","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-142","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0,0,0,0,2,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-143","betalactams","Class A betalactamases","TEM",0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-144","betalactams","Class A betalactamases","TEM",1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-145","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,2,0,0,0,0,0,8,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-146","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-147","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-148","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-149","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,3,5,1,0,0,0,1,0,0,0,2,0,0,1,0,0,0,1,0,1,4,2,1,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-15","betalactams","Class A betalactamases","TEM",1,0,0,1,0,0,0,0,0,0,3,1,1,0,1,0,0,0,1,0,0,0,0,2,0,6,2,1,0,3,3,0
+"SNPconfirmed|RGI|Strict|TEM-150","betalactams","Class A betalactamases","TEM",0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,2,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-151","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-152","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-153","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-154","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-155","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-156","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-157","betalactams","Class A betalactamases","TEM",0,0,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,4,0,0,0,1,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-158","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-159","betalactams","Class A betalactamases","TEM",2,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,7,5,1,4,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-16","betalactams","Class A betalactamases","TEM",1,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-160","betalactams","Class A betalactamases","TEM",1,0,0,0,2,2,0,0,0,0,1,0,0,0,0,0,2,1,2,0,0,0,0,0,0,0,2,0,0,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-162","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-163","betalactams","Class A betalactamases","TEM",2,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,0,0,6,0,2,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-164","betalactams","Class A betalactamases","TEM",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,1,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-166","betalactams","Class A betalactamases","TEM",0,0,0,0,0,2,4,2,1,2,3,0,1,1,0,0,0,0,1,0,1,1,0,0,3,2,0,1,0,3,3,0
+"SNPconfirmed|RGI|Strict|TEM-167","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-168","betalactams","Class A betalactamases","TEM",0,1,0,0,0,3,0,0,3,0,0,0,1,0,0,0,0,0,3,1,0,0,0,0,2,0,3,0,0,5,4,0
+"SNPconfirmed|RGI|Strict|TEM-169","betalactams","Class A betalactamases","TEM",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,4,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-17","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-171","betalactams","Class A betalactamases","TEM",0,0,0,1,1,0,4,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|TEM-176","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,3,0,4,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-178","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,0,3,0,0,2,5,0
+"SNPconfirmed|RGI|Strict|TEM-182","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-183","betalactams","Class A betalactamases","TEM",2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,4,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-184","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,1,0
+"SNPconfirmed|RGI|Strict|TEM-185","betalactams","Class A betalactamases","TEM",1,0,1,1,2,0,0,0,1,0,0,2,0,0,0,0,1,1,6,0,0,1,0,0,0,3,2,0,0,6,0,0
+"SNPconfirmed|RGI|Strict|TEM-186","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-187","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,1,0,3,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-188","betalactams","Class A betalactamases","TEM",1,0,3,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,1,0,2,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-189","betalactams","Class A betalactamases","TEM",0,0,1,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,6,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-19","betalactams","Class A betalactamases","TEM",1,0,0,1,0,0,2,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,2,0,2,0,2,1,1,0
+"SNPconfirmed|RGI|Strict|TEM-190","betalactams","Class A betalactamases","TEM",0,0,1,0,1,0,11,0,6,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,2,0,0,3,5,0,1
+"SNPconfirmed|RGI|Strict|TEM-192","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,8,2,0,0,0,1,1,0,0,2,2,0
+"SNPconfirmed|RGI|Strict|TEM-193","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,2,0,0,0,2,0,1,0,0,0,2,0,0,0,2,0,0,0,1,0,3,1,2,5,1,0
+"SNPconfirmed|RGI|Strict|TEM-194","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-195","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-196","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,0,1,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-197","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,6,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-198","betalactams","Class A betalactamases","TEM",0,1,1,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,2,0,0,2,0,3,3,0,2,4,0,0
+"SNPconfirmed|RGI|Strict|TEM-199","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0,2,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-2","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-20","betalactams","Class A betalactamases","TEM",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,5,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-201","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,6,0,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|TEM-206","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,4,1,0,0,0,0,8,0,3,0,2,0
+"SNPconfirmed|RGI|Strict|TEM-207","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"SNPconfirmed|RGI|Strict|TEM-208","betalactams","Class A betalactamases","TEM",0,0,1,1,1,1,0,0,1,1,0,0,1,0,0,0,0,0,1,1,0,3,0,0,0,0,3,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-209","betalactams","Class A betalactamases","TEM",0,0,1,1,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,3,0,1,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-211","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2,1,0
+"SNPconfirmed|RGI|Strict|TEM-213","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-214","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-215","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,1,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-216","betalactams","Class A betalactamases","TEM",0,0,0,3,0,0,1,0,0,0,0,0,2,1,1,0,7,0,0,4,1,1,0,2,0,0,2,0,1,2,2,1
+"SNPconfirmed|RGI|Strict|TEM-217","betalactams","Class A betalactamases","TEM",0,0,1,2,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,2,0,2,5,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-219","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,2,1,0
+"SNPconfirmed|RGI|Strict|TEM-22","betalactams","Class A betalactamases","TEM",0,0,0,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-220","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-24","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-26","betalactams","Class A betalactamases","TEM",0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-28","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-29","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,2,2,0,2,0,0,0,1,1,1,0,0,0,0,0,0,1,0,1,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-3","betalactams","Class A betalactamases","TEM",0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3,0,5,0,2,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-30","betalactams","Class A betalactamases","TEM",0,0,0,1,3,0,0,0,0,0,0,0,0,4,1,0,0,0,5,3,1,0,0,1,0,4,9,3,1,1,3,0
+"SNPconfirmed|RGI|Strict|TEM-33","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,0,1,0,0,0,1,0,0,0,1,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-34","betalactams","Class A betalactamases","TEM",3,0,0,2,1,0,11,0,0,0,1,0,0,0,0,0,0,0,1,2,3,2,0,0,2,1,4,1,3,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-4","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-40","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,2,1,0,4,2,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-42","betalactams","Class A betalactamases","TEM",0,0,0,1,1,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,1,0,0,4,3,0,1,0,4,2,2,0
+"SNPconfirmed|RGI|Strict|TEM-43","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-45","betalactams","Class A betalactamases","TEM",0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,1,0,5,0,0,1,1
+"SNPconfirmed|RGI|Strict|TEM-47","betalactams","Class A betalactamases","TEM",0,0,0,0,2,0,2,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0,0,0,1,3,6,1,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-48","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,2,2,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,6,2,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-49","betalactams","Class A betalactamases","TEM",0,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,3,3,1,1,3,0
+"SNPconfirmed|RGI|Strict|TEM-52","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-53","betalactams","Class A betalactamases","TEM",0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,4,0,0
+"SNPconfirmed|RGI|Strict|TEM-54","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-55","betalactams","Class A betalactamases","TEM",1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,6,0,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|TEM-59","betalactams","Class A betalactamases","TEM",1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-6","betalactams","Class A betalactamases","TEM",0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-63","betalactams","Class A betalactamases","TEM",1,0,0,2,0,2,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-67","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-68","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-7","betalactams","Class A betalactamases","TEM",0,1,0,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1,0,5,0,0,0,4,0,0
+"SNPconfirmed|RGI|Strict|TEM-70","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0
+"SNPconfirmed|RGI|Strict|TEM-71","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-72","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-75","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,5,0,0,0,0,0,1,0,1,0,0,0,4,1,0,0,2,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-76","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,3,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-78","betalactams","Class A betalactamases","TEM",0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,1,0,0,2,0,1,0,0,0,3,0,0,1,3,2,0
+"SNPconfirmed|RGI|Strict|TEM-79","betalactams","Class A betalactamases","TEM",0,0,0,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-8","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,0,0,0,0,2,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-80","betalactams","Class A betalactamases","TEM",0,0,0,0,3,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,2,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-81","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,4,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-82","betalactams","Class A betalactamases","TEM",0,0,1,0,0,3,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-83","betalactams","Class A betalactamases","TEM",2,1,0,0,0,0,5,0,0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-84","betalactams","Class A betalactamases","TEM",0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,7,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-85","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-87","betalactams","Class A betalactamases","TEM",1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,4,2,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-88","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|TEM-89","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-90","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,3,1,2,1,1,0,0,0,0,0,0,1,0,1,0,0,0,1,7,0,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|TEM-91","betalactams","Class A betalactamases","TEM",0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-92","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-93","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,1,0,0,0,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,4,0
+"SNPconfirmed|RGI|Strict|TEM-94","betalactams","Class A betalactamases","TEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,2,0,2,0,0,0
+"SNPconfirmed|RGI|Strict|TEM-96","betalactams","Class A betalactamases","TEM",1,0,0,2,0,2,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|TolC","Multi-drug resistance","Multi-drug efflux pumps","TOLC",2,0,0,0,0,51,0,0,2,0,2,1,0,0,0,1,1,1,2,2,0,1,0,0,0,0,127,1,0,9,0,0
+"SNPconfirmed|RGI|Strict|TriA","Triclosan","Triclosan efflux pump","TRIA",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|aad(6)","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+"SNPconfirmed|RGI|Strict|aadA","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|aadA11","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|aadA12","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,4,0,2,1,0,1,0,0,1,3,1,0,1,0,2,1,1,2,2,0,0,2,0,2,4,3,1,6,1,0
+"SNPconfirmed|RGI|Strict|aadA13","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,4,1,0,0
+"SNPconfirmed|RGI|Strict|aadA15","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|aadA17","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",2,2,0,1,0,4,4,0,3,0,0,1,0,1,2,0,1,1,1,0,5,2,1,1,5,6,5,3,8,6,1,0
+"SNPconfirmed|RGI|Strict|aadA2","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,1,3,1,0,2,1,0,1,0,0,0,1,0,0,0,1,0,1,0,5,0,0,0,0,1,0,0,0,0,1,1
+"SNPconfirmed|RGI|Strict|aadA21","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",1,0,0,1,2,0,2,1,4,0,1,2,0,1,1,0,2,0,1,0,4,2,0,1,0,5,0,4,0,6,1,0
+"SNPconfirmed|RGI|Strict|aadA22","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0
+"SNPconfirmed|RGI|Strict|aadA23","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,2,0,0,1,1,1,0,0,0,0,0,1,0,3,0,0,0,0,0,0,1,0,0,3,1,2,4,0,1,1,0
+"SNPconfirmed|RGI|Strict|aadA24","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,1,0,0,5,0,0,0,3,0,0,0,0,1,1,1,0,0,3,2,0,0,0,0,0,0,0,2,1,4,1,0
+"SNPconfirmed|RGI|Strict|aadA25","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",1,0,0,0,0,0,2,1,0,0,0,0,1,0,0,0,3,0,1,3,8,0,0,0,3,3,2,1,0,4,0,0
+"SNPconfirmed|RGI|Strict|aadA3","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",3,0,0,0,1,1,0,1,1,0,0,0,0,2,0,0,1,0,0,0,0,0,0,1,4,3,0,2,2,4,2,0
+"SNPconfirmed|RGI|Strict|aadA6/aadA10","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|aadA8","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",0,0,0,0,0,0,4,0,0,0,0,1,1,1,3,0,1,1,3,0,8,0,0,0,1,0,0,1,8,0,1,0
+"SNPconfirmed|RGI|Strict|aadA9","Aminoglycosides","Aminoglycoside O-nucleotidyltransferases","ANT3-DPRIME",4,2,0,0,2,0,0,0,3,0,3,2,0,0,0,0,0,0,0,1,2,2,1,0,1,0,1,1,0,9,1,1
+"SNPconfirmed|RGI|Strict|abeM","Multi-drug resistance","Multi-drug efflux pumps","ABEM",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|abeS","Multi-drug resistance","Multi-drug efflux pumps","ABES",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|acrB","Multi-drug resistance","Multi-drug efflux pumps","ACRB",10,0,1,0,4,63,0,1,5,4,2,3,2,0,0,0,0,0,0,6,0,3,2,0,2,0,110,8,0,38,1,0
+"SNPconfirmed|RGI|Strict|acrD","Aminoglycosides","Aminoglycoside efflux pumps","ACRD",3,0,0,0,1,160,2,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,338,0,0,5,2,4
+"SNPconfirmed|RGI|Strict|adeB","Multi-drug resistance","Multi-drug efflux pumps","ADEB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|adeF","Multi-drug resistance","Multi-drug efflux pumps","ADEF",4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|adeH","Multi-drug resistance","Multi-drug efflux pumps","ADEH",2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|adeJ","Multi-drug resistance","Multi-drug efflux pumps","ADEJ",2,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,0
+"SNPconfirmed|RGI|Strict|adeL","Multi-drug resistance","Multi-drug efflux pumps","ADEL",1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|arnA","Cationic antimicrobial peptides","Lipid A modification","ARNA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|bacA","Bacitracin","Undecaprenyl pyrophosphate phosphatase","BACA",0,0,0,0,0,32,6,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|baeR","Multi-drug resistance","MDR regulator","BAER",0,0,1,0,0,62,0,0,0,1,1,2,0,0,0,0,0,0,0,0,0,1,0,0,0,1,85,0,0,3,0,0
+"SNPconfirmed|RGI|Strict|baeS","Multi-drug resistance","MDR regulator","BAES",0,0,0,0,2,36,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,51,0,0,4,1,0
+"SNPconfirmed|RGI|Strict|catI","Phenicol","Chloramphenicol acetyltransferases","CAT",0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0
+"SNPconfirmed|RGI|Strict|cmx","Phenicol","Phenicol efflux pumps","CMXAB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,4,0,0,0
+"SNPconfirmed|RGI|Strict|cphA2","betalactams","Class B betalactamases","CPHA",0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|cphA4","betalactams","Class B betalactamases","CPHA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|cphA7","betalactams","Class B betalactamases","CPHA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|cphA8","betalactams","Class B betalactamases","CPHA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|cpxA","Multi-drug resistance","MDR regulator","CPXA",1,0,0,0,0,158,0,0,0,1,0,1,1,0,0,0,2,0,0,0,2,0,0,0,0,0,243,0,6,5,0,6
+"SNPconfirmed|RGI|Strict|dfrA19","Trimethoprim","Dihydrofolate reductase","DFRA",2,2,0,4,1,2,6,0,0,2,0,0,2,4,2,2,0,0,2,2,6,0,2,2,8,2,2,0,4,0,0,2
+"SNPconfirmed|RGI|Strict|efrB","Multi-drug resistance","Multi-drug efflux pumps","EMRB",0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|emeA","Multi-drug resistance","Multi-drug efflux pumps","EMEA",3,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,5,0,1,0,1,0,0,0,0,11,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|emrA","Multi-drug resistance","Multi-drug efflux pumps","EMRA",0,0,0,2,0,94,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,188,0,0,5,0,0
+"SNPconfirmed|RGI|Strict|emrB","Multi-drug resistance","Multi-drug efflux pumps","EMRB",1,0,1,0,1,71,0,0,4,0,0,4,0,0,0,0,0,1,0,0,0,0,0,0,0,0,89,1,0,8,0,0
+"SNPconfirmed|RGI|Strict|emrK","Multi-drug resistance","Multi-drug efflux pumps","EMRK",0,0,0,0,0,47,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,87,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|emrR","Multi-drug resistance","MDR regulator","EMRR",0,0,1,0,0,61,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,70,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|emrY","Multi-drug resistance","Multi-drug efflux pumps","EMRY",0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,1,0
+"SNPconfirmed|RGI|Strict|evgA","Multi-drug resistance","MDR regulator","EVGA",0,0,0,0,0,43,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|evgS","Multi-drug resistance","MDR regulator","EVGS",0,0,0,4,0,108,8,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,145,0,0,4,0,4
+"SNPconfirmed|RGI|Strict|floR","Phenicol","Phenicol efflux pumps","FLOR",0,0,0,0,0,0,0,0,0,0,0,0,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|gadW","Multi-drug resistance","MDR regulator","GADW",0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|gadX","Multi-drug resistance","MDR regulator","GADX",0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|imiH","betalactams","Class A betalactamases","IMI",0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|imiS","betalactams","Class A betalactamases","IMI",0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|lmrD","MLS","Lincosamide efflux pump","LMRD",6,11,11,0,16,0,0,9,9,9,0,9,0,0,0,0,0,41,7,11,0,10,0,0,3,4,0,2,0,1,2,0
+"SNPconfirmed|RGI|Strict|lnuA","MLS","Lincosamide nucleotidyltransferases","LNUA",0,739,943,0,0,2,0,0,0,0,14,10,0,0,0,9,0,1,2,1235,0,2,2,0,0,1295,0,0,60,0,0,0
+"SNPconfirmed|RGI|Strict|lnuE","MLS","Lincosamide nucleotidyltransferases","LNUE",0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|lsaA","MLS","Streptogramin resistance ATP-binding cassette ABC efflux pumps","LSA",0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|marA","Multi-drug resistance","MDR regulator","MARA",0,0,0,0,0,21,2,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mdtA","Multi-drug resistance","Multi-drug efflux pumps","MDTA",0,0,0,0,0,53,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,6,0
+"SNPconfirmed|RGI|Strict|mdtB","Multi-drug resistance","Multi-drug efflux pumps","MDTB",6,0,0,0,10,193,2,0,4,0,2,0,1,0,0,0,1,4,0,5,0,6,0,0,0,0,282,2,0,23,1,0
+"SNPconfirmed|RGI|Strict|mdtC","Multi-drug resistance","Multi-drug efflux pumps","MDTC",2,0,0,0,0,91,0,0,4,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,185,0,0,6,4,0
+"SNPconfirmed|RGI|Strict|mdtE","Multi-drug resistance","Multi-drug efflux pumps","MDTE",0,0,0,0,0,91,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,216,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|mdtF","Multi-drug resistance","Multi-drug efflux pumps","MDTF",0,0,0,0,0,195,6,0,2,0,6,0,0,0,2,0,2,0,0,0,4,0,0,0,0,2,322,2,0,8,0,0
+"SNPconfirmed|RGI|Strict|mdtG","Multi-drug resistance","Multi-drug efflux pumps","MDTG",0,0,0,0,0,44,8,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,94,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mdtH","Multi-drug resistance","Multi-drug efflux pumps","MDTH",0,0,0,0,0,49,3,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|mdtM","Multi-drug resistance","Multi-drug efflux pumps","MDTM",0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,4,103,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mdtN","Multi-drug resistance","Multi-drug efflux pumps","MDTN",0,0,2,1,2,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,75,4,0,2,0,0
+"SNPconfirmed|RGI|Strict|mdtO","Multi-drug resistance","Multi-drug efflux pumps","MDTO",0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mdtP","Multi-drug resistance","Multi-drug efflux pumps","MDTP",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mefA","MLS","Macrolide resistance efflux pumps","MEFA",0,0,1,0,0,0,1,0,0,0,0,0,2,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|mel","MLS","Macrolide resistance efflux pumps","MEL",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,2,0,0,0,2
+"SNPconfirmed|RGI|Strict|mphD","MLS","Macrolide phosphotransferases","MPH",0,2,0,0,0,0,5,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0
+"SNPconfirmed|RGI|Strict|msbA","Multi-drug resistance","Multi-drug efflux pumps","MSBA",2,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|msrA","MLS","Macrolide resistance efflux pumps","MSRA",0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|msrC","MLS","Macrolide resistance efflux pumps","MSRC",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|msrE","MLS","Macrolide resistance efflux pumps","MSRE",0,3,3,0,0,2,13,0,0,0,0,0,4,1,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,2
+"SNPconfirmed|RGI|Strict|norB","Multi-drug resistance","Multi-drug efflux pumps","NORB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|oqxB","Multi-drug resistance","Multi-drug efflux pumps","OQXB",10,0,1,2,0,0,0,0,9,2,8,8,3,0,2,2,0,0,0,5,0,0,0,0,1,1,2,9,2,15,0,0
+"SNPconfirmed|RGI|Strict|patA","Fluoroquinolones","Quinolone active efflux","PATA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|plasmid-encoded cat (pp-cat)","Phenicol","Chloramphenicol acetyltransferases","CAT",0,0,0,0,0,2,0,2,0,0,2,0,0,0,0,1,0,0,0,0,4,0,0,0,0,5,0,0,0,1,1,0
+"SNPconfirmed|RGI|Strict|pp-flo","Phenicol","Phenicol efflux pumps","PFLO",0,0,0,0,0,0,39,0,0,0,0,0,0,3,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|qacA","Multi-drug resistance","Multi-drug efflux pumps","QACAB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|qacH","Multi-drug resistance","Multi-drug efflux pumps","QACH",67,0,0,0,485,2,0,1,42,0,30,17,0,2,0,0,0,161,2,0,0,15,0,0,3,0,0,0,2,110,0,0
+"SNPconfirmed|RGI|Strict|rosA","Cationic antimicrobial peptides","Cationic antimicrobial peptide efflux pumps","rosA",0,0,9,0,10,0,0,0,2,2,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,1,0,0,0,4,0,0
+"SNPconfirmed|RGI|Strict|rosB","Cationic antimicrobial peptides","Cationic antimicrobial peptide efflux pumps","rosB",3,2,57,0,14,0,0,0,5,0,2,5,0,0,0,0,0,0,0,114,0,3,0,0,0,6,0,5,0,8,0,0
+"SNPconfirmed|RGI|Strict|rpoB2","Rifampin","Rifampin-resistant beta-subunit of RNA polymerase RpoB","RPOB",0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,2
+"SNPconfirmed|RGI|Strict|sdiA","Multi-drug resistance","MDR regulator","SDIA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|smeA","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0
+"SNPconfirmed|RGI|Strict|smeC","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|smeD","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,2,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|smeE","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,5,0,0,0,2,8,0,0,0,0,0,2,0,2,2,0,0,4,0,0,0,0,8,0,2,0,4,0,0,0
+"SNPconfirmed|RGI|Strict|smeF","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,4,0,0,0,3,0,0,0
+"SNPconfirmed|RGI|Strict|smeS","Multi-drug resistance","Multi-drug efflux pumps","sme",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|sul1","Sulfonamides","Sulfonamide-resistant dihydropteroate synthases","SULI",0,5,2,4,0,7,3,12,11,7,11,0,1,7,5,0,6,0,12,4,25,3,6,7,23,2,26,19,6,0,4,1
+"SNPconfirmed|RGI|Strict|sul2","Sulfonamides","Sulfonamide-resistant dihydropteroate synthases","SULII",0,0,0,2,0,0,24,0,0,0,0,0,2,0,0,0,3,0,0,0,0,0,0,0,4,0,0,1,0,4,0,0
+"SNPconfirmed|RGI|Strict|tet(33)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TET33",0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(39)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TET39",0,0,0,0,3,0,0,0,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0
+"SNPconfirmed|RGI|Strict|tet(40)","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TET40",0,0,0,0,2,0,32,0,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,2
+"SNPconfirmed|RGI|Strict|tet(A)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(B)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETB",0,0,0,0,0,0,0,0,0,0,4,2,0,0,0,0,0,0,0,0,0,2,0,0,4,0,0,8,2,0,1,0
+"SNPconfirmed|RGI|Strict|tet(C)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETC",11,1,3,9,1,3,8,8,7,4,2,0,9,4,9,2,3,1,6,15,29,2,6,6,8,30,29,3,13,49,30,0
+"SNPconfirmed|RGI|Strict|tet(D)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETD",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(E)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETE",0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(G)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETG",0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(H)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,2,9157,0,57,4,5,8158,163,1,4550,2055,0,1,0,0,2,3,0,9670,0,49,0,0,9592,2,3,0,1,1,2,7
+"SNPconfirmed|RGI|Strict|tet(J)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETJ",0,0,243,0,1,0,0,218,4,0,102,51,0,1,0,0,0,0,0,264,0,5,0,1,260,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(L)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETL",0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet(W/N/W)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETW",0,0,0,0,2,0,39,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,2,0,4
+"SNPconfirmed|RGI|Strict|tet(Y)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tet32","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TET32",0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,2,0,0,1,0,0
+"SNPconfirmed|RGI|Strict|tet44","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TET44",0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,3,0,0,1,0
+"SNPconfirmed|RGI|Strict|tetA(P)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETA",0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tetB(P)","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETB",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tetM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",339,698,1035,131,1970,9,15,2174,349,1930,382,123,151,22,3,138,178,207,69,1923,6,239,234,109,4089,1988,20,3075,1102,744,790,1
+"SNPconfirmed|RGI|Strict|tetO","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETO",0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2
+"SNPconfirmed|RGI|Strict|tetQ","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETQ",1,3,4,0,0,0,41,0,0,0,2,0,7,2,0,0,3,0,0,9,0,0,0,0,0,0,0,0,0,10,0,11
+"SNPconfirmed|RGI|Strict|tetR","Tetracyclines","Tetracycline transcriptional repressor","TETR",0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|tetS","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETS",128,107,183,51,5858,2,0,2298,565,761,31,13,159,32,1,8,158,580,52,335,0,386,150,25,5242,306,1,1322,100,230,549,0
+"SNPconfirmed|RGI|Strict|tetW","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETW",2,10,1,1,7,0,83,5,4,12,0,0,2,0,0,3,4,1,1,6,0,0,2,2,16,4,0,12,9,4,6,6
+"SNPconfirmed|RGI|Strict|ugd","Cationic antimicrobial peptides","Lipid A modification","PMRC",0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|vatF","MLS","Streptogramin A O-acetyltransferase","VATF",2,0,14,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,2,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|vgaC","MLS","ABC transporter","VGA",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"SNPconfirmed|RGI|Strict|y56 beta-lactamase","betalactams","Class A betalactamases","Y56",0,3,35,0,4,0,0,0,2,0,0,0,0,0,0,0,0,2,0,100,0,2,0,0,0,2,0,0,0,0,0,0
+"Sul|AJ310778.1|gene13|Sulfonamides|Sulfonamide-resistant_dihydropteroate_synthases|SULI","Sulfonamides","Sulfonamide-resistant dihydropteroate synthases","SULI",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0
+"Tet|TetM|U08812|1981-3900|1920|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,0,0,0,0,0,0,411,0,312,0,0,0,0,0,0,0,0,0,0,0,0,0,0,804,0,0,534,212,0,0,0
+"Tet|TetS|L09756|447-2372|1926|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETS","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETS",21,20,0,0,2110,0,0,871,204,273,0,0,52,0,0,0,61,219,25,81,0,148,47,0,1965,66,0,443,0,58,186,0
+"Tet|tetC_2_NC_003123|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETC","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETC",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0
+"Tet|tetH_1_Y16103|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETH","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,0,1872,0,0,0,0,1647,34,0,920,428,0,0,0,0,0,0,0,2063,0,0,0,0,2032,0,0,0,0,0,0,0
+"Tet|tetH_2_AJ245947|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETH","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,0,2058,0,20,0,0,1825,34,0,1014,433,0,0,0,0,0,0,0,2145,0,0,0,0,2132,0,0,0,0,0,0,0
+"Tet|tetH_3_Y15510|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETH","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,0,2235,0,0,0,0,2020,46,0,1183,529,0,0,0,0,0,0,0,2304,0,16,0,0,2279,0,0,0,0,0,0,0
+"Tet|tetH_4_U00792|Tetracyclines|Tetracycline_resistance_major_facilitator_superfamily_MFS_efflux_pumps|TETH","Tetracyclines","Tetracycline resistance major facilitator superfamily MFS efflux pumps","TETH",0,0,1863,0,0,0,0,1646,36,0,813,376,0,0,0,0,0,0,0,2039,0,0,0,0,2006,0,0,0,0,0,0,0
+"Tet|tetM_12_FR671418|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,269,353,0,536,0,0,0,0,548,0,0,0,0,0,0,0,74,0,672,0,0,0,0,0,656,0,941,0,0,0,0
+"Tet|tetM_13_AM990992|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,176,293,49,667,0,0,1324,89,1155,88,0,64,0,0,66,83,70,0,448,0,52,0,45,2324,458,0,1745,760,0,440,0
+"Tet|tetM_1_X92947|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,97,196,133,660,0,0,1395,101,850,71,0,58,0,0,0,111,68,0,417,0,61,120,105,2511,384,0,1406,623,0,380,0
+"Tet|tetM_2_X90939|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,0,74,0,148,0,0,0,0,236,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,136,0,0,0,0,0,0
+"Tet|tetM_4_X75073|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,0,0,0,177,0,0,704,34,546,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1358,128,0,869,350,0,0,0
+"Tet|tetM_5_U58985|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,105,117,0,356,0,0,834,64,650,0,0,0,0,0,0,0,0,0,260,0,0,0,0,1531,316,0,1093,449,0,284,0
+"Tet|tetM_6_M21136|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,40,70,49,286,0,0,2043,122,1766,0,0,139,0,0,172,172,30,0,127,0,81,299,0,2944,185,0,2298,1188,0,953,0
+"Tet|tetM_7_FN433596|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,53,70,51,352,0,0,2325,103,1901,32,0,141,0,0,190,188,0,0,116,0,72,334,45,3345,177,0,2612,1352,0,1019,0
+"Tet|tetM_8_X04388|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",340,615,876,0,986,0,0,0,0,553,0,0,0,0,0,0,0,0,0,1345,0,0,0,0,0,1426,0,812,0,730,0,0
+"Tet|tetM_9_X56353|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETM","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETM",0,0,180,64,426,0,0,697,0,442,0,0,0,0,0,0,50,36,0,292,0,44,0,62,1479,308,0,769,259,0,148,0
+"Tet|tetS_1_DQ377340|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETS","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETS",39,0,0,0,1915,0,0,745,171,198,0,0,70,0,0,0,0,201,0,50,0,141,54,0,1693,53,0,418,30,57,178,0
+"Tet|tetS_3_X92946|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETS","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETS",34,0,39,0,2107,0,0,779,192,264,0,0,44,0,0,0,65,203,0,74,0,123,55,0,1826,65,0,433,30,68,205,0
+"Tet|tetW_1_DQ060146|Tetracyclines|Tetracycline_resistance_ribosomal_protection_proteins|TETW","Tetracyclines","Tetracycline resistance ribosomal protection proteins","TETW",0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"gi|347364916|gb|HM569226.2|betalactams|Class_C_betalactamases|CMY","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,0,0
+"gi|698174167|gb|KM087838.1|betalactams|Class_C_betalactamases|CMY","betalactams","Class C betalactamases","CMY",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,0,0
