@@ -1,6 +1,5 @@
 # Script to load libraries
 suppressWarnings(suppressMessages(library(metagenomeSeq)))
-suppressWarnings(suppressMessages(library(tidyr)))
 suppressWarnings(suppressMessages(library(vegan)))
 suppressWarnings(suppressMessages(library(ggplot2)))
 suppressWarnings(suppressMessages(library(tidyverse)))
@@ -12,11 +11,10 @@ suppressWarnings(suppressMessages(library(rgl)))
 suppressWarnings(suppressMessages(library(scales)))
 suppressWarnings(suppressMessages(library(gplots)))
 suppressWarnings(suppressMessages(library(ggrepel)))
-suppressWarnings(suppressMessages(library(rgl)))
-suppressWarnings(suppressMessages(library(gridExtra)))
 suppressWarnings(suppressMessages(library(RColorBrewer)))
 suppressWarnings(suppressMessages(library(ggthemes)))
 
+# Optional tools for 3D figures
 #library(rtools)
 #library(plotly)
 #library(plot3D)
