@@ -74,6 +74,24 @@ taxa_file <- "../exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org
 # to use for EXPLORATORY analysis (NMDS, PCA, alpha rarefaction, barplots)
 # NOTE: Exploratory variables cannot be numeric. 
 
+#AMR_exploratory_analyses = list(
+#  # Analysis 1
+#  # Description: 
+#  list(
+#    name = 'Variable1',
+#    subsets = list(),
+#    exploratory_var = 'Variable1'
+#  ),
+#  # Analysis 2
+#  # Description: 
+#  list(
+#    name = 'Variable2_Variable1_Subset',
+#    subsets = list('Variable1 == Value1'),
+#    exploratory_var = 'Variable2'
+#  )
+#)
+
+
 AMR_exploratory_analyses = list(
   # Analysis Store
   # Description: 
@@ -185,6 +203,30 @@ microbiome_exploratory_analyses = list(
 # parent variable in the model matrix equation.  Contrasts are named by
 # parent variable then child variable without a space inbetween, for example:
 # PVar1Cvar1 where the model matrix equation is ~ 0 + Pvar1.
+
+#AMR_statistical_analyses = list(
+#  # Analysis 1
+#  # Description: 
+#  list(
+#    name = 'Variable1',
+#    subsets = list(),
+#    model_matrix = '~ 0 + Variable1 + Variable2',
+#    contrasts = list('Variable1Value1 - Variable1Value2'),
+#    random_effect = NA
+#  ),
+#  # Analysis 2
+#  # Description: 
+#  list(
+#    name = 'Variable2_Variable1_Subset',
+#    subsets = list('Variable1 == Value1'),
+#    model_matrix = '~ 0 + Variable2',
+#    contrasts = list('Variable2Value1 - Variable2Value2',
+#                     'Variable2Value1 - Variable2Value3',
+#                     'Variable2Value2 - Variable2Value3'),
+#    random_effect = NA
+#  )
+#)
+
 AMR_statistical_analyses = list(
   # Analysis 1
   # Description: 
@@ -267,7 +309,9 @@ microbiome_statistical_analyses = list(
 ## Run the analysis
 #
 ## Pick the correct script that handles resistome data and/or microbiome data. 
+# Choose one of the following scripts
 #source('scripts/metagenomeSeq_megares_kraken.R')
+#source('scripts/metagenomeSeq_qiime2.R')
 source('scripts/metagenomeSeq_megares_qiime.R')
 
 # After running this script, these are the useful objects that contain all the data aggregated to different levels
@@ -275,7 +319,9 @@ source('scripts/metagenomeSeq_megares_qiime.R')
 # Melted counts are contained in these data.table objects "amr_melted_analytic" "microbiome_melted_analytic"
 
 ## Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
+# Choose one of the following scripts:
 #source('scripts/print_figures.R')
-
+#source('scripts/print_microbiome_figures.R')
+#source('scripts/print_AMR_figures.R')
 
 
