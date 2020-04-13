@@ -379,17 +379,19 @@ meg_heatmap <- function(melted_data,
                              by=c(group_var, sample_var, 'Name')]
   names(tile_subset)[length(names(tile_subset))] <- 'Normalized_Count'
 
-  numselect <- 20
+  numselect <- 30
   tile_names <- heatmap_select_top_counts(tile_subset, group_var,
                                           sample_var, numselect)
   name_count <- length(unique(tile_names$Name))
-  while(name_count > 20) {
+  
+  while(name_count > 30) {
     numselect <- numselect - 1
     tile_names <- heatmap_select_top_counts(tile_subset, group_var,
-                                            sample_var, numselect)
+                                            sample_var, 1)
     name_count <- length(unique(tile_names$Name))
   }
 
+  
   tile_subset <- tile_subset[Name %in% tile_names$Name, ]
 
   ## Check if needing to change factor order. Need to convert to data frame first, then back to data table
@@ -948,7 +950,7 @@ meg_relative_barplot <- function(melted_data,
           panel.border = element_rect(colour = "black", fill=NA, size=0.5)) +
     xlab(group_var) +
     ylab('Relative abundance\n') +
-    scale_fill_tableau("Classic 20", direction = -1) +
+    #scale_fill_tableau("Classic 20", direction = -1) +
     ggtitle(paste(data_type, ' ', level_var, ' Relative Abundance by ', group_var, '\n',
                   sep='', collapse=''))
   png(filename=paste(outdir, '/', data_type, '_', level_var, '_RelativeAbundance_BarPlot_by_', group_var, '.png',
