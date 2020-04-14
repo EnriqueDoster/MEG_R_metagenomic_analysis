@@ -15,59 +15,60 @@ set.seed(154)  # Seed the RNG, necessary for reproducibility
 
 # We usually filter out genes with wild-type potential.  If you want to include these
 # in your analysis, comment this vector out
-snp_regex = c('ACRR',
-              'CATB',
-              'CLS',
-              'DFRC',
-              'DHFR',
-              'DHFRIII',
-              'DHFRIX',
-              'EMBA',
-              'embB',
-              'EMBB',
-              'EMBC',
-              'EMBR',
-              'ETHA',
-              'FOLP',
-              'GIDB',
-              'GYRA',
-              'gyrB',
-              'GYRB',
-              'INHA',
-              'INIA',
-              'INIC',
-              'KASA',
-              'LIAFSR',
-              'LMRA',
-              'MARR',
-              'MEXR',
-              'MEXZ',
-              'mprF',
-              'MPRF',
-              'NDH',
-              'omp36',
-              'OMP36',
-              'OMPF',
-              'OPRD',
-              'PARC',
-              'parE',
-              'PARE',
-              'PGSA',
-              'phoP',
-              'PHOP',
-              'PNCA',
-              'POR',
-              'PORB',
-              'RAMR',
-              'rpoB',
-              'RPOB',
-              'RPOC',
-              'RPSL',
-              'SOXS',
-              'tetR',
-              'TETR',
-              'TLYA',
-              'TUFAB')
+snp_regex = ''
+#  c('ACRR',
+              # 'CATB',
+              # 'CLS',
+              # 'DFRC',
+              # 'DHFR',
+              # 'DHFRIII',
+              # 'DHFRIX',
+              # 'EMBA',
+              # 'embB',
+              # 'EMBB',
+              # 'EMBC',
+              # 'EMBR',
+              # 'ETHA',
+              # 'FOLP',
+              # 'GIDB',
+              # 'GYRA',
+              # 'gyrB',
+              # 'GYRB',
+              # 'INHA',
+              # 'INIA',
+              # 'INIC',
+              # 'KASA',
+              # 'LIAFSR',
+              # 'LMRA',
+              # 'MARR',
+              # 'MEXR',
+              # 'MEXZ',
+              # 'mprF',
+              # 'MPRF',
+              # 'NDH',
+              # 'omp36',
+              # 'OMP36',
+              # 'OMPF',
+              # 'OPRD',
+              # 'PARC',
+              # 'parE',
+              # 'PARE',
+              # 'PGSA',
+              # 'phoP',
+              # 'PHOP',
+              # 'PNCA',
+              # 'POR',
+              # 'PORB',
+              # 'RAMR',
+              # 'rpoB',
+              # 'RPOB',
+              # 'RPOC',
+              # 'RPSL',
+              # 'SOXS',
+              # 'tetR',
+              # 'TETR',
+              # 'TLYA',
+              # 'TUFAB')
 
 
 ##########################
@@ -149,10 +150,19 @@ setkey(annotations, header)  # Data tables are SQL objects with optional primary
 
 ##### optional edits ###
 ## add step to remove samples with 1 or 0 features
-#amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
+amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
+
+if (length(amr_sparseFeatures) == 0) {
+  print("No AMR features removed")
+  } else {
+    amr = amr[, -amr_sparseFeatures]
+    print(paste0(length(amr_sparseFeatures)," features removed. Listed below:"))
+    print(names(amr_sparseFeatures))
+  }
+
 #amr = amr[, -amr_sparseFeatures]
-# microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
-# microbiome = microbiome[, -microbiome_sparseFeatures]
+#microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
+#microbiome = microbiome[, -microbiome_sparseFeatures]
 
 # Calculate normalization factors on the analytic data.
 # We use Cumulative Sum Scaling as implemented in metagenomeSeq.
@@ -251,6 +261,15 @@ setDT(microbiome_taxonomy)[, c('Domain',
                                'Species') := tstrsplit(id, '|', type.convert = TRUE, fixed = TRUE)]
 setkey(microbiome_taxonomy, id)
 
+
+microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
+if (length(microbiome_sparseFeatures) == 0) {
+  print("No microbiome features removed")
+} else {
+  microbiome = microbiome[, -microbiome_sparseFeatures]
+  print(paste0(length(microbiome_sparseFeatures)," features removed. Listed below:"))
+  print(names(microbiome_sparseFeatures))
+}
 
 # Calculate normalization factors on the analytic data.
 # We use Cumulative Sum Scaling as implemented in metagenomeSeq.
