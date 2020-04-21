@@ -26,8 +26,8 @@ sample_column_id = 'ID'
 ## must match between the annotation file and the database file.
 
 # Where is the metadata file stored on your machine?
-amr_metadata_filepath = '../FC_meat_AMR_metadata.csv'
-amr_count_matrix_filepath = '../strict_SNP_confirmed_AMR_analytic_matrix.csv'
+amr_metadata_filepath = 'data/test_data/FC_meat_AMR_metadata.csv'
+amr_count_matrix_filepath = 'data/test_data/strict_SNP_confirmed_AMR_analytic_matrix.csv'
 # Name of the megares annotation file used for this project
 megares_annotation_filename = 'data/amr/megares_annotations_v1.03.csv'
 
@@ -36,7 +36,7 @@ megares_annotation_filename = 'data/amr/megares_annotations_v1.03.csv'
 #################################
 
 # Where is the metadata file for the microbiome samples stored on your machine?
-microbiome_temp_metadata_file = "../FC_meat_metadata.csv"
+microbiome_temp_metadata_file = "data/test_data/FC_meat_metadata.csv"
 
 # If you used the AMR++ pipeline and have the kraken2 count matrix, point to the kraken file or see below for using qiime2 results.
 #kraken_temp_file = "../kraken_analytic_matrix.csv"
@@ -54,10 +54,10 @@ microbiome_temp_metadata_file = "../FC_meat_metadata.csv"
 ##
 ## If you are using qiime2 results, uncomment the four lines below and specify the location to each file
 ##
-biom_file <- "../exported-biom-table/otu_table_json.biom"
-tre_file <- "../exported-tree/tree.nwk"
-tax_fasta <- "../exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
-taxa_file <- "../exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
+biom_file <- "data/test_data/exported-biom-table/otu_table_json.biom"
+tre_file <- "data/test_data/exported-tree/tree.nwk"
+tax_fasta <- "data/test_data/exported-rep-seqs/dna-sequences.fasta" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otus.fasta
+taxa_file <- "data/test_data/exported-biom-table-taxa/taxonomy.tsv" #https://data.qiime2.org/2017.6/tutorials/training-feature-classifiers/85_otu_taxonomy.txt
 
 
 
