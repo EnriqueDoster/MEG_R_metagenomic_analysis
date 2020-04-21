@@ -311,8 +311,9 @@ microbiome_statistical_analyses = list(
 ## Pick the correct script that handles resistome data and/or microbiome data. 
 # Choose one of the following scripts
 #source('scripts/metagenomeSeq_megares_kraken.R')
-#source('scripts/metagenomeSeq_qiime2.R')
-source('scripts/metagenomeSeq_megares_qiime.R')
+#source('scripts/metagenomeSeq_megares_qiime.R')
+source('scripts/metagenomeSeq_qiime2.R')
+source('scripts/metagenomeSeq_megaresv2.R')
 
 # After running this script, these are the useful objects that contain all the data aggregated to different levels
 # The metagenomeSeq objects are contained in these lists "AMR_analytic_data" and "microbiome_analytic_data"
