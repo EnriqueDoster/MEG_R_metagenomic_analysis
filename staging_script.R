@@ -318,10 +318,13 @@ source('scripts/metagenomeSeq_megares_qiime.R')
 # The metagenomeSeq objects are contained in these lists "AMR_analytic_data" and "microbiome_analytic_data"
 # Melted counts are contained in these data.table objects "amr_melted_analytic" "microbiome_melted_analytic"
 
-## Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
-# Choose one of the following scripts:
-#source('scripts/print_figures.R')
-#source('scripts/print_microbiome_figures.R')
-#source('scripts/print_AMR_figures.R')
+# Run code to make some exploratory figures, zero inflated gaussian model, and output count matrices.
+## Choose one of the following scripts:
+source('scripts/print_microbiome_figures.R')
+source('scripts/print_AMR_figures.R')
+
+## For ZIG model results
+source('scripts/print_microbiome_ZIG_results.R')
+source('scripts/print_AMR_ZIG_results.R')
 
 
