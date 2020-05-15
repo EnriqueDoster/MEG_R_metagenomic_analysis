@@ -1,6 +1,11 @@
 # MEG_R_metagenomic_analysis
 Code to combine microbiome (kraken2 or Qiime2) and resistome results (AmrPlusPlus) for statistical analysis with metagenomeSeq.
 
+# How to use this code:
+* Start with the "staging_script.R"
+* Once this is filled out, it calls scripts from the "scripts" directory.
+
+
 ## Statistical analysis
 ---
 
