@@ -15,61 +15,109 @@ set.seed(154)  # Seed the RNG, necessary for reproducibility
 
 # We usually filter out genes with wild-type potential.  If you want to include these
 # in your analysis, comment this vector out
-snp_regex = ''
-#  c('ACRR',
-              # 'CATB',
-              # 'CLS',
-              # 'DFRC',
-              # 'DHFR',
-              # 'DHFRIII',
-              # 'DHFRIX',
-              # 'EMBA',
-              # 'embB',
-              # 'EMBB',
-              # 'EMBC',
-              # 'EMBR',
-              # 'ETHA',
-              # 'FOLP',
-              # 'GIDB',
-              # 'GYRA',
-              # 'gyrB',
-              # 'GYRB',
-              # 'INHA',
-              # 'INIA',
-              # 'INIC',
-              # 'KASA',
-              # 'LIAFSR',
-              # 'LMRA',
-              # 'MARR',
-              # 'MEXR',
-              # 'MEXZ',
-              # 'mprF',
-              # 'MPRF',
-              # 'NDH',
-              # 'omp36',
-              # 'OMP36',
-              # 'OMPF',
-              # 'OPRD',
-              # 'PARC',
-              # 'parE',
-              # 'PARE',
-              # 'PGSA',
-              # 'phoP',
-              # 'PHOP',
-              # 'PNCA',
-              # 'POR',
-              # 'PORB',
-              # 'RAMR',
-              # 'rpoB',
-              # 'RPOB',
-              # 'RPOC',
-              # 'RPSL',
-              # 'SOXS',
-              # 'tetR',
-              # 'TETR',
-              # 'TLYA',
-              # 'TUFAB')
-
+snp_regex = c("A16S",
+              "ACRR",
+              "AXYZ",
+              "BASRS",
+              "CAP16S",
+              "CATB",
+              "CATP",
+              "CDSA",
+              "CLS",
+              "DFRC",
+              "DHFR",
+              "DHFRIII",
+              "EATAV",
+              "EMBA",
+              "EMBB",
+              "EMBC",
+              "EMBR",
+              "ETHA",
+              "FABG",
+              "FOLC",
+              "FOLP",
+              "FUSA",
+              "FUSE",
+              "GIDB",
+              "GLPT",
+              "GSHF",
+              "GYRA",
+              "GYRB",
+              "GYRBA",
+              "GYRC",
+              "ILES",
+              "INHA",
+              "INIA",
+              "INIB",
+              "INIC",
+              "KASA",
+              "KATG",
+              "LIAFSR",
+              "LMRA",
+              "LPXA",
+              "LPXC",
+              "MDR23S",
+              "MENA",
+              "MEXS",
+              "MEXT",
+              "MEXZ",
+              "MLS23S",
+              "MPRFD",
+              "MTRR",
+              "MURA",
+              "MURG",
+              "NALC",
+              "NALD",
+              "NDH",
+              "NFXB",
+              "O23S",
+              "OMP36",
+              "OMPF",
+              "OMPFB",
+              "OPRD",
+              "P16S",
+              "P23S",
+              "PARC",
+              "PARE",
+              "PAREF",
+              "PBP1A",
+              "PBP2",
+              "PBP2B",
+              "PBP2X",
+              "PBP3",
+              "PGSA",
+              "PH23S",
+              "PHOB",
+              "PHOP",
+              "PHOQ",
+              "PNCA",
+              "POR",
+              "PTSL",
+              "RAMR",
+              "RIBD",
+              "RPOB",
+              "RPOBL",
+              "RPOC",
+              "RPOCL",
+              "RPSA",
+              "RPSJ",
+              "RPSL",
+              "RRSA",
+              "RRSC",
+              "RRSH",
+              "SOXR",
+              "SOXS",
+              "TET16S",
+              "TETR",
+              "TETRM",
+              "THYA",
+              "TLYA",
+              "TUFAB",
+              "UHPT",
+              "VAN",
+              "WALK",
+              "YKKCL",
+              "YYBT")
 
 ##########################
 ## Import & Format Data ##
@@ -399,35 +447,6 @@ microbiome_raw_analytic_data <- c(microbiome_domain_raw_analytic,
 microbiome_raw_analytic_names <- c('Domain', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species')
 
 
-## Add diversity values to metadata object
-## Resistome diversity
-metadata$AMR_class_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[1]])))
-metadata$AMR_class_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[1]])))
-
-metadata$AMR_mech_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[2]])))
-metadata$AMR_mech_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[2]])))
-
-## Microbiome diversity
-microbiome_metadata$microbiome_domain_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[1]])))
-microbiome_metadata$microbiome_domain_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[1]])))
-
-microbiome_metadata$microbiome_phylum_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[2]])))
-microbiome_metadata$microbiome_phylum_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[2]])))
-
-microbiome_metadata$microbiome_class_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[3]])))
-microbiome_metadata$microbiome_class_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[3]])))
-
-microbiome_metadata$microbiome_order_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[4]])))
-microbiome_metadata$microbiome_order_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[4]])))
-
-microbiome_metadata$microbiome_family_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[5]])))
-microbiome_metadata$microbiome_family_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[5]])))
-
-microbiome_metadata$microbiome_genus_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[6]])))
-microbiome_metadata$microbiome_genus_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[6]])))
-
-microbiome_metadata$microbiome_species_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[7]])))
-microbiome_metadata$microbiome_species_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[7]])))
 
 for( l in 1:length(AMR_analytic_data) ) {
     sample_idx <- match(colnames(MRcounts(AMR_analytic_data[[l]])), metadata[[sample_column_id]])
@@ -467,3 +486,54 @@ for( l in 1:length(microbiome_raw_analytic_data) ) {
 }
 
 
+## Add diversity values to metadata object
+## Resistome counts
+
+new_AMR_metadata <- as.data.table(pData(AMR_raw_analytic_data[[1]]), keep.rownames = TRUE)
+new_AMR_metadata$ID <- new_AMR_metadata$rn
+
+new_AMR_metadata$resistome_raw_mapped_reads = colSums(MRcounts(AMR_raw_analytic_data[[1]]))
+new_AMR_metadata$resistome_CSS_counts = colSums(MRcounts(AMR_analytic_data[[1]]))
+
+## Resistome diversity
+new_AMR_metadata$AMR_class_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[1]])))
+new_AMR_metadata$AMR_class_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[1]])))
+#metadata$AMR_class_InvSimpson = diversity(t(MRcounts(AMR_raw_analytic_data[[1]])),"invsimp")
+
+new_AMR_metadata$AMR_mech_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[2]])))
+new_AMR_metadata$AMR_mech_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[2]])))
+
+metadata <- new_AMR_metadata
+
+# Microbiome counts
+
+
+new_microbiome_metadata <- as.data.table(pData(microbiome_raw_analytic_data[[1]]), keep.rownames = TRUE)
+new_microbiome_metadata$ID <- new_microbiome_metadata$rn
+
+new_microbiome_metadata$microbiome_raw_mapped_reads = colSums(MRcounts(microbiome_raw_analytic_data[[1]]))
+new_microbiome_metadata$microbiome_CSS_counts = colSums(MRcounts(microbiome_analytic_data[[1]]))
+
+## Microbiome diversity
+new_microbiome_metadata$microbiome_domain_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[1]])))
+new_microbiome_metadata$microbiome_domain_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[1]])))
+
+new_microbiome_metadata$microbiome_phylum_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[2]])))
+new_microbiome_metadata$microbiome_phylum_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[2]])))
+
+new_microbiome_metadata$microbiome_class_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[3]])))
+new_microbiome_metadata$microbiome_class_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[3]])))
+
+new_microbiome_metadata$microbiome_order_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[4]])))
+new_microbiome_metadata$microbiome_order_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[4]])))
+
+new_microbiome_metadata$microbiome_family_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[5]])))
+new_microbiome_metadata$microbiome_family_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[5]])))
+
+new_microbiome_metadata$microbiome_genus_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[6]])))
+new_microbiome_metadata$microbiome_genus_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[6]])))
+
+new_microbiome_metadata$microbiome_species_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[7]])))
+new_microbiome_metadata$microbiome_species_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[7]])))
+
+microbiome_metadata <- new_microbiome_metadata
