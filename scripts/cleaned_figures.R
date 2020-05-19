@@ -15,7 +15,343 @@ setkey(microbiome_metadata,ID)
 microbiome_melted_analytic <- microbiome_melted_analytic[microbiome_metadata]
 amr_melted_raw_analytic <- amr_melted_raw_analytic[metadata]
 amr_melted_analytic <- amr_melted_analytic[metadata]
-## Write out counts for figures with tableou
+
+
+##### Metadata
+melted_metadata <- melt(metadata, measure.vars = c("Raw_paired_reads", "Trimmed_paired_reads","NonHostReads", "Microbiome_mapped_reads","Resistome_mapped_reads"))
+melted_metadata$Reads <- melted_metadata$variable
+
+#AMR_class_sum[,percentage:= round(sum_class/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(melted_metadata, aes(x = ID, y = value, fill = Reads)) + 
+  geom_bar(stat = "identity", position = position_dodge(width = 0.7), alpha = .6 )+
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=12),
+    legend.title=element_text(size=16),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Reads') 
+
+
+
+ggsave("barplot_reads_and_mapping_results.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+
+
+##### AMR exploratory #####
+
+## Raw mapped reads
+AMR_class_sum <- amr_melted_raw_analytic[Level_ID=="Class", .(sum_class= sum(Normalized_Count)),by=.(ID, Name)]
+AMR_class_sum[,total:= sum(sum_class), by=.(ID)]
+AMR_class_sum[,percentage:= sum_class/total ,by=.(ID, Name) ]
+AMR_class_sum$Class <- AMR_class_sum$Name
+#AMR_class_sum[,percentage:= round(sum_class/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(AMR_class_sum, aes(x = ID, y = sum_class, fill = Class)) + 
+  geom_bar(stat = "identity")+
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=10),
+    legend.title=element_text(size=20),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Raw reads') 
+
+ggsave("BarChart_AMR_Class_mapped_reads.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+## 
+## With label for "low abundance classes"
+AMR_total_class <- amr_melted_analytic[Level_ID=="Class", .(sum_class= sum(Normalized_Count)),by=.(Name)]
+AMR_total_class[,total:= sum(sum_class)]
+AMR_total_class[,proportion:= sum_class/total , by=.(Name) ]
+View(AMR_total_class)
+
+length(unique(AMR_total_class$Name))
+rare_class <- AMR_total_class[proportion < .01 ,Name]
+
+AMR_class_by_ID_edited <- amr_melted_analytic[Level_ID=="Class", .(sum_class = sum(Normalized_Count)), by = .(Name,ID)]
+
+AMR_class_by_ID_edited[(Name %in% rare_class), Name := 'Low abundance AMR classes']
+#AMR_class_by_ID_edited[(Name %in% rare_class),]
+
+AMR_class_by_ID_edited[,sample_total:= sum(sum_class), by=.(ID)]
+AMR_class_by_ID_edited[, percentage := sum_class/sample_total *100 ,by=.( Name, ID) ]
+AMR_class_by_ID_edited[, percentage_label:= as.character(percentage)]
+AMR_class_by_ID_edited[percentage_label=='0', percentage_label := '<0.01']
+
+# Drop extra factors 
+AMR_class_by_ID_edited$Name = droplevels(AMR_class_by_ID_edited$Name)
+unique(factor(AMR_class_by_ID_edited$Name))
+# Check which factors you have and change the order here
+AMR_class_by_ID_edited$Name = factor(AMR_class_by_ID_edited$Name ,levels=c("Low abundance AMR classes (< 1%)","Sodium resistance","Acetate resistance","Multi-drug resistance","Aminoglycosides","Zinc resistance","Arsenic resistance","Biocide and metal resistance" ,"Nickel resistance","Acid resistance","Multi-biocide resistance",
+                                                                           "betalactams","Copper resistance","Cationic antimicrobial peptides","Drug and biocide and metal resistance","Multi-metal resistance", 
+                                                                           "MLS","Drug and biocide resistance","Tetracyclines"))
+
+AMR_class_by_ID_edited$Class <- AMR_class_by_ID_edited$Name
+#AMR_class_sum[,percentage:= round(sum_class/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(AMR_class_by_ID_edited, aes(x = ID, y = percentage, fill = Name)) + 
+  geom_bar(stat = "identity") +
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=12),
+    legend.title=element_text(size=16),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Relative abundance') +
+  scale_fill_tableau("Tableau 20", direction = -1)
+
+ggsave("Relative_abundance_AMR_Class_LowAbundance_label.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+
+
+
+
+
+
+
+
+## By ID, faceted by Study, Class level
+AMR_class_sum <- amr_melted_analytic[Level_ID=="Class", .(sum_class= sum(Normalized_Count)),by=.(ID, Name)]
+AMR_class_sum[,total:= sum(sum_class), by=.(ID)]
+AMR_class_sum[,percentage:= sum_class/total ,by=.(ID, Name) ]
+AMR_class_sum$Class <- AMR_class_sum$Name
+#AMR_class_sum[,percentage:= round(sum_class/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(AMR_class_sum, aes(x = ID, y = percentage, fill = Class)) + 
+  geom_bar(stat = "identity")+
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=12),
+    legend.title=element_text(size=16),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Relative abundance') 
+
+ggsave("Relative_abundance_AMR_Class_all_classes.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+
+
+
+
+
+###############
+######  Microbiome
+###############
+
+## Raw mapped reads
+microbiome_class_sum <- microbiome_melted_raw_analytic[Level_ID=="Phylum", .(sum_phylum= sum(Normalized_Count)),by=.(ID, Name)]
+microbiome_class_sum[,total:= sum(sum_phylum), by=.(ID)]
+microbiome_class_sum[,percentage:= sum_phylum/total ,by=.(ID, Name) ]
+microbiome_class_sum$Phylum <- microbiome_class_sum$Name
+#microbiome_class_sum[,percentage:= round(sum_phylum/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(microbiome_class_sum, aes(x = ID, y = sum_phylum, fill = Phylum)) + 
+  geom_bar(stat = "identity")+
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=10),
+    legend.title=element_text(size=20),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Raw reads') 
+
+ggsave("BarChart_Microbiome_mapped_reads.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+## 
+## With label for "low abundance classes"
+Microbiome_total_phylum <- microbiome_melted_analytic[Level_ID=="Phylum", .(sum_phylum= sum(Normalized_Count)),by=.(Name)]
+Microbiome_total_phylum[,total:= sum(sum_phylum)]
+Microbiome_total_phylum[,proportion:= sum_phylum/total , by=.(Name) ]
+View(Microbiome_total_phylum)
+
+length(unique(Microbiome_total_phylum$Name)) # 45 phyla
+rare_phyla <- Microbiome_total_phylum[proportion < .01 ,Name]
+
+Microbiome_phylum_by_ID_edited <- microbiome_melted_analytic[Level_ID=="Phylum", .(sum_phylum = sum(Normalized_Count)), by = .(Name,ID)]
+
+Microbiome_phylum_by_ID_edited[(Name %in% rare_phyla), Name := 'Low abundance phyla (< 1%)']
+#AMR_class_by_ID_edited[(Name %in% rare_class),]
+
+Microbiome_phylum_by_ID_edited[,sample_total:= sum(sum_phylum), by=.(ID)]
+Microbiome_phylum_by_ID_edited[, percentage := sum_phylum/sample_total *100 ,by=.( Name, ID) ]
+Microbiome_phylum_by_ID_edited[, percentage_label:= as.character(percentage)]
+Microbiome_phylum_by_ID_edited[percentage_label=='0', percentage_label := '<0.01']
+
+# Drop extra factors 
+Microbiome_phylum_by_ID_edited$Name = droplevels(Microbiome_phylum_by_ID_edited$Name)
+unique(factor(Microbiome_phylum_by_ID_edited$Name))
+# Check which factors you have and change the order here
+Microbiome_phylum_by_ID_edited$Name = factor(Microbiome_phylum_by_ID_edited$Name ,levels=c('Low abundance phyla (< 1%)',"Fusobacteria","Actinobacteria","Bacteroidetes","Proteobacteria","Firmicutes"))
+
+Microbiome_phylum_by_ID_edited$Class <- Microbiome_phylum_by_ID_edited$Name
+#AMR_class_sum[,percentage:= round(sum_phylum/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(Microbiome_phylum_by_ID_edited, aes(x = ID, y = percentage, fill = Name)) + 
+  geom_bar(stat = "identity") +
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=12),
+    legend.title=element_text(size=16),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Relative abundance') +
+  scale_fill_tableau("Tableau 20", direction = -1)
+
+ggsave("Relative_abundance_MicrobiomePhylum_LowAbundance_label.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+
+
+
+
+
+
+
+
+## By ID, faceted by Study, Class level
+Microbiome_phylum_sum <- microbiome_melted_analytic[Level_ID=="Phylum", .(sum_phylum= sum(Normalized_Count)),by=.(ID, Name)]
+Microbiome_phylum_sum[,total:= sum(sum_phylum), by=.(ID)]
+Microbiome_phylum_sum[,percentage:= sum_phylum/total ,by=.(ID, Name) ]
+Microbiome_phylum_sum$Phylum <- Microbiome_phylum_sum$Name
+#AMR_class_sum[,percentage:= round(sum_class/total, digits=2) ,by=.(ID, Name) ] removes some with low proportions
+ggplot(Microbiome_phylum_sum, aes(x = ID, y = percentage, fill = Phylum)) + 
+  geom_bar(stat = "identity")+
+  #facet_wrap( ~ Study, scales='free',ncol = 2) +
+  #scale_fill_brewer(palette="Dark2") +
+  theme(
+    panel.grid.major=element_blank(),
+    panel.grid.minor=element_blank(),
+    strip.text.x=element_text(size=24),
+    strip.text.y=element_text(size=24, angle=0),
+    axis.text.x=element_blank(), #element_text(size=16, angle=20, hjust=1)
+    axis.text.y=element_text(size=22),
+    axis.title=element_text(size=26),
+    legend.position="right",
+    panel.spacing=unit(0.1, "lines"),
+    plot.title=element_text(size=32, hjust=0.5),
+    legend.text=element_text(size=12),
+    legend.title=element_text(size=16),
+    panel.background = element_rect(fill = "white")
+  ) +
+  #ggtitle("CSS counts -resistome composition") +
+  xlab('Sample ID') +
+  ylab('Relative abundance') 
+
+ggsave("Relative_abundance_Microbiome_phylum_all_classes.jpeg", width = 60, height = 30, units = "cm")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
