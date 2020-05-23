@@ -59,10 +59,16 @@ ifelse(!dir.exists(file.path('microbiome_matrices/raw')), dir.create(file.path('
 
 ##### optional edits ###
 ## add step to remove samples with 1 or 0 features
-#amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
-#amr = amr[, -amr_sparseFeatures]
-# microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
-# microbiome = microbiome[, -microbiome_sparseFeatures]
+# Check microbiome sparse features
+microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
+if (length(microbiome_sparseFeatures) == 0) {
+  print("No microbiome features removed")
+} else {
+  microbiome = microbiome[, -microbiome_sparseFeatures]
+  print(paste0(length(microbiome_sparseFeatures)," features removed. Listed below:"))
+  print(names(microbiome_sparseFeatures))
+}
+
 
 # Calculate normalization factors on the analytic data.
 # We use Cumulative Sum Scaling as implemented in metagenomeSeq.
@@ -180,29 +186,6 @@ microbiome_raw_analytic_data <- c(microbiome_domain_raw_analytic,
 microbiome_raw_analytic_names <- c('Domain', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species')
 
 
-## Add diversity values to metadata object
-## Microbiome diversity
-microbiome_metadata$microbiome_domain_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[1]])))
-microbiome_metadata$microbiome_domain_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[1]])))
-
-microbiome_metadata$microbiome_phylum_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[2]])))
-microbiome_metadata$microbiome_phylum_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[2]])))
-
-microbiome_metadata$microbiome_class_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[3]])))
-microbiome_metadata$microbiome_class_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[3]])))
-
-microbiome_metadata$microbiome_order_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[4]])))
-microbiome_metadata$microbiome_order_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[4]])))
-
-microbiome_metadata$microbiome_family_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[5]])))
-microbiome_metadata$microbiome_family_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[5]])))
-
-microbiome_metadata$microbiome_genus_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[6]])))
-microbiome_metadata$microbiome_genus_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[6]])))
-
-microbiome_metadata$microbiome_species_Richness = specnumber(t(MRcounts(microbiome_analytic_data[[7]])))
-microbiome_metadata$microbiome_species_Shannon = diversity(t(MRcounts(microbiome_analytic_data[[7]])))
-
 
 for( l in 1:length(microbiome_analytic_data) ) {
     sample_idx <- match(colnames(MRcounts(microbiome_analytic_data[[l]])), microbiome_metadata[[sample_column_id]])
@@ -221,5 +204,37 @@ for( l in 1:length(microbiome_raw_analytic_data) ) {
     fData(microbiome_raw_analytic_data[[l]]) <- data.frame(Feature=rownames(MRcounts(microbiome_raw_analytic_data[[l]])))
     rownames(fData(microbiome_raw_analytic_data[[l]])) <- rownames(MRcounts(microbiome_raw_analytic_data[[l]]))
 }
+
+# Microbiome counts
+new_microbiome_metadata <- as.data.table(pData(microbiome_raw_analytic_data[[1]]), keep.rownames = TRUE)
+new_microbiome_metadata$ID <- new_microbiome_metadata$rn
+
+new_microbiome_metadata$microbiome_raw_mapped_reads = colSums(MRcounts(microbiome_raw_analytic_data[[1]]))
+new_microbiome_metadata$microbiome_CSS_counts = colSums(MRcounts(microbiome_analytic_data[[1]]))
+
+## Microbiome diversity
+new_microbiome_metadata$microbiome_domain_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[1]])))
+new_microbiome_metadata$microbiome_domain_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[1]])))
+
+new_microbiome_metadata$microbiome_phylum_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[2]])))
+new_microbiome_metadata$microbiome_phylum_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[2]])))
+
+new_microbiome_metadata$microbiome_class_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[3]])))
+new_microbiome_metadata$microbiome_class_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[3]])))
+
+new_microbiome_metadata$microbiome_order_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[4]])))
+new_microbiome_metadata$microbiome_order_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[4]])))
+
+new_microbiome_metadata$microbiome_family_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[5]])))
+new_microbiome_metadata$microbiome_family_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[5]])))
+
+new_microbiome_metadata$microbiome_genus_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[6]])))
+new_microbiome_metadata$microbiome_genus_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[6]])))
+
+new_microbiome_metadata$microbiome_species_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[7]])))
+new_microbiome_metadata$microbiome_species_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[7]])))
+
+microbiome_metadata <- new_microbiome_metadata
+
 
 

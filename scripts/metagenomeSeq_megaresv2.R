@@ -175,10 +175,15 @@ setkey(annotations, header)  # Data tables are SQL objects with optional primary
 
 ##### optional edits ###
 ## add step to remove samples with 1 or 0 features
-#amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
-#amr = amr[, -amr_sparseFeatures]
-# microbiome_sparseFeatures = which(colSums(MRcounts(microbiome) > 0) < 2) ## just counts how many rows have less than 2 hits
-# microbiome = microbiome[, -microbiome_sparseFeatures]
+
+amr_sparseFeatures = which(colSums(MRcounts(amr) > 0) < 2) ## just counts how many rows have less than 2 hits
+if (length(amr_sparseFeatures) == 0) {
+  print("No AMR features removed")
+} else {
+  amr = amr[, -amr_sparseFeatures]
+  print(paste0(length(amr_sparseFeatures)," features removed. Listed below:"))
+  print(names(amr_sparseFeatures))
+}
 
 # Calculate normalization factors on the analytic data.
 # We use Cumulative Sum Scaling as implemented in metagenomeSeq.
@@ -287,6 +292,26 @@ for( l in 1:length(AMR_raw_analytic_data) ) {
     fData(AMR_raw_analytic_data[[l]]) <- data.frame(Feature=rownames(MRcounts(AMR_raw_analytic_data[[l]])))
     rownames(fData(AMR_raw_analytic_data[[l]])) <- rownames(MRcounts(AMR_raw_analytic_data[[l]]))
 }
+
+
+## Add diversity values to metadata object
+## Resistome counts
+
+new_AMR_metadata <- as.data.table(pData(AMR_raw_analytic_data[[1]]), keep.rownames = TRUE)
+new_AMR_metadata$ID <- new_AMR_metadata$rn
+
+new_AMR_metadata$resistome_raw_mapped_reads = colSums(MRcounts(AMR_raw_analytic_data[[1]]))
+new_AMR_metadata$resistome_CSS_counts = colSums(MRcounts(AMR_analytic_data[[1]]))
+
+## Resistome diversity
+new_AMR_metadata$AMR_class_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[1]])))
+new_AMR_metadata$AMR_class_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[1]])))
+#metadata$AMR_class_InvSimpson = diversity(t(MRcounts(AMR_raw_analytic_data[[1]])),"invsimp")
+
+new_AMR_metadata$AMR_mech_Richness = specnumber(t(MRcounts(AMR_raw_analytic_data[[2]])))
+new_AMR_metadata$AMR_mech_Shannon = diversity(t(MRcounts(AMR_raw_analytic_data[[2]])))
+
+metadata <- new_AMR_metadata
 
 
 
