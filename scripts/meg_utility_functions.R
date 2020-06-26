@@ -12,7 +12,7 @@
 
 # Misc reshape function for data table
 melt_dt <- function(D, level_id) {
-  temp <- melt(D, variable.name='Sample', value.name='Normalized_Count')
+  temp <- reshape2::melt(D, variable.name='Sample', value.name='Normalized_Count')
   names(temp) <- c('Name', 'ID', 'Normalized_Count')
   temp <- data.table(cbind(rep(level_id, nrow(temp)), temp))
   names(temp)[1] <- 'Level_ID'
@@ -538,7 +538,7 @@ meg_alpha_diversity <- function(data_list,
                                                      fill=group_var)) +
     geom_boxplot(size=1) +
     facet_wrap(~Level, scales='free_y')
-  g_alphadiv <- g_alphadiv + scale_fill_tableau("Classic 20", direction = -1)
+  #g_alphadiv <- g_alphadiv + scale_fill_tableau("Classic 20", direction = -1)
   g_alphadiv <- g_alphadiv +
     ggtitle(paste('Alpha Diversity by ', group_var, ' for CSS data\nInverse Simpson Index',
                   sep='', collapse='')) +
@@ -586,7 +586,7 @@ meg_alpha_diversity <- function(data_list,
   g_sraw <- ggplot(data=all_species_CSS, aes_string(group_var, 'Value', fill=group_var)) +
     geom_boxplot(size=1) +
     facet_wrap(~Level, scales='free_y')
-  g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
+  #g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
   g_sraw <- g_sraw +
     ggtitle(paste('Species Richness by ', group_var, ' for CSS data\nInverse Simpson Index',
                   sep='', collapse='')) +
@@ -652,7 +652,7 @@ meg_alpha_rarefaction <- function(data_list,
                              Level=character(),
                              Value=numeric())
   names(all_alphadiv)[1] <- sample_var
-
+  setkeyv(metadata, sample_var)
   all_species_raw <- data.table(ID=character(),
                                 Level=character(),
                                 Value=numeric())
@@ -734,7 +734,7 @@ meg_alpha_rarefaction <- function(data_list,
                                                      fill=group_var)) +
     geom_boxplot(size=1) +
     facet_wrap(~Level, scales='free_y')
-  g_alphadiv <- g_alphadiv + scale_fill_tableau("Classic 20", direction = -1)
+  #g_alphadiv <- g_alphadiv + scale_fill_tableau("Classic 20", direction = -1)
   g_alphadiv <- g_alphadiv +
     ggtitle(paste('Alpha Diversity by ', group_var, ' for Rarefied data\nInverse Simpson Index',
                   sep='', collapse='')) +
@@ -782,7 +782,7 @@ meg_alpha_rarefaction <- function(data_list,
   g_sraw <- ggplot(data=all_species_raw, aes_string(group_var, 'Value', fill=group_var)) +
     geom_boxplot(size=1) +
     facet_wrap(~Level, scales='free_y')
-  g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
+  #g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
   g_sraw <- g_sraw +
     ggtitle(paste('Species Richness by ', group_var, ' for Raw data\nInverse Simpson Index',
                   sep='', collapse='')) +
@@ -831,7 +831,7 @@ meg_alpha_rarefaction <- function(data_list,
   g_srare <- ggplot(data=all_species_rare, aes_string(group_var, 'Value', fill=group_var)) +
     geom_boxplot(size=1) +
     facet_wrap(~Level, scales='free_y')
-  g_srare <- g_srare + scale_fill_tableau("Tableau 20", direction = -1)
+  #g_srare <- g_srare + scale_fill_tableau("Tableau 20", direction = -1)
   g_srare <- g_srare +
     ggtitle(paste('Species Richness by ', group_var, ' for Rarefied data\nInverse Simpson Index',
                   sep='', collapse='')) +
@@ -877,6 +877,7 @@ meg_relative_barplot <- function(melted_data,
                                  data_type,
                                  factor_order) {
   setkeyv(melted_data, sample_var)
+  setkeyv(metadata, sample_var)
   melted_data <- metadata[melted_data]
 
   if(length(analysis_subset) > 0) {
@@ -974,6 +975,7 @@ meg_barplot <- function(melted_data,
                         data_type,
                         factor_order) {
   setkeyv(melted_data, sample_var)
+  setkeyv(metadata, sample_var)
   melted_data <- metadata[melted_data]
 
   if(length(analysis_subset) > 0) {
@@ -1068,6 +1070,7 @@ meg_median_barplot <- function(melted_data,
                                data_type,
                                factor_order) {
   setkeyv(melted_data, sample_var)
+  setkeyv(metadata, sample_var)
   melted_data <- metadata[melted_data]
 
   if(length(analysis_subset) > 0) {
