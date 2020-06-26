@@ -238,7 +238,7 @@ for( l in 1:length(microbiome_raw_analytic_data) ) {
 
 # Microbiome counts
 new_microbiome_metadata <- as.data.table(pData(microbiome_raw_analytic_data[[1]]), keep.rownames = TRUE)
-new_microbiome_metadata$ID <- new_microbiome_metadata$rn
+names(new_microbiome_metadata)[names(new_microbiome_metadata) == "rn"] <- "ID"
 
 new_microbiome_metadata$microbiome_raw_mapped_reads = colSums(MRcounts(microbiome_raw_analytic_data[[1]]))
 new_microbiome_metadata$microbiome_CSS_counts = colSums(MRcounts(microbiome_analytic_data[[1]]))
