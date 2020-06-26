@@ -181,23 +181,10 @@ microbiome_melted_raw_analytic <- rbind(melt_dt(MRcounts(microbiome_domain_raw_a
                                     melt_dt(MRcounts(microbiome_species_raw_analytic), 'Species'))
 
 # Ensure that the metadata entries match the factor order of the MRexperiments
-metadata <- data.table(amr_temp_metadata[match(colnames(MRcounts(amr_class_analytic)), amr_temp_metadata[, sample_column_id]), ])
-setkeyv(metadata, sample_column_id)
-
 microbiome_metadata <- data.table(microbiome_temp_metadata[match(colnames(MRcounts(microbiome_phylum_analytic)), microbiome_temp_metadata[, sample_column_id]), ])
 setkeyv(microbiome_metadata, sample_column_id)
 
 # Vector of objects for iteration and their names
-AMR_analytic_data <- c(amr_class_analytic,
-                       amr_mech_analytic,
-                       amr_group_analytic,
-                       amr_gene_analytic)
-AMR_analytic_names <- c('Class', 'Mechanism', 'Group', 'Gene')
-AMR_raw_analytic_data <- c(amr_class_raw_analytic,
-                           amr_mech_raw_analytic,
-                           amr_group_raw_analytic,
-                           amr_gene_raw_analytic)
-AMR_raw_analytic_names <- c('Class', 'Mechanism', 'Group', 'Gene')
 microbiome_analytic_data <- c(microbiome_domain_analytic,
                           microbiome_phylum_analytic,
                           microbiome_class_analytic,
