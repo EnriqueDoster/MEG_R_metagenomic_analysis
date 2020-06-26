@@ -359,7 +359,8 @@ meg_heatmap <- function(melted_data,
   tile_subset <- melted_data[Level_ID == level_var, ]
   colnames(tile_subset)[colnames(tile_subset) == 'ID'] <- sample_var
   setkeyv(tile_subset, sample_var)
-
+  setkeyv(metadata, sample_var)
+  
   tile_subset <- metadata[tile_subset]
   tile_subset <- tile_subset[!is.na(tile_subset[[group_var]]), ]
 
@@ -379,7 +380,7 @@ meg_heatmap <- function(melted_data,
                              by=c(group_var, sample_var, 'Name')]
   names(tile_subset)[length(names(tile_subset))] <- 'Normalized_Count'
 
-  numselect <- 10
+  numselect <- 20
   tile_names <- heatmap_select_top_counts(tile_subset, group_var,
                                           sample_var, numselect)
   name_count <- length(unique(tile_names$Name))
