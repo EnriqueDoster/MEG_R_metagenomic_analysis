@@ -515,6 +515,7 @@ meg_alpha_diversity <- function(data_list,
                                    ordered=T))
 
   setkeyv(all_alphadiv, sample_var)
+  setkeyv(metadata, sample_var)
   all_alphadiv <- metadata[all_alphadiv]
   all_alphadiv <- all_alphadiv[!is.na(all_alphadiv[[group_var]]), ]
 
