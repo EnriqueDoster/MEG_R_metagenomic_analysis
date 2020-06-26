@@ -13,7 +13,7 @@
 ## Modify this as necessary, though you shouldn't need to for basic use.
 set.seed(154)  # Seed the RNG, necessary for reproducibility
 
-source('scripts/qiime2_2_phyloseq.R')
+#source('scripts/qiime2_2_phyloseq.R')
 
 # We usually filter out genes with wild-type potential.  If you want to include these
 # in your analysis, comment this vector out
@@ -298,7 +298,7 @@ for( l in 1:length(AMR_raw_analytic_data) ) {
 ## Resistome counts
 
 new_AMR_metadata <- as.data.table(pData(AMR_raw_analytic_data[[1]]), keep.rownames = TRUE)
-new_AMR_metadata$ID <- new_AMR_metadata$rn
+names(new_AMR_metadata)[names(new_AMR_metadata) == "rn"] <- "ID"
 
 new_AMR_metadata$resistome_raw_mapped_reads = colSums(MRcounts(AMR_raw_analytic_data[[1]]))
 new_AMR_metadata$resistome_CSS_counts = colSums(MRcounts(AMR_analytic_data[[1]]))
