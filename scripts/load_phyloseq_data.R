@@ -1,5 +1,3 @@
-# currently only set up to load AMR++ results from megares and kraken2
-
 ##### Set up environment
 library("phyloseq")
 library("dplyr")
