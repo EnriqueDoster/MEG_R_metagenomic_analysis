@@ -422,8 +422,8 @@ meg_heatmap <- function(melted_data,
     labs(fill= 'Log2 Normalized Count') +
     ggtitle(paste(data_type, ' ', level_var, ' Normalized Counts by ', group_var, '\n',
                   sep='', collapse=''))
-  png(filename=paste(outdir, '/', level_var, '_', group_var, '_',
-                     'Heatmap.png', sep='', collapse=''), width=1400, height=700)
+  png(filename=paste(outdir, '/','Heatmap_', level_var, '_by', group_var,
+                     '.png', sep='', collapse=''), width=1400, height=700)
   print(tile)
   dev.off()
 }
@@ -434,9 +434,11 @@ meg_heatmap <- function(melted_data,
 ###                        ###
 ##############################
 
+# Function that returns species count, rarefied species count, and alpha diversity measures
+# for each sample in the m x n matrix, m = features, n = samples
 alpha_CSS_diversity <- function(X, minlevel, method='invsimpson') {
   S <- specnumber(X, MARGIN=2)
-  alphadiv <- diversity(X, index=method, MARGIN=2)
+  alphadiv <- vegan::diversity(X, index=method, MARGIN=2)
   return(list(CSS_species_abundance=S,
               CSS_data=X,
               alphadiv=alphadiv))
@@ -466,10 +468,9 @@ meg_alpha_diversity <- function(data_list,
   
   local_data <- data_list
   
-  # Output Diversity counts
+  
   all_sample_data <- alpha_CSS_diversity(MRcounts(local_data[[1]]))
-  write.table(all_sample_data$alphadiv, paste(outdir, '/', data_type, '_CSS_InvSimpson_values', group_var, '.csv',
-                                              sep='', collapse=''), sep=",")
+  
   
   # I don't currently use the non_zero_sample variable for CSS counts, but it could come in handy for removing those samples or including a report for which samples had 0 counts
   for( l in 1:length(local_data) ) {
@@ -496,7 +497,7 @@ meg_alpha_diversity <- function(data_list,
                                  length(local_obj$alphadiv)),
                        Value=as.numeric(local_obj$alphadiv))
     names(temp)[1] <- sample_var
-    all_alphadiv <- rbind(all_alphadiv, temp)
+    all_alphadiv <- rbind(all_alphadiv, temp, fill=TRUE)
     
     # Raw species
     temp <- data.table(ID=names(local_obj$CSS_species_abundance),
@@ -504,7 +505,7 @@ meg_alpha_diversity <- function(data_list,
                                  length(local_obj$CSS_species_abundance)),
                        Value=as.numeric(local_obj$CSS_species_abundance))
     names(temp)[1] <- sample_var
-    all_species_CSS <- rbind(all_species_CSS, temp)
+    all_species_CSS <- rbind(all_species_CSS, temp, fill = TRUE)
     
   }
   
@@ -520,7 +521,6 @@ meg_alpha_diversity <- function(data_list,
   all_alphadiv <- metadata[all_alphadiv]
   all_alphadiv <- all_alphadiv[!is.na(all_alphadiv[[group_var]]), ]
   
-  
   alphadiv_type_sums <- all_alphadiv[Level==data_names[2], median(round(Value, digits=0)), by=group_var]
   alphadiv_value_labels <- as.character(alphadiv_type_sums[[group_var]][order(alphadiv_type_sums$V1, decreasing=T)])
   all_alphadiv[[group_var]] <- factor(all_alphadiv[[group_var]],
@@ -532,7 +532,7 @@ meg_alpha_diversity <- function(data_list,
   #all_alphadiv[[group_var]] <- droplevels( all_alphadiv[[group_var]])
   #all_alphadiv$Level <- droplevels( all_alphadiv$Level)
   # Plot figure
-  png(filename=paste(outdir, '/', data_type, '_CSS_alphadiversity_by_', group_var, '.png',
+  png(filename=paste(outdir, '/', 'Diversity_', data_type, '_CSS_InvSimpson_by_', group_var, '.png',
                      sep='', collapse=''),
       width=1024, height=768)
   g_alphadiv <- ggplot(data=all_alphadiv, aes_string(x=group_var,
@@ -563,6 +563,9 @@ meg_alpha_diversity <- function(data_list,
   print(g_alphadiv)
   dev.off()
   
+  # Output Diversity counts
+  write.table(all_alphadiv, paste(outdir, '/', data_type, '_CSS_InvSimpson_values.csv',
+                                  sep='', collapse=''), sep=",")
   
   #
   ## Raw species abundance
@@ -581,8 +584,9 @@ meg_alpha_diversity <- function(data_list,
   # Check if needing to change factor order.
   ifelse(factor_order != '', all_species_CSS[[group_var]] <- factor(all_species_CSS[[group_var]], levels = eval(factor_order), ordered=T),1)
   
+  
   # Plot figure
-  png(filename=paste(outdir, '/', data_type, '_CSS_richness_by_', group_var, '.png',
+  png(filename=paste(outdir, '/', 'Diversity_', data_type, '_CSS_Richness_by_', group_var, '.png',
                      sep='', collapse=''),
       width=1024, height=768)
   g_sraw <- ggplot(data=all_species_CSS, aes_string(group_var, 'Value', fill=group_var)) +
@@ -590,7 +594,7 @@ meg_alpha_diversity <- function(data_list,
     facet_wrap(~Level, scales='free_y')
   #g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
   g_sraw <- g_sraw +
-    ggtitle(paste('Species Richness by ', group_var, ' for CSS data\nInverse Simpson Index',
+    ggtitle(paste('Species Richness by ', group_var, ' for CSS data\nRichness',
                   sep='', collapse='')) +
     ylab('Unique Species\n') +
     xlab(paste('\n', group_var, sep='', collapse='')) +
@@ -611,10 +615,12 @@ meg_alpha_diversity <- function(data_list,
   print(g_sraw)
   dev.off()
   
+  # Output Diversity counts
+  write.table(all_species_CSS, paste(outdir, '/', data_type, '_CSS_richness_values.csv',
+                                     sep='', collapse=''), sep=",")
+  
+  
 }
-
-
-
 
 
 
@@ -626,15 +632,14 @@ meg_alpha_diversity <- function(data_list,
 
 
 
-# Function that returns species count, rarefied species count, and alpha diversity measures
-# for each sample in the m x n matrix, m = features, n = samples
+
 alpha_rarefaction <- function(X, minlevel, method='invsimpson') {
   S <- specnumber(X, MARGIN=2)
   raremax <- min(colSums(X))
   if( raremax < minlevel ) raremax <- minlevel
   Srare <- rarefy(X, raremax, MARGIN=2)
   Xrare <- t(rrarefy(t(X), raremax))
-  alphadiv <- diversity(Xrare, index=method, MARGIN=2)
+  alphadiv <- vegan::diversity(Xrare, index=method, MARGIN=2)
   return(list(raw_species_abundance=S,
               rarefied_species_abundance=Srare,
               rarefied_data=Xrare,
@@ -727,8 +732,9 @@ meg_alpha_rarefaction <- function(data_list,
   # Check if needing to change factor order.
   ifelse(factor_order != '', all_alphadiv[[group_var]] <- factor(all_alphadiv[[group_var]], levels = eval(factor_order), ordered=T),1)
   
+  
   # Plot figure
-  png(filename=paste(outdir, '/', data_type, '_alphadiversity_by_', group_var, '.png',
+  png(filename=paste(outdir, '/', 'Diversity_', data_type, '_rarefied_InvSimpson_by_', group_var, '.png',
                      sep='', collapse=''),
       width=1024, height=768)
   g_alphadiv <- ggplot(data=all_alphadiv, aes_string(x=group_var,
@@ -760,6 +766,11 @@ meg_alpha_rarefaction <- function(data_list,
   dev.off()
   
   
+  # Output Diversity counts
+  write.table(all_alphadiv, paste(outdir, '/', data_type, '_rarefied_InvSimpson_values.csv',
+                                  sep='', collapse=''), sep=",")
+  
+  
   #
   ## Raw species abundance
   #
@@ -778,7 +789,7 @@ meg_alpha_rarefaction <- function(data_list,
   ifelse(factor_order != '', all_species_raw[[group_var]] <- factor(all_species_raw[[group_var]], levels = eval(factor_order), ordered=T),1)
   
   # Plot figure
-  png(filename=paste(outdir, '/', data_type, '_raw_richness_by_', group_var, '.png',
+  png(filename=paste(outdir, '/', 'Diversity_', data_type, '_raw_richness_by_', group_var, '.png',
                      sep='', collapse=''),
       width=1024, height=768)
   g_sraw <- ggplot(data=all_species_raw, aes_string(group_var, 'Value', fill=group_var)) +
@@ -786,7 +797,7 @@ meg_alpha_rarefaction <- function(data_list,
     facet_wrap(~Level, scales='free_y')
   #g_sraw <- g_sraw + scale_fill_tableau("Classic 20", direction = -1)
   g_sraw <- g_sraw +
-    ggtitle(paste('Species Richness by ', group_var, ' for Raw data\nInverse Simpson Index',
+    ggtitle(paste('Species Richness by ', group_var, ' for Raw data\nRichness',
                   sep='', collapse='')) +
     ylab('Unique Species\n') +
     xlab(paste('\n', group_var, sep='', collapse='')) +
@@ -808,6 +819,10 @@ meg_alpha_rarefaction <- function(data_list,
   dev.off()
   
   
+  # Output Diversity counts
+  write.table(all_species_raw, paste(outdir, '/', data_type, '_raw_data_richness_values.csv',
+                                     sep='', collapse=''), sep=",")
+  
   
   #
   ## Rarefied species abundance
@@ -827,7 +842,7 @@ meg_alpha_rarefaction <- function(data_list,
   ## Check if needing to change factor order.
   ifelse(factor_order != '', all_species_rare[[group_var]] <- factor(all_species_rare[[group_var]], levels = eval(factor_order), ordered=T),1)
   
-  png(filename=paste(outdir, '/', data_type, '_rarefied_richness_by_', group_var, '.png',
+  png(filename=paste(outdir, '/', 'Diversity_',data_type, '_rarefied_richness_by_', group_var, '.png',
                      sep='', collapse=''),
       width=1024, height=768)
   g_srare <- ggplot(data=all_species_rare, aes_string(group_var, 'Value', fill=group_var)) +
@@ -855,7 +870,15 @@ meg_alpha_rarefaction <- function(data_list,
           panel.border = element_rect(colour = "black", fill=NA, size=0.5))
   print(g_srare)
   dev.off()
+  
+  # Output Diversity counts
+  write.table(all_species_rare, paste(outdir, '/', data_type, '_rarefied_data_richness_values.csv',
+                                      sep='', collapse=''), sep=",")
 }
+
+
+
+
 
 
 ##############################
@@ -956,7 +979,7 @@ meg_relative_barplot <- function(melted_data,
     #scale_fill_tableau("Classic 20", direction = -1) +
     ggtitle(paste(data_type, ' ', level_var, ' Relative Abundance by ', group_var, '\n',
                   sep='', collapse=''))
-  png(filename=paste(outdir, '/', data_type, '_', level_var, '_RelativeAbundance_BarPlot_by_', group_var, '.png',
+  png(filename=paste(outdir, '/','RelativeAbundance_BarPlot_', data_type, '_', level_var, '_by_',group_var, '.png',
                      sep='', collapse=''), width=1024, height=768)
   print(meg_bar)
   dev.off()
@@ -1052,7 +1075,7 @@ meg_barplot <- function(melted_data,
     ylab('Mean of Normalized Count\n') +
     ggtitle(paste('Mean ', data_type, ' ', level_var, ' Normalized Count by ', group_var, '\n',
                   sep='', collapse=''))
-  png(filename=paste(outdir, '/', data_type, '_', level_var, '_Mean_BarPlot_by_', group_var, '.png',
+  png(filename=paste(outdir, '/','MeanAbundance_BarPlot_', data_type, '_', level_var, '_by_',group_var, '.png',
                      sep='', collapse=''), width=1024, height=768)
   print(meg_bar)
   dev.off()
@@ -1147,7 +1170,7 @@ meg_median_barplot <- function(melted_data,
     ylab('Normalized Count\n') +
     ggtitle(paste('Median ', data_type, ' ', level_var, ' Normalized Count by ', group_var, '\n',
                   sep='', collapse=''))
-  png(filename=paste(outdir, '/', data_type, '_', level_var, '_Median_BarPlot_by_', group_var, '.png',
+  png(filename=paste(outdir, '/','MedianAbundance_BarPlot_', data_type, '_', level_var, '_by_',group_var, '.png',
                      sep='', collapse=''), width=1024, height=768)
   print(meg_bar)
   dev.off()
