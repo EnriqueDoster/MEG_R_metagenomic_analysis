@@ -164,7 +164,7 @@ microbiome_melted_raw_analytic <- rbind(melt_dt(MRcounts(microbiome_domain_raw_a
 
 # Ensure that the metadata entries match the factor order of the MRexperiment
 
-microbiome_metadata <- data.table(microbiome_temp_metadata[match(colnames(MRcounts(microbiome_phylum_analytic)), microbiome_temp_metadata[, ID]), ])
+microbiome_metadata <- data.table(microbiome_temp_metadata[match(colnames(MRcounts(microbiome_phylum_analytic)), microbiome_temp_metadata[, sample_column_id]), ])
 setkeyv(microbiome_metadata, sample_column_id)
 
 # Vector of objects for iteration and their names
