@@ -1304,3 +1304,4 @@ meg_fitZig <- function(data_list,
     }
   }
 }
+
