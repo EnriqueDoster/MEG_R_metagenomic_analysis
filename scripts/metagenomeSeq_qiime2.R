@@ -13,7 +13,7 @@
 ## Modify this as necessary, though you shouldn't need to for basic use.
 set.seed(154)  # Seed the RNG, necessary for reproducibility
 
-#source('scripts/qiime2_2_phyloseq.R')
+source('scripts/qiime2_2_phyloseq.R')
 
 
 ##########################
@@ -214,25 +214,26 @@ new_microbiome_metadata$microbiome_CSS_counts = colSums(MRcounts(microbiome_anal
 
 ## Microbiome diversity
 new_microbiome_metadata$microbiome_domain_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[1]])))
-new_microbiome_metadata$microbiome_domain_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[1]])))
+new_microbiome_metadata$microbiome_domain_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[1]])))
 
 new_microbiome_metadata$microbiome_phylum_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[2]])))
-new_microbiome_metadata$microbiome_phylum_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[2]])))
+new_microbiome_metadata$microbiome_phylum_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[2]])))
 
 new_microbiome_metadata$microbiome_class_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[3]])))
-new_microbiome_metadata$microbiome_class_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[3]])))
+new_microbiome_metadata$microbiome_class_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[3]])))
 
 new_microbiome_metadata$microbiome_order_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[4]])))
-new_microbiome_metadata$microbiome_order_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[4]])))
+new_microbiome_metadata$microbiome_order_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[4]])))
 
 new_microbiome_metadata$microbiome_family_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[5]])))
-new_microbiome_metadata$microbiome_family_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[5]])))
+new_microbiome_metadata$microbiome_family_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[5]])))
 
 new_microbiome_metadata$microbiome_genus_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[6]])))
-new_microbiome_metadata$microbiome_genus_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[6]])))
+new_microbiome_metadata$microbiome_genus_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[6]])))
 
 new_microbiome_metadata$microbiome_species_Richness = specnumber(t(MRcounts(microbiome_raw_analytic_data[[7]])))
-new_microbiome_metadata$microbiome_species_Shannon = diversity(t(MRcounts(microbiome_raw_analytic_data[[7]])))
+new_microbiome_metadata$microbiome_species_Shannon = vegan::diversity(t(MRcounts(microbiome_raw_analytic_data[[7]])))
 
 microbiome_metadata <- new_microbiome_metadata
+
 
