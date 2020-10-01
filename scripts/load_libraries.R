@@ -21,3 +21,13 @@ suppressWarnings(suppressMessages(library(ggthemes)))
 #library(gg3D) # https://github.com/AckerDWM/gg3D, library(devtools) , install_github("https://github.com/AckerDWM/gg3D")
 #library(ggbiplot) #  install_github("vqv/ggbiplot")
 #library(magick)
+
+
+# Use bioconductor to install packages
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install(c('phyloseq','metagenomeSeq'))
+
+# Install packages from CRAN repository
+#install.packages(c("dplyr","ggplot2","data.table","tidyr","forcats", "vegan","plyr", "devtools",
+#                   "pheatmap","dendsort","ggrepel","ggpubr","Rtools"))
